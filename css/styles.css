@@ -1,0 +1,16 @@
+@font-face {
+    font-family: SourceSans;
+    src: url("SourceSansPro-SemiBold.ttf");
+    src: url("SourceSansPro-Regular.ttf");
+}
+
+h1 {
+    font-family: "SourceSans", sans-serif;
+    color: white;
+}
+
+.wrapper {
+    width: 1920px;
+    height: 1080px;
+    background-color: grey;
+}
