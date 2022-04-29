@@ -19,25 +19,30 @@ header{
 }
 /* LOGO HEADER */
 #logo{
-    width: 13%;
+    width: 16.5%;
 }
 
 #logo a img{
     width: 135px;
     height: 90px;
+    
 }
 
 /* NAV HEADER */
-header nav{
-    
+/*header nav{ }*/
 
-}
 header nav ul li{
     float: left;
     font-size: 1.3em;
 }
 header nav ul li a{
     padding: 0 30px;
+    transition: 0.5s;
+}
+header nav ul li a:hover{
+    font-size: 1.3em;
+    transition: 0.5s;
+    
 }
 .aqui{
     color: red;
@@ -50,24 +55,99 @@ header nav ul li a{
    
 }
 #botoes_header .btn_redondo{
+    text-align: center;
     font-size: 1.3em;
     width: 35px;
     height: 35px;
     cursor: pointer;
     border-radius: 100%;
-    border: 2px solid green;
-    padding: 0 15px;
+    border: 2px solid rgb(2, 2, 2, 0.5);
+    padding: 0 15px;    
     margin: 0 5px;
-    
 }
+
+#botoes_header #darkmode{
+    text-indent: -3000px;
+    background: url(../img/lua.png) center center no-repeat;
+    background-size: 90%;
+    overflow: hidden;
+}
+#botoes_header #interrogacao{
+    text-indent: -3000px;
+    background: url(../img/interrogacao.png) center center no-repeat;
+    background-size: 85%;
+    overflow: hidden;
+}
+
 #botoes_header .btn_normal{
     font-size: 1.2em;
     height: 40px;
     cursor: pointer;
     border-radius: 5%;
-    border: 2px solid green;
+    border: 2px solid rgb(0, 192, 135, 0.5);
     padding: 0 15px;
     margin: 0 5px;
+    color: rgb(0, 192, 135);
+}
+#botoes_header .btn_normal:hover{
+    background-color:rgb(0, 192, 135, 0.5);
+    color: white;
+}
+/* FIM HEADER */
+
+/* ARTICLE - CONTEÚDOS PRINCIPAIS */
+
+/* ARTICLE - Imagem Apresentacao */
+#box_imagem_Apresentacao{
+    background: rgb(243, 243, 243) url(../img/imagem_apresentacao.png) no-repeat center center;
+    height: 650px;
+    border: 1px solid transparent;
+}
+#box_imagem_Apresentacao h1{
+    font-size: 4.5em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+}
+/* ARTICLE - BOX TEXTO */
+article{
+    font-size: 1.1em;
+}
+.titulo{
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    margin: 20px;
+}
+#box_informativo p{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 0 150px;
+}
+
+#box_informativo .box_imagens{
+    margin: 0 auto;
+    width: 70%;
+}
+#box_informativo .box_videos{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+}
+#box_informativo .box_imagens img{
+    background-repeat: no-repeat;
+}
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    margin-top: 30px;
+    background-color: #ccc;
+    height: 50px;
+    font-size: 1.3em;
 }
 
 @media (max-width: 480px) {
