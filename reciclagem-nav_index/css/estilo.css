@@ -10,7 +10,7 @@
 
 /* HEADER */
 header{
-    height: 90px;
+    height: 70px;
     width: 100%;
 
     display: flex;
@@ -72,9 +72,26 @@ header nav ul li a:hover{
     background-size: 90%;
     overflow: hidden;
 }
+#botoes_header #darkmode:hover{
+    background: url(../img/lua_inverso.png) center center no-repeat;
+    background-color:  gray;
+    border: 2px solid transparent;
+    text-indent: -3000px;
+    background-size: 85%;
+    overflow: hidden;
+}
+
 #botoes_header #interrogacao{
     text-indent: -3000px;
     background: url(../img/interrogacao.png) center center no-repeat;
+    background-size: 85%;
+    overflow: hidden;
+}
+#botoes_header #interrogacao:hover{
+    background: url(../img/interrogacao_inverso.png) center center no-repeat;
+    background-color:  gray;
+    border: 2px solid transparent;
+    text-indent: -3000px;
     background-size: 85%;
     overflow: hidden;
 }
@@ -101,13 +118,13 @@ header nav ul li a:hover{
 #box_imagem_Apresentacao{
     background: rgb(243, 243, 243) url(../img/imagem_apresentacao.png) no-repeat center center;
     height: 650px;
-    border: 1px solid transparent;
 }
 #box_imagem_Apresentacao h1{
     font-size: 4.5em;
     text-align: center;
     color: rgb(0, 192, 135);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
 }
 /* ARTICLE - BOX TEXTO */
 article{
@@ -127,16 +144,21 @@ article{
 
 #box_informativo .box_imagens{
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
+    height: 725px;
+    background: rgb(232, 240, 247) url(../img/sig_latas.webp) center bottom no-repeat;
+    background-size: 55%;
 }
+
+
 #box_informativo .box_videos{
     display:flex;
     align-items: center;
     justify-content:center;
-
 }
-#box_informativo .box_imagens img{
-    background-repeat: no-repeat;
+#box_informativo .box_videos iframe{
+    width: 45%;
+    height: 20em;
 }
 /* Footer */
 footer{
