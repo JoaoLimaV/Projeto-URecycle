@@ -25,7 +25,6 @@ header{
 #logo a img{
     width: 135px;
     height: 90px;
-    
 }
 
 /* NAV HEADER */
@@ -155,10 +154,11 @@ article{
     display:flex;
     align-items: center;
     justify-content:center;
+    flex-direction: column;
 }
 #box_informativo .box_videos iframe{
-    width: 45%;
-    height: 20em;
+    width: 50%;
+    height: 30em;
 }
 /* Footer */
 footer{
