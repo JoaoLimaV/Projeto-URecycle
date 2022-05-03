@@ -7,11 +7,39 @@
     border:0;
     background-color: transparent;
 }
+ :root{
+    --bg-padrao:white;
+    --bg-destaque: rgb(203, 215, 227, 0.3);
 
+    --all-color-font: rgb(0, 0, 0, 0.9);
+    --destaque-color-font: red;
+
+    --btn-dark-bg: url(../img/lua.png) center center no-repeat;
+    --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
+    --btn-border: 2px solid black;
+ }
+
+ .dark-mode:root{
+    --bg-padrao: rgb(43, 43, 43);
+    --bg-destaque:rgb(59, 60, 61);
+
+    --all-color-font: rgba(255, 255, 255, 0.9);
+    --destaque-color-font: rgb(219, 255, 17);
+
+    --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
+    --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
+    --btn-border: 2px solid white;
+ }
 /* HEADER */
+body{
+    color: var(--all-color-font);
+    background-color: var(--bg-padrao);
+    
+}
 header{
     height: 70px;
     width: 100%;
+    background-color: var(--bg-padrao);
 
     display: flex;
     align-items:center;
@@ -37,13 +65,14 @@ header nav ul li{
 header nav ul li a{
     padding: 0 30px;
     transition: 0.5s;
+    color: var(--all-color-font);
 }
 header nav ul li a:hover{
     color: rgb(0, 192, 135);
     transition: 0.5s;
 }
 .aqui{
-    color: red;
+    color: var(--destaque-color-font);
 }
 
 /*  BOTOES HEADER */
@@ -66,12 +95,13 @@ header nav ul li a:hover{
 
 #botoes_header #darkmode{
     text-indent: -3000px;
-    background: url(../img/lua.png) center center no-repeat;
+    background: var(--btn-dark-bg);
+    border: var(--btn-border);
     background-size: 90%;
     overflow: hidden;
 }
 #botoes_header #darkmode:hover{
-    background: url(../img/lua_inverso.png) center center no-repeat;
+    background: var();
     background-color:  gray;
     border: 2px solid transparent;
     text-indent: -3000px;
@@ -81,7 +111,8 @@ header nav ul li a:hover{
 
 #botoes_header #interrogacao{
     text-indent: -3000px;
-    background: url(../img/interrogacao.png) center center no-repeat;
+    background: var(--btn-interrogacao-bg);
+    border: var(--btn-border);
     background-size: 85%;
     overflow: hidden;
 }
@@ -115,7 +146,7 @@ header nav ul li a:hover{
 
 /* ARTICLE - Imagem Apresentacao */
 #box_imagem_Apresentacao{
-    background: rgb(243, 243, 243) url(../img/imagem_apresentacao.png) no-repeat center center;
+    background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
     height: 650px;
 }
 #box_imagem_Apresentacao h1{
@@ -124,28 +155,33 @@ header nav ul li a:hover{
     color: rgb(0, 192, 135);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
     margin: 0 0;
+    background-color: var();
+    
 }
 /* ARTICLE - BOX TEXTO */
 article{
     font-size: 1.1em;
+    background-color: var(--bg-padrao);
 }
-.titulo{
+article .titulo{
     font-size: 2em;
     text-align: center;
     color: rgb(0, 192, 135);
     margin: 20px;
+    
 }
 #box_informativo p{
     font-size: 1.2em;
     text-align: justify;
     padding: 0 150px;
+    
 }
 
 #box_informativo .box_imagens{
     margin: 0 auto;
     width: 100%;
     height: 725px;
-    background: rgb(232, 240, 247) url(../img/sig_latas.webp) center bottom no-repeat;
+    background: var(--bg-destaque) url(../img/sig_latas.png) center bottom no-repeat;
     background-size: 55%;
 }
 
@@ -167,7 +203,7 @@ footer{
     justify-content:center;
 
     margin-top: 30px;
-    background-color: #ccc;
+    background-color: var(--bg-destaque);
     height: 50px;
     font-size: 1.3em;
 }
