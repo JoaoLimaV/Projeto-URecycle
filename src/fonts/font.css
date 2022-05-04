@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "SourceSansPro-Regular";
+    src: url("SourceSansPro-Regular.ttf");
+}
+
+*{
+    font-size: SourceSansPro-Regular;
+}

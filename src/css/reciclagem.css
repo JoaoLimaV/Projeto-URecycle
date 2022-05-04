@@ -11,17 +11,30 @@
     --bg-padrao:white;
     --bg-destaque: rgb(203, 215, 227, 0.3);
 
+    --bg-menu-drop:rgba(203, 215, 227, 0.541);
+    --bg-menu-drop-hover:rgb(161, 196, 231);
+
+    --cor-menu-drop: invert(0%);
+    --bg-menu-drop-celular:rgba(203, 215, 227);
+
     --all-color-font: rgb(0, 0, 0, 0.9);
     --destaque-color-font: red;
 
     --btn-dark-bg: url(../img/lua.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
     --btn-border: 2px solid black;
+    
  }
 
  .dark-mode:root{
     --bg-padrao: rgb(43, 43, 43);
     --bg-destaque:rgb(59, 60, 61);
+    
+    --bg-menu-drop:rgba(147, 148, 148, 0.747);
+    --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
+
+    --cor-menu-drop: invert(100%);
+    --bg-menu-drop-celular:rgba(147, 148, 148);
 
     --all-color-font: rgba(255, 255, 255, 0.9);
     --destaque-color-font: rgb(219, 255, 17);
@@ -34,7 +47,9 @@
 body{
     color: var(--all-color-font);
     background-color: var(--bg-padrao);
-    
+    min-width: 530px;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 header{
     height: 70px;
@@ -150,6 +165,7 @@ header nav ul li a:hover{
     height: 40px;
     width: 40px;
     cursor: pointer;
+    filter: var(--cor-menu-drop)
 }
 
 /* FIM HEADER */
@@ -158,8 +174,7 @@ header nav ul li a:hover{
 
 /* ARTICLE - Imagem Apresentacao */
 #box_imagem_Apresentacao{
-    background: var(--bg-destaque);
-    /* background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center; */
+    background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
     height: 650px;
 }
 #box_imagem_Apresentacao h1{
@@ -189,7 +204,7 @@ article .titulo{
 }
 #box_informativo .box_imagens {
     background: var(--bg-destaque);
-    /* background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom; */
+    background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom;
     background-size: 70%;
     height: 725px;
 
@@ -218,22 +233,37 @@ footer{
     font-size: 1.3em;
 }
 
+
 @media (max-width: 1024px) {
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
+        height: 50px;
+    }
    #botoes_header{
        display: none;
    }
    #menu_drop{
        display: block;
+       transition: 1s;
    }
+   header #nav_drop_down ul li a:hover{
+    color: var(--all-color-font);
+    transition: 0.5s;
+    }
+    
    #box_informativo .box_imagens{
-        /* background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom; */
-        background-size: 90%;
+        background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom;
+        background-size: 800px;
         height: 725px;
-
+    }
+    #box_informativo p{
+        font-size: 1.2em;
+        text-align: justify;
+        padding: 0 100px; 
     }
     #box_imagem_Apresentacao{
-       /* background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center; */
-        background-size: 90%;
+        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
+        background-size: 800px;
         width: 100%;
         height: 650px;
     }
@@ -245,35 +275,96 @@ footer{
     #nav_drop_down{
         display: none;
         position: absolute;
-        width: 120px;
-        right: 10px;
-        background-color: #ccc;     
+        right: 10px;     
+        width: 150px;
+        height: 140px;
+        z-index: 100;
+        background-color: var(--bg-menu-drop);
+        border-radius: 2%;
     }
     #nav_drop_down ul li a{
-        right: 10px;
-        width: 60px;
+        padding: 5px 2px ;
+        width: 150px;
         font-size: 1em;
         display: block;
-        text-align:right;
-        border: 1px solid red;
-        z-index: 100;
+        text-align: right;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.637); 
+
+    }
+    #nav_drop_down li:hover{
+        background-color: var(--bg-menu-drop-hover);
+        cursor: pointer;
     }
     #menu_drop.active #nav_drop_down{
         display: block;
 
     }
+    .ViewCelular{
+        display:none;
+    }
 
 }
 
-@media (max-width: 480px) {
-    *{
+@media (max-width: 600px) {
+    .ViewCelular{
+        display:block;
+    }
+    header nav{
         display: none;
     }
-}
-
-@media (max-width: 768px) {
-    *{
-        display: none;
+    #box_informativo p{
+        font-size: 1.2em;
+        text-align: justify;
+        padding: 0 50px; 
     }
-}
+    #logo{
+        width: 16.5%;
+    }
+    #logo a img{
+        width: 100px;
+        height: 70px;
+    }
+    #nav_drop_down{
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        background-color: var(--bg-menu-drop-celular);
+        border-radius: 0%;
+        height: calc(100vh);
+        text-align: left;
+        right: 0; 
+    }
+    #nav_drop_down li{
+        width: 100%;
+        height: calc(14.3vh);
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    #nav_drop_down ul li a{
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        width: 98%;
+        border: transparent;
+    }
+    #box_informativo .box_videos iframe{
+        width: 80%;
+        height: 300px;
+    }
+    #box_informativo .box_imagens {
+        background: var(--bg-destaque);
+        background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center center;
+        background-size: 550px;
+        height: 500px;
+    
+    }
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center bottom;
+        background-size: 550px;
+        height: 400px;
+    }
+ }
 
