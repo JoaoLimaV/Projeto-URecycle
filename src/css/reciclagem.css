@@ -10,6 +10,7 @@
  :root{
     --bg-padrao:white;
     --bg-destaque: rgb(203, 215, 227, 0.3);
+    --logo-imagem: url(../img/logo.png);
 
     --bg-menu-drop:rgba(203, 215, 227, 0.541);
     --bg-menu-drop-hover:rgb(161, 196, 231);
@@ -29,6 +30,7 @@
  .dark-mode:root{
     --bg-padrao: rgb(43, 43, 43);
     --bg-destaque:rgb(59, 60, 61);
+    --logo-imagem: url(../img/logo_branca.png);
     
     --bg-menu-drop:rgba(147, 148, 148, 0.747);
     --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
@@ -47,7 +49,7 @@
 body{
     color: var(--all-color-font);
     background-color: var(--bg-padrao);
-    min-width: 530px;
+    min-width: 200px;
     max-width: 2000px;
     margin: 0 auto;
 }
@@ -63,15 +65,19 @@ header{
 /* LOGO HEADER */
 #logo{
     width: 16.5%;
+    height: 70px;
 }
 
-#logo a img{
+#logo a{
+    display: block;
     width: 135px;
-    height: 90px;
+    background: var(--logo-imagem) center right no-repeat;
+    background-size: 100%;
+    text-indent: -3000px;
+    height: 70px;
 }
 
 /* NAV HEADER */
-/*header nav{ }*/
 
 header nav ul li{
     float: left;
@@ -235,22 +241,64 @@ footer{
 
 
 @media (max-width: 1024px) {
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
-        height: 50px;
-    }
+    
+   /* Header */
    #botoes_header{
        display: none;
    }
    #menu_drop{
        display: block;
-       transition: 1s;
    }
    header #nav_drop_down ul li a:hover{
     color: var(--all-color-font);
     transition: 0.5s;
     }
-    
+    #nav_drop_down{
+        display: none;
+        position: absolute;
+        width: 450px;
+        z-index: 100;
+        background-color: var(--bg-menu-drop-celular);
+        border-radius: 0%;
+        height: calc(100vh);
+        text-align: left;
+
+        right: 0; 
+        top: 70px;
+    }
+    #nav_drop_down li{
+        width: 100%;
+        height: calc(14.3vh);
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    #nav_drop_down ul li a{
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        width: 86%;
+        height: 80px;
+        border: transparent;
+    }
+
+    #nav_drop_down li:hover{
+        background-color: var(--bg-menu-drop-hover);
+        cursor: pointer;
+    }
+    #menu_drop.active #nav_drop_down{
+        display: block;
+
+    }
+    .ViewCelular{
+        display:none;
+    }
+    /* Fim Header */
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
+        height: 50px;
+    }
    #box_informativo .box_imagens{
         background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom;
         background-size: 800px;
@@ -272,40 +320,11 @@ footer{
         height: 400px;
     }
     
-    #nav_drop_down{
-        display: none;
-        position: absolute;
-        right: 10px;     
-        width: 150px;
-        height: 140px;
-        z-index: 100;
-        background-color: var(--bg-menu-drop);
-        border-radius: 2%;
-    }
-    #nav_drop_down ul li a{
-        padding: 5px 2px ;
-        width: 150px;
-        font-size: 1em;
-        display: block;
-        text-align: right;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.637); 
-
-    }
-    #nav_drop_down li:hover{
-        background-color: var(--bg-menu-drop-hover);
-        cursor: pointer;
-    }
-    #menu_drop.active #nav_drop_down{
-        display: block;
-
-    }
-    .ViewCelular{
-        display:none;
-    }
 
 }
 
 @media (max-width: 600px) {
+    /* Header */
     .ViewCelular{
         display:block;
     }
@@ -333,7 +352,7 @@ footer{
         border-radius: 0%;
         height: calc(100vh);
         text-align: left;
-        right: 0; 
+         
     }
     #nav_drop_down li{
         width: 100%;
@@ -350,6 +369,7 @@ footer{
         width: 98%;
         border: transparent;
     }
+    /* FIM Header */
     #box_informativo .box_videos iframe{
         width: 80%;
         height: 300px;
@@ -365,6 +385,20 @@ footer{
         background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center bottom;
         background-size: 550px;
         height: 400px;
+    }
+    #box_imagem_Apresentacao h1{
+        font-size: 2.5em;
+        text-align: center;
+        color: rgb(0, 192, 135);
+        text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+        margin: 0 0;
+    }
+    article .titulo{
+        font-size: 1em;
+        text-align: center;
+        color: rgb(0, 192, 135);
+        margin: 20px;
+        
     }
  }
 
