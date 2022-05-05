@@ -180,7 +180,7 @@ header nav ul li a:hover{
 
 /* ARTICLE - Imagem Apresentacao */
 #box_imagem_Apresentacao{
-    background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
+    background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
     height: 650px;
 }
 #box_imagem_Apresentacao h1{
@@ -210,9 +210,9 @@ article .titulo{
 }
 #box_informativo .box_imagens {
     background: var(--bg-destaque);
-    background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom;
-    background-size: 70%;
-    height: 725px;
+    background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+    background-size: 1000px;
+    height: 900px;
 
 }
 
@@ -295,12 +295,14 @@ footer{
         display:none;
     }
     /* Fim Header */
+
     #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
-        height: 50px;
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
+        background-size: 800px;
+        
     }
    #box_informativo .box_imagens{
-        background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center bottom;
+        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
         background-size: 800px;
         height: 725px;
     }
@@ -310,7 +312,7 @@ footer{
         padding: 0 100px; 
     }
     #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center center;
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
         background-size: 800px;
         width: 100%;
         height: 650px;
@@ -323,7 +325,7 @@ footer{
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
     /* Header */
     .ViewCelular{
         display:block;
@@ -366,8 +368,7 @@ footer{
         display: block;
         font-size: 1.5em;
         text-align: center;
-        width: 98%;
-        border: transparent;
+        width: 85%;
     }
     /* FIM Header */
     #box_informativo .box_videos iframe{
@@ -376,13 +377,13 @@ footer{
     }
     #box_informativo .box_imagens {
         background: var(--bg-destaque);
-        background: var(--bg-destaque) url(../img/sig_latas.png) no-repeat center center;
-        background-size: 550px;
-        height: 500px;
+        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+        background-size: 100%;
+        height: 550px;
     
     }
     #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/imagem_apresentacao.png) no-repeat center bottom;
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
         background-size: 550px;
         height: 400px;
     }
@@ -394,7 +395,7 @@ footer{
         margin: 0 0;
     }
     article .titulo{
-        font-size: 1em;
+        font-size: 1.5em;
         text-align: center;
         color: rgb(0, 192, 135);
         margin: 20px;
