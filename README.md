@@ -1,2 +1,0 @@
-# Projeto-URecycle
-Projeto-URecycle

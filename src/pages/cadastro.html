@@ -4,33 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/src/css/cadastro.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"/>
     <title>Cadastro U-Recycle</title>
 </head>
 <body>
-    <header>
-        <img src="/reciclagem-nav_index/img/logo.png" alt="">
+    <header class="">
+        <a href="">
+            <img src="/src/img/logo.png">
+        </a>
+        <div>
+            <p>Dark mode</p>
+        </div>
     </header>
-    <fieldset>
-        <form action="">
-            <h1>Cadastro</h1>
-            <div><input type="text" placeholder="Nome"></div>
-            <div><input type="text" placeholder="Sobrenome"></div>
-            <div><input type="text" placeholder="E-mail"></div>
-            <div><input type="text" placeholder="Senha"></div>
-            <div><input type="text" placeholder="Telefone"></div>
-            <div><input type="text" placeholder="Cidade"></div>
-            <input type="radio" name="pessoaFisica" id="pessoaFisica"><label for=pessoaFisica">Pessoa Fisica</label>
-            <input type="radio" name="pessoaJuridica" id="pessoaJuridica"><label for="pessoaJuridica">Pessoa Juridica</label>
-            <button>Cadastrar</button>
-            <button>Facebook</button>
-            <button>Google</button>
-            <a href="">Já possuo cadastro</a>
-            <img src="/reciclagem-nav_index/img/logo.png" alt="">
-        </form>
-    </fieldset>
-    <footer>
+        <fieldset class="container">
+            <div class="img_form">
+                <h1>Você faz a diferença</h1>
+                <img src="/src/img/Cadastro.png" alt="">
+            </div>
+            <form action="">
+                <h1>Cadastro</h1>
 
-    </footer>
+                <div class="nome" id="nomeCompleto">
+                    <div id="nomeDiv"><input type="text" placeholder="Nome" id="nome"></div>
+                    <div id="sobrenomeDiv"><input type="text" placeholder="Sobrenome" id="sobrenome"></div>
+                </div>
+                
+                <div class="data">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Senha">
+                    <input type="text" placeholder="Telefone">
+                    <input type="text" placeholder="Cidade">
+                </div>
+
+                <div class="radio">
+                    <div id="pf">
+                        <input type="radio" name="pessoaFisica" id="pessoaFisica"><label for=pessoaFisica">Pessoa Fisica</label>
+                    </div>
+                    <div id="pj">
+                        <input type="radio" name="pessoaJuridica" id="pessoaJuridica"><label for="pessoaJuridica">Pessoa Juridica</label>
+                    </div>
+                </div> 
+                <button>Cadastrar</button>
+                <div class="redes_sociais">
+                    <button>Facebook</button>
+                    <button>Google</button>
+                </div>
+                <a href="">Já possuo cadastro</a>
+                <img src="/src/img/logo.png">
+            </form>
+        </fieldset>     
+   
 </body>
 </html>
