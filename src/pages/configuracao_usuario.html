@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/configuracao_usuario.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
+    <script type="text/javascript" src="../js/funcionalidades.js"></script>
+    <title>Meu Perfil</title>
+</head>
+<body>
+    <main>
+        <!-- Inicio Cabeçalho-->
+        <header>
+            <!-- Inicio Logo-->
+                <div id="logo"> 
+                    <a href="">
+                        U-Recycle
+                    </a>
+                </div> <!-- FIM Logo-->
+
+                <!-- Inicio BOTÕES-->
+                <div id="botoes_header">
+                    <button class = "btn_redondo" id = "interrogacao" onclick= 'trocarPag()'>Dúvidas</button>
+                    <button class = "btn_redondo"  id = "darkmode" onclick="darkmode()">Dark Mode</button>
+                    <button class = "btn_redondo"  id = "perfil" onclick="darkmode()">PERFIL</button>
+                </div><!-- FIM BOTÕES-->
+
+                <div id="menu_drop">
+                    <button onclick="dropdown()" id ="btn_drop">
+                        <img src="/src/img/download-removebg-preview.png">
+                    </button>
+                    
+                    <nav id = nav_drop_down> 
+                        <ul>
+                            <li >
+                                <a href="">Entrar</a>
+                            </li>
+                            <li>
+                                <a href="">Cadastrar</a>
+                            </li>
+                            <li>
+                                <a onclick="darkmode()">Dark-Mode</a>
+                            </li>
+                            <li>
+                                <a href="">Dúvidas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header><!-- FIM Cabeçalho-->
+
+            <!-- COMEÇO BARRA-LATERAL-ESQUERDA-->
+            <article id = "container">
+                <h1 id="titulo">MINHA CONTA</h1>
+                <article id="conteudo_principal">
+                    <article id="menu_lateral_esquerda">
+                        <article class="caixa">
+                            <h3>Configuração de Usuário</h3>
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>Perfil de Usuário</a>
+                                        </li>
+                                        <li>
+                                            <a>Endereço</a>
+                                        </li>
+                                        <li>
+                                            <a class="primeiro" >Alterar Senha</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                        </article>
+
+                        <div class = barra></div>
+
+                        <article class="caixa">
+                            <h3>Configuração do Aplicativo</h3>
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>Notificação</a>
+                                        </li>
+                                        <li>
+                                            <a>Idioma</a>
+                                        </li>
+                                        <li>
+                                            <a class="primeiro" >Acessiblidade</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                        </article>
+                        
+                        <div class = barra></div>
+
+                        <article class="caixa">
+                            <h3>Ajuda e Suporte</h3>
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a>Mensagem</a>
+                                        </li>
+                                        <li>
+                                            <a>Ajuda</a>
+                                        </li>
+                                        <li>
+                                            <a class="primeiro" >Sobre</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                        </article>
+                    </article>
+                    <!-- FIM BARRA-LATERAL-DIREITA-->
+                    
+
+                    <article id="menu_meio">
+                        <div class ="caixa">
+
+                        </div>
+                        <h3> Sobre Mim</h3>
+                        <div class ="caixa">
+
+                        </div>
+                    </article>
+
+                    <article id="menu_lateral_direita">
+                        <article class ="caixa concluido">
+                            <div class ="icone_usuario"></div>
+                            <div class ="texto">
+                                CEP: 00000-000 <br>
+                                STATUS: Concluido
+                            </div>
+                        </article>
+
+                        <article class = "caixa concluido">
+                            <div class ="icone_usuario"></div>
+                            <div class ="texto">
+                                CEP: 00000-000 <br>
+                                STATUS: Concluido
+                            </div>
+                        </article>
+
+                        <article class = "caixa concluido">
+                            <div class ="icone_usuario"></div>
+                            <div class ="texto">
+                                CEP: 00000-000 <br>
+                                STATUS: Concluido
+                            </div>
+                        </article>
+
+                        <article class = "caixa pendente">
+                            <div class ="icone_usuario"></div>
+                            <div class ="texto">
+                                CEP: 00000-000 <br>
+                                STATUS: Pendente
+                            </div>
+                        </article>
+
+                        <article class = "caixa cancelado">
+                            <div class ="icone_usuario"></div>
+                            <div class ="texto">
+                                CEP: 00000-000 <br>
+                                STATUS: Cancelado
+                            </div>
+                        </article>
+
+                    </article>
+                </article>
+            </article>
+
+    </main>
+</body>
+</html>
