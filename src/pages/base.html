@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen" />
+    
+    <script type="text/javascript" src="../js/funcionalidades.js"></script>
+
+    <title>Document</title>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Inicio Logo-->
+        <div id="logo">
+            <a href="">
+                <img src="../img/logo.png" width="100%">
+            </a>
+        </div> <!-- FIM Logo-->
+
+        <!-- Inicio BOTÕES-->
+        <div id="botoes_header">
+            <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+            <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
+            <button class="btn_normal">Cadastrar</button>
+            <button class="btn_normal">Entrar</button>
+        </div><!-- FIM BOTÕES-->
+        <div id="menu_drop">
+            <button onclick="dropdown()" id ="btn_drop">
+                <img src="../img/download-removebg-preview.png">
+            </button>
+            
+            <nav id = nav_drop_down> 
+                <ul>
+                    <li class="ViewCelular">
+                        <a href="" >Home</a>
+                    </li>
+                    <li class="ViewCelular">
+                        <a href="" class="aqui" >Reciclagem</a>
+                    </li>
+                    <li class="ViewCelular">
+                        <a href="" >Dicas</a>
+                    </li>
+                    <li >
+                        <a href="">Entrar</a>
+                    </li>
+                    <li>
+                        <a href="">Cadastrar</a>
+                    </li>
+                    <li>
+                        <a onclick="darkmode()">Dark-Mode</a>
+                    </li>
+                    <li>
+                        <a href="">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- FIM Cabeçalho-->

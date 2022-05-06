@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/perguntas.css" media="screen" />
+    
+    <script type="text/javascript" src="../js/funcionalidades.js"></script>
+
+    <title>Document</title>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Inicio Logo-->
+        <div id="logo">
+            <a href="">
+                <img src="../img/logo.png" width="100%">
+            </a>
+        </div> <!-- FIM Logo-->
+
+        <!-- Inicio BOTÕES-->
+        <div id="botoes_header">
+            <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+            <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
+            <button class="btn_normal">Cadastrar</button>
+            <button class="btn_normal">Entrar</button>
+        </div>
+        <!-- FIM BOTÕES-->
+        <!-- Inicio DROPDOWN-->
+        <div id="menu_drop">
+            <button onclick="dropdown()" id ="btn_drop">
+                <img src="../img/download-removebg-preview.png">
+            </button>
+            
+            <nav id = nav_drop_down> 
+                <ul>
+                    <li class="ViewCelular">
+                        <a href="" >Home</a>
+                    </li>
+                    <li class="ViewCelular">
+                        <a href="" class="aqui" >Reciclagem</a>
+                    </li>
+                    <li class="ViewCelular">
+                        <a href="" >Dicas</a>
+                    </li>
+                    <li >
+                        <a href="">Entrar</a>
+                    </li>
+                    <li>
+                        <a href="">Cadastrar</a>
+                    </li>
+                    <li>
+                        <a onclick="darkmode()">Dark-Mode</a>
+                    </li>
+                    <li>
+                        <a href="">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Fim DROPDOWN -->
+    </header><!-- FIM Cabeçalho-->
+    <br><br>
+    <article>
+        <article class="titulo"> Perguntas Frequentes</article>
+        <!---Inicio Barra de Pesquisa-->
+        <form>
+            <label for="pergunta" id="pergunta" class="texto_basico">Pesquise para achar a resposta de que procura:<br></label>
+            <input type="text" name="pergunta" id="pergunta" placeholder="Digite algo como &#34como fazer um pedido&#34">
+        </form>
+        <!---Fim Barra de Pesquisa-->
+    </article>
+    <article class="texto_basico">
+    Tópicos de ajuda
+    </article>
+    <article>
+        <!---Inicio Barra Lateral-->
+        <article id="lateral">
+            <ul id="botoes_lateral">
+                <li><button class="btn_normal">Tópicos Recomendados</button></li>
+                <li><button class="btn_normal">Gerenciando sua conta</button></li>
+                <li><button class="btn_normal">Segurança e privacidade</button></li>
+                <li><button class="btn_normal">Dispositivos & Serviços Digitais</button></li>
+                <li><button class="btn_normal">Outros Tópicos e páginas de ajuda</button></li>
+                <li><button class="btn_normal">Lima Bobão</button></li>
+            </ul>
+        </article>
+        <!---Fim Barra Lateral-->
+        <!---Inicio Caixas de perguntas-->
+        <article class="caixa">
+                <h4>Como fazer um pedido</h4>
+                <p class="texto_caixa">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                </p>
+            </article>
+        <div class="caixa">
+                <h4>Nova legislação</h4>
+                <p class="texto_caixa">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+        </div>
+        <div class="caixa">
+            <h4>Que tesao</h4>
+            <p class="texto_caixa">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+        <!---Fim Caixas de perguntas-->
+    </article>
+    <article class="clear">
+</body>
+
+</html>
