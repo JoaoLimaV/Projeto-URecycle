@@ -23,7 +23,7 @@
 
     --btn-dark-bg: url(../img/lua.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
-    --btn-perfil-bg: url(../img/icone-usuario.png) center center no-repeat;
+    --btn-perfil-bg: url(../img/icone_usuario.png) center center no-repeat;
     --btn-border: 2px solid black;
     
  }
@@ -44,14 +44,14 @@
 
     --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
-    --btn-perfil-bg: url(../img/icone-usuario.png) center center no-repeat;
+    --btn-perfil-bg: url(../img/icone_usuario.png) center center no-repeat;
     --btn-border: 2px solid white;
  }
 /* HEADER */
 body{
     color: var(--all-color-font);
     background-color: var(--bg-padrao);
-    min-width: 200px;
+    min-width: 400px;
     max-width: 2000px;
     margin: 0 auto;
 }
@@ -131,17 +131,17 @@ header{
 #botoes_header #perfil{
     text-indent: -3000px;
     background: var(--btn-perfil-bg);
+    background-size: 100%;
     border: var(--btn-border);
-    background-size: 70%;
     overflow: hidden;
 }
 #botoes_header #perfil:hover{
     background: var(--btn-perfil-bg);
     background-color:  rgba(150, 150, 150, 0.377);
-    border: 2px solid transparent;
-    text-indent: -3000px;
-    background-size: 70%;
+    border: 2px solid transparent;  
+    background-size: 100%;
     overflow: hidden;
+    text-indent: -3000px;
 }
 /* MENU DROPDOWN PARA O MOBILE */
 #menu_drop{
@@ -163,12 +163,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: 91.5vh;
+    flex-direction: column;   
 }
 #container h1#titulo{
     color: rgb(0, 192, 135);
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
     margin-bottom: 20px;
  }
@@ -178,7 +177,6 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 80%;
-
 }
 #menu_lateral_esquerda, #menu_lateral_direita{
     background-color: var(--bg-destaque);
@@ -186,23 +184,20 @@ header{
 
 #menu_lateral_esquerda{
    width: 20%;
-   height: 550px;
+   height: 700px;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
    border: 2px solid #ccc;
-   
-   
 }
 #menu_lateral_esquerda .caixa{
     width: 100%;
-    
+    padding: 30px;
  }
 #menu_lateral_esquerda .caixa h3{
     text-align: center;
-    margin: 2px 0px;
-    color: rgb(0, 192, 135);
+    color: rgb(99, 192, 175);
     font-size: 1.4em;
  }
  .barra{
@@ -216,11 +211,11 @@ header{
      height: 2px;
      background-color: rgb(0,0,0,0.5);
      display:block;
-     margin-bottom: 10px;
+     margin-bottom: 0px;
  }
 
  #menu_lateral_esquerda .caixa ul li{
-    padding: 10px 15px;
+    padding: 13px;
     font-size: 1.2em;   
  }
  #menu_lateral_esquerda .caixa ul li:hover{
@@ -230,7 +225,7 @@ header{
 
 #menu_meio{
     width: 57%;
-    height: 550px;
+    height: 700px;
     border: 2px solid #ccc;
     
     display: flex;
@@ -238,27 +233,76 @@ header{
     justify-content: center;
     flex-direction: column;
  }
- 
-#menu_meio .caixa{
+#menu_meio .caixa_sobre_mim,  #menu_meio .caixa_info{
     width: 95%;
-    height: 250px;
+    height: 300px;
     border: 2px solid #ccc;
     margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
  #menu_meio h3{
     width: 90%;
     text-align: left;
-    color: rgb(0, 192, 135);
+    color: rgb(99, 192, 175);
     font-size: 1.2em;
  }
+ #menu_meio .caixa_info #caixa_imagem{
+    width: 35%;
+    height: 250px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ #menu_meio .caixa_info #imagem{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+    background-size: 100%;
+ }
+ #menu_meio .caixa_info #caixa_texto{
+    width: 65%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+ }
+ #menu_meio .caixa_info #caixa_texto #texto{
+    width: 80%;
+    height: 70%;
+    border: 2px solid #ccc;
+    padding: 10px;
+ }
+ #btn_editar{
+   width: 160px;
+   height: 30px;
+   background-color: rgb(49, 197, 153);
+   border-radius: 2%;
+   cursor: pointer;
+   font-size: 1.1em;
+   color: white;
+   margin: 5px;
+ }
+
+ #menu_meio .caixa_sobre_mim .colown{
+    width: 45%;
+    text-align: justify;
+    margin: 10px;
+  }
 
 #menu_lateral_direita{
     width: 20%;
-    height: 550px;
+    height: 700px;
 
     display: flex;
     align-items: center;
-   /* justify-content: center; */
+    justify-content: center;
     flex-direction: column;
     border: 2px solid #ccc;
  } 
@@ -267,6 +311,12 @@ header{
     align-items: center;
     justify-content: space-between;
     font-size: 1em;
+ }
+ #menu_lateral_direita h1#titulo{
+    display: none;
+ }
+ .bold{
+    font-weight: bold;
  }
  #menu_lateral_direita .caixa.concluido{
     margin: 10px;
@@ -301,14 +351,24 @@ header{
  #menu_lateral_direita .icone_usuario{
     margin: 10px;
     width: 40%;
-    height: 80%;
+    height: 50%;
     border: 1px solid rgb(0, 0, 0, 0.4);
-    background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload);
+    background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload) no-repeat center center;
     background-size: 100%;
+ }
+ #menu_lateral_direita a{
+    font-size: 1.1em;
+    margin-top: 15px;
+    text-decoration:underline;
+    color: var(--all-color-font);
+ }
+ #menu_lateral_direita a:hover{
+    font-size: 1.15em;
+    color:rgb(0, 192, 135);
  }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
     
    /* Header */
    #botoes_header{
@@ -363,6 +423,102 @@ header{
         display:none;
     }
     /* Fim Header */
+
+     #container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+     #container #conteudo_principal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    #menu_lateral_esquerda{
+        width: 90%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: initial;
+        border: 2px solid #ccc;
+        margin-bottom: 30px;
+     }
+     #menu_lateral_esquerda .caixa{
+         width: 1000%;
+      }
+     #menu_lateral_esquerda .caixa h3{
+         text-align: center;
+         margin: 2px 0px;
+         color: rgb(99, 192, 175);
+         font-size: 1.4em;
+      }
+      .barra{
+          height: 80%;
+      }
+      .barra::after{
+          content: " ";
+          text-indent: -5000px;
+          height: 100%;
+          width: 1px;
+          background-color: rgb(0,0,0,0.5);
+      }
+     
+      #menu_lateral_esquerda .caixa ul li{
+         padding: 10px 15px;
+         font-size: 1.2em;   
+         text-align: center;
+      }
+      #menu_lateral_esquerda .caixa ul li:hover{
+         background-color: var(--bg-menu-drop-hover);
+         cursor: pointer;
+     }
+
+     #menu_meio{
+        width: 90%;
+        height: 700px;
+        border: 2px solid #ccc;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+     }
+     #menu_meio .caixa_info #caixa_imagem #imagem{
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        border: 1px solid #ccc;
+        background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+        background-size: 80%;
+
+     }
+
+     #menu_lateral_direita{
+        width: 90%;    
+        display: flex;
+        align-items: center;
+       /* justify-content: center; */
+        flex-direction: column;
+        border: 2px solid #ccc;
+        margin-bottom: 30px;
+     } 
+     #menu_lateral_direita .icone_usuario{
+        margin: 10px;
+        width: 20%;
+        height: 80%;
+        border: 1px solid rgb(0, 0, 0, 0.4);
+        background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload) no-repeat center center;
+        background-size: 100%;
+     }
+     #container h1#titulo{
+        display: block;
+     }
+    
     
 }
 
@@ -373,11 +529,6 @@ header{
     }
     header nav{
         display: none;
-    }
-    #box_informativo p{
-        font-size: 1.2em;
-        text-align: justify;
-        padding: 0 50px; 
     }
     #logo{
         width: 16.5%;
@@ -412,18 +563,73 @@ header{
         width: 85%;
     }
     /* FIM Header */
+    #menu_meio .caixa_info{
+        width: 80%;
+        height: 50%;
+        border: 2px solid #ccc;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+     
     #container #conteudo_principal{
         justify-content: center;
     }
     #menu_lateral_esquerda{
-        width: 50%;
-        height: 550px;
         display: none;
      }
     #menu_lateral_direita{
-        width: 20%;
-        height: 550px;
         display: none;
+     }
+
+     #menu_meio{
+        width: 90%;
+        height: 1000px;
+        border: 2px solid #ccc;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+    #menu_meio .caixa_sobre_mim,  #menu_meio .caixa_info{
+        width: 95%;
+        height: 600px;
+        border: 2px solid #ccc;
+        margin: 10px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     #menu_meio .caixa_info #caixa_imagem{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     #menu_meio .caixa_info #imagem{
+       
+        background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+        background-size: 70%;
+     }
+     #menu_meio .caixa_info #caixa_texto{
+        width: 100%;
+        height: 400px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+     }
+     #menu_meio .caixa_info #caixa_texto #texto{
+        width: 90%;
+        height: 70%;
+        border: 2px solid #ccc;
+        padding: 10px;
      }
  }
 
