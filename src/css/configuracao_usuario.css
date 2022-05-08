@@ -8,8 +8,8 @@
     background-color: transparent;
 }
  :root{
-    --bg-padrao:white;
-    --bg-destaque: rgb(203, 215, 227, 0.3);
+    --bg-padrao:black;
+    --bg-destaque: rgb(255, 255, 255);
     --logo-imagem: url(../img/logo.png);
 
     --bg-menu-drop:rgba(203, 215, 227, 0.541);

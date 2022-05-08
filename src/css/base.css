@@ -8,15 +8,13 @@
     background-color: transparent;
 }
  :root{
-    --bg-padrao:white;
-    --bg-destaque: rgb(203, 215, 227, 0.3);
+    --bg-padrao:rgba(144, 247, 113, 0.11);
+    --bg-destaque: rgb(255, 255, 255);
     --logo-imagem: url(../img/logo.png);
 
-    --bg-menu-drop:rgba(203, 215, 227, 0.541);
-    --bg-menu-drop-hover:rgb(161, 196, 231);
-
+    --bg-menu-drop-celular:rgb(255, 255, 255);
+    --bg-menu-drop-hover:rgb(206, 248, 195);
     --cor-menu-drop: invert(0%);
-    --bg-menu-drop-celular:rgba(203, 215, 227);
 
     --all-color-font: rgb(0, 0, 0, 0.9);
     --destaque-color-font: rgb(0, 192, 135);
@@ -32,12 +30,10 @@
     --bg-destaque:rgb(59, 60, 61);
     --logo-imagem: url(../img/logo_branca.png);
     
-    --bg-menu-drop:rgba(147, 148, 148, 0.747);
+    --bg-menu-drop-celular:rgb(59, 60, 61);;
     --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
-
     --cor-menu-drop: invert(100%);
-    --bg-menu-drop-celular:rgba(147, 148, 148);
-
+    
     --all-color-font: rgba(255, 255, 255, 0.9);
     --destaque-color-font: rgb(219, 255, 17);
 
@@ -58,13 +54,18 @@ body{
 header{
     height: 70px;
     width: 100%;
-    background-color: var(--bg-padrao);
+    background-color: var(--bg-destaque);
+    position: fixed;
 
     display: flex;
     align-items:center;
     justify-content: space-between;
+    z-index: 100;
+    border-bottom: 2px solid rgba(204, 204, 204, 0.37);
 }
-
+#separador{
+    height: 70px;width: 100%;
+}
 /* LOGO HEADER */
 
 #logo{
@@ -174,11 +175,14 @@ header nav ul li a:hover{
     width: 50px;
     display: none;
 }
-#menu_drop img {
+#menu_drop #btn_drop{
     height: 40px;
     width: 40px;
     cursor: pointer;
-    filter: var(--cor-menu-drop)
+    filter: var(--cor-menu-drop);
+    background: url(../img/menu_hamburguer.png) no-repeat center center;
+    background-size: 100%;
+    text-indent: 1000px;
 }
 
 /* FIM HEADER */
@@ -198,25 +202,36 @@ header nav ul li a:hover{
      transition: 0.5s;
      }
      #nav_drop_down{
-         display: none;
+         display: block;
          position: absolute;
-         width: 450px;
-         z-index: 100;
+         width: 0px;
          background-color: var(--bg-menu-drop-celular);
-         border-radius: 0%;
-         height: calc(100vh);
-         text-align: left;
- 
          right: 0; 
          top: 70px;
+
+         transition: .6s;
+         z-index: 1000;
+         height: calc(100vh - 70px);
+         visibility: hidden;
+         overflow-y: hidden;
+
      }
+     #menu_drop.active #nav_drop_down{
+        width: 450px;
+        visibility: visible;
+        overflow-y: auto;
+ 
+     }
+     #menu_drop.active #btn_drop{
+        background-image: url(../img/menu_hamburguer_X.png);
+      }
      #nav_drop_down li{
          width: 100%;
-         height: calc(14.3vh);
+         height: calc(14vh);
+         
          display: flex;
          align-items: center;
          justify-content:center;
-         flex-direction: column;
      }
      #nav_drop_down ul li a{
          display: block;
@@ -230,10 +245,6 @@ header nav ul li a:hover{
      #nav_drop_down li:hover{
          background-color: var(--bg-menu-drop-hover);
          cursor: pointer;
-     }
-     #menu_drop.active #nav_drop_down{
-         display: block;
- 
      }
      .ViewCelular{
          display:none;
@@ -263,18 +274,27 @@ header nav ul li a:hover{
         height: 70px;
     }
     #nav_drop_down{
-        display: none;
+        display: block;
         position: absolute;
         width: 100%;
-        z-index: 100;
         background-color: var(--bg-menu-drop-celular);
-        border-radius: 0%;
-        height: calc(100vh);
-        text-align: left;
+        height: 0px;
+        top: 70px;
+
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
     }
+    #menu_drop.active #nav_drop_down{
+        height: calc(100vh - 70px);
+        width: 100%;
+        visibility: visible;
+        overflow-y: auto;
+     }
     #nav_drop_down li{
         width: 100%;
-        height: calc(14.3vh);
+        height: calc(14vh);
         display: flex;
         align-items: center;
         justify-content:center;

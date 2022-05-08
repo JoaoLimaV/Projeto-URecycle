@@ -1,0 +1,123 @@
+
+/* ARTICLE - CONTEÚDOS PRINCIPAIS */
+
+/* ARTICLE - Imagem Apresentacao */
+#box_imagem_Apresentacao{
+    background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
+    height: 650px;
+}
+#box_imagem_Apresentacao h1{
+    font-size: 4.5em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
+}
+/* ARTICLE - BOX TEXTO */
+article{
+    font-size: 1.1em;
+    background-color: var(--bg-padrao);
+}
+article .titulo{
+    background-color: transparent;
+
+    width: 100%;  
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+}
+#box_informativo p{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 0 150px;
+}
+#box_informativo .box_imagens {
+    background: var(--bg-destaque);
+    background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+    background-size: 1000px;
+    height: 900px;
+}
+
+#box_informativo .box_videos{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    height: 700px;
+}
+#box_informativo .box_videos iframe{
+    width: 50%;
+    height: 700px;
+}
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--bg-destaque);
+    height: 50px;
+    font-size: 1.3em;
+}
+
+
+@media (max-width: 1024px) {
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
+        background-size: 800px;
+        
+    }
+   #box_informativo .box_imagens{
+        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+        background-size: 800px;
+        height: 725px;
+    }
+    #box_informativo p{
+        font-size: 1.2em;
+        text-align: justify;
+        padding: 0 100px; 
+    }
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
+        background-size: 800px;
+        width: 100%;
+        height: 650px;
+    }
+    #box_informativo .box_videos iframe{
+        width: 60%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 750px) {
+    #box_informativo .box_videos iframe{
+        width: 80%;
+        height: 300px;
+    }
+    #box_informativo .box_imagens {
+        background: var(--bg-destaque);
+        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+        background-size: 100%;
+        height: 550px;
+    
+    }
+    #box_imagem_Apresentacao{
+        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
+        background-size: 550px;
+        height: 400px;
+    }
+    #box_imagem_Apresentacao h1{
+        font-size: 2.5em;
+        text-align: center;
+        color: rgb(0, 192, 135);
+        text-shadow: 3px 3px rgba(255, 255, 255, 0.1); /* Vertical, Horizontal*/
+        margin: 0 0;
+    }
+    #box_informativo .titulo{
+        font-size: 1.4em;
+        text-align: center;
+        color: rgb(0, 192, 135);
+        margin: 20px;
+        width: 90%;
+    }
+ }
+
