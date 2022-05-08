@@ -19,7 +19,7 @@
     --bg-menu-drop-celular:rgba(203, 215, 227);
 
     --all-color-font: rgb(0, 0, 0, 0.9);
-    --destaque-color-font: red;
+    --destaque-color-font: rgb(0, 192, 135);
 
     --btn-dark-bg: url(../img/lua.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
@@ -45,7 +45,9 @@
     --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
     --btn-border: 2px solid white;
  }
+
 /* HEADER */
+
 body{
     color: var(--all-color-font);
     background-color: var(--bg-padrao);
@@ -62,7 +64,9 @@ header{
     align-items:center;
     justify-content: space-between;
 }
+
 /* LOGO HEADER */
+
 #logo{
     width: 16.5%;
     height: 70px;
@@ -97,6 +101,7 @@ header nav ul li a:hover{
 }
 
 /*  BOTOES HEADER */
+
 #botoes_header{
     display: flex;
     align-items: center;
@@ -122,11 +127,11 @@ header nav ul li a:hover{
     overflow: hidden;
 }
 #botoes_header #darkmode:hover{
-    background: var();
-    background-color:  gray;
+    background: url(../img/lua_inverso.png) center center no-repeat;
+    background-color:  rgba(150, 150, 150, 0.377);
     border: 2px solid transparent;
     text-indent: -3000px;
-    background-size: 85%;
+    background-size: 90%;
     overflow: hidden;
 }
 
@@ -139,7 +144,7 @@ header nav ul li a:hover{
 }
 #botoes_header #interrogacao:hover{
     background: url(../img/interrogacao_inverso.png) center center no-repeat;
-    background-color:  gray;
+    background-color:  rgba(150, 150, 150, 0.377);
     border: 2px solid transparent;
     text-indent: -3000px;
     background-size: 85%;
@@ -161,7 +166,9 @@ header nav ul li a:hover{
     border: 2px solid transparent;
     color: white;
 }
+
 /* MENU DROPDOWN PARA O MOBILE */
+
 #menu_drop{
     height: 40px;
     width: 50px;
@@ -176,157 +183,67 @@ header nav ul li a:hover{
 
 /* FIM HEADER */
 
-/* ARTICLE - CONTEÚDOS PRINCIPAIS */
-
-/* ARTICLE - Imagem Apresentacao */
-#box_imagem_Apresentacao{
-    background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-    height: 650px;
-}
-#box_imagem_Apresentacao h1{
-    font-size: 4.5em;
-    text-align: center;
-    color: rgb(0, 192, 135);
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
-    margin: 0 0;
-}
-/* ARTICLE - BOX TEXTO */
-article{
-    font-size: 1.1em;
-    background-color: var(--bg-padrao);
-}
-article .titulo{
-    font-size: 2em;
-    text-align: center;
-    color: rgb(0, 192, 135);
-    margin: 20px;
-    
-}
-#box_informativo p{
-    font-size: 1.2em;
-    text-align: justify;
-    padding: 0 150px;
-    
-}
-#box_informativo .box_imagens {
-    background: var(--bg-destaque);
-    background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
-    background-size: 1000px;
-    height: 900px;
-
-}
-
-#box_informativo .box_videos{
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-    height: 700px;
-}
-#box_informativo .box_videos iframe{
-    width: 50%;
-    height: 700px;
-}
-/* Footer */
-footer{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-
-    margin-top: 30px;
-    background-color: var(--bg-destaque);
-    height: 50px;
-    font-size: 1.3em;
-}
-
+/* Header Mobile 1024px*/
 
 @media (max-width: 1024px) {
-    
-   /* Header */
-   #botoes_header{
-       display: none;
-   }
-   #menu_drop{
-       display: block;
-   }
-   header #nav_drop_down ul li a:hover{
-    color: var(--all-color-font);
-    transition: 0.5s;
-    }
-    #nav_drop_down{
+
+    #botoes_header{
         display: none;
-        position: absolute;
-        width: 450px;
-        z-index: 100;
-        background-color: var(--bg-menu-drop-celular);
-        border-radius: 0%;
-        height: calc(100vh);
-        text-align: left;
-
-        right: 0; 
-        top: 70px;
     }
-    #nav_drop_down li{
-        width: 100%;
-        height: calc(14.3vh);
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        flex-direction: column;
-    }
-    #nav_drop_down ul li a{
+    #menu_drop{
         display: block;
-        font-size: 1.5em;
-        text-align: center;
-        width: 86%;
-        height: 80px;
-        border: transparent;
     }
-
-    #nav_drop_down li:hover{
-        background-color: var(--bg-menu-drop-hover);
-        cursor: pointer;
-    }
-    #menu_drop.active #nav_drop_down{
-        display: block;
-
-    }
-    .ViewCelular{
-        display:none;
-    }
-    /* Fim Header */
-
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 800px;
-        
-    }
-   #box_informativo .box_imagens{
-        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
-        background-size: 800px;
-        height: 725px;
-    }
-    #box_informativo p{
-        font-size: 1.2em;
-        text-align: justify;
-        padding: 0 100px; 
-    }
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 800px;
-        width: 100%;
-        height: 650px;
-    }
-    #box_informativo .box_videos iframe{
-        width: 60%;
-        height: 400px;
-    }
-    
-
+    header #nav_drop_down ul li a:hover{
+     color: var(--all-color-font);
+     transition: 0.5s;
+     }
+     #nav_drop_down{
+         display: none;
+         position: absolute;
+         width: 450px;
+         z-index: 100;
+         background-color: var(--bg-menu-drop-celular);
+         border-radius: 0%;
+         height: calc(100vh);
+         text-align: left;
+ 
+         right: 0; 
+         top: 70px;
+     }
+     #nav_drop_down li{
+         width: 100%;
+         height: calc(14.3vh);
+         display: flex;
+         align-items: center;
+         justify-content:center;
+         flex-direction: column;
+     }
+     #nav_drop_down ul li a{
+         display: block;
+         font-size: 1.5em;
+         text-align: center;
+         width: 86%;
+         height: 80px;
+         border: transparent;
+     }
+ 
+     #nav_drop_down li:hover{
+         background-color: var(--bg-menu-drop-hover);
+         cursor: pointer;
+     }
+     #menu_drop.active #nav_drop_down{
+         display: block;
+ 
+     }
+     .ViewCelular{
+         display:none;
+     }
 }
+/* Fim Header Mobile 1024px*/
 
+/* Header Mobile 750px*/
 @media (max-width: 750px) {
-    /* Header */
+    
     .ViewCelular{
         display:block;
     }
@@ -354,7 +271,6 @@ footer{
         border-radius: 0%;
         height: calc(100vh);
         text-align: left;
-         
     }
     #nav_drop_down li{
         width: 100%;
@@ -370,36 +286,31 @@ footer{
         text-align: center;
         width: 85%;
     }
-    /* FIM Header */
-    #box_informativo .box_videos iframe{
-        width: 80%;
-        height: 300px;
-    }
-    #box_informativo .box_imagens {
-        background: var(--bg-destaque);
-        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
-        background-size: 100%;
-        height: 550px;
-    
-    }
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 550px;
-        height: 400px;
-    }
-    #box_imagem_Apresentacao h1{
-        font-size: 2.5em;
-        text-align: center;
-        color: rgb(0, 192, 135);
-        text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
-        margin: 0 0;
-    }
-    article .titulo{
-        font-size: 1.5em;
-        text-align: center;
-        color: rgb(0, 192, 135);
-        margin: 20px;
-        
-    }
- }
+}
+/* Fim Header Mobile 750px*/
 
+/* ARTICLE - BOX TEXTO */
+article{
+    font-size: 1.1em;
+    background-color: var(--bg-padrao);
+}
+article .titulo{
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    margin: 20px;
+}
+.clear{
+    clear: both;
+}
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+    margin-top: 30px;
+    background-color: var(--bg-destaque);
+    height: 50px;
+    font-size: 1.3em;
+}

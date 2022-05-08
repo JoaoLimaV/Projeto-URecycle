@@ -1,0 +1,635 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    text-decoration: none;
+    border:0;
+    background-color: transparent;
+}
+ :root{
+    --bg-padrao:white;
+    --bg-destaque: rgb(203, 215, 227, 0.3);
+    --logo-imagem: url(../img/logo.png);
+
+    --bg-menu-drop:rgba(203, 215, 227, 0.541);
+    --bg-menu-drop-hover:rgb(255, 255, 255);
+
+    --cor-menu-drop: invert(0%);
+    --bg-menu-drop-celular:rgba(239, 241, 243, 0.952);
+
+    --all-color-font: rgb(0, 0, 0, 0.9);
+    --destaque-color-font: red;
+
+    --btn-dark-bg: url(../img/lua.png) center center no-repeat;
+    --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
+    --btn-perfil-bg: url(../img/icone_usuario.png) center center no-repeat;
+    --btn-border: 2px solid black;
+    
+ }
+
+ .dark-mode:root{
+    --bg-padrao: rgb(43, 43, 43);
+    --bg-destaque:rgb(59, 60, 61);
+    --logo-imagem: url(../img/logo_branca.png);
+    
+    --bg-menu-drop:rgba(147, 148, 148, 0.747);
+    --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
+
+    --cor-menu-drop: invert(100%);
+    --bg-menu-drop-celular:rgba(147, 148, 148);
+
+    --all-color-font: rgba(255, 255, 255, 0.9);
+    --destaque-color-font: rgb(219, 255, 17);
+
+    --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
+    --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
+    --btn-perfil-bg: url(../img/icone_usuario.png) center center no-repeat;
+    --btn-border: 2px solid white;
+ }
+/* HEADER */
+body{
+    color: var(--all-color-font);
+    background-color: var(--bg-padrao);
+    min-width: 400px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+header{
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-padrao);
+
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+/* LOGO HEADER */
+#logo{
+    width: 16.5%;
+    height: 70px;
+}
+
+#logo a{
+    display: block;
+    width: 135px;
+    background: var(--logo-imagem) center right no-repeat;
+    background-size: 100%;
+    text-indent: -3000px;
+    height: 70px;
+}
+/*  BOTOES HEADER */
+#botoes_header{
+    display: flex;
+    align-items: center;
+   
+}
+#botoes_header .btn_redondo{
+    text-align: center;
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid rgb(2, 2, 2, 0.5);
+    padding: 0 15px;    
+    margin: 0 5px;
+}
+
+#botoes_header #darkmode{
+    text-indent: -3000px;
+    background: var(--btn-dark-bg);
+    border: var(--btn-border);
+    background-size: 90%;
+    overflow: hidden;
+}
+#botoes_header #darkmode:hover{
+    background: url(../img/lua_inverso.png) center center no-repeat;
+    background-color:  rgba(150, 150, 150, 0.377);
+    border: 2px solid transparent;
+    text-indent: -3000px;
+    background-size: 90%;
+    overflow: hidden;
+}
+
+#botoes_header #interrogacao{
+    text-indent: -3000px;
+    background: var(--btn-interrogacao-bg);
+    border: var(--btn-border);
+    background-size: 85%;
+    overflow: hidden;
+}
+#botoes_header #interrogacao:hover{
+    background: url(../img/interrogacao_inverso.png) center center no-repeat;
+    background-color:  rgba(150, 150, 150, 0.377);
+    border: 2px solid transparent;
+    text-indent: -3000px;
+    background-size: 85%;
+    overflow: hidden;
+}
+
+#botoes_header #perfil{
+    text-indent: -3000px;
+    background: var(--btn-perfil-bg);
+    background-size: 100%;
+    border: var(--btn-border);
+    overflow: hidden;
+}
+#botoes_header #perfil:hover{
+    background: var(--btn-perfil-bg);
+    background-color:  rgba(150, 150, 150, 0.377);
+    border: 2px solid transparent;  
+    background-size: 100%;
+    overflow: hidden;
+    text-indent: -3000px;
+}
+/* MENU DROPDOWN PARA O MOBILE */
+#menu_drop{
+    height: 40px;
+    width: 50px;
+    display: none;
+}
+#menu_drop img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    filter: var(--cor-menu-drop)
+}
+
+/* FIM HEADER */
+
+/* COMEÇO HEADER */
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+#container h1#titulo{
+    color: rgb(0, 192, 135);
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+#container #conteudo_principal{
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+#menu_lateral_esquerda, #menu_lateral_direita{
+    background-color: var(--bg-destaque);
+}
+
+#menu_lateral_esquerda{
+   width: 20%;
+   height: 700px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   border: 2px solid #ccc;
+}
+#menu_lateral_esquerda .caixa{
+    width: 100%;
+    padding: 30px;
+ }
+#menu_lateral_esquerda .caixa h3{
+    text-align: center;
+    color: rgb(99, 192, 175);
+    font-size: 1.4em;
+ }
+ .barra{
+     width: 80%;
+ }
+ .barra::after{
+     content: " ";
+     text-indent: -5000px;
+     margin: 0 auto;
+     width: 100%;
+     height: 2px;
+     background-color: rgb(0,0,0,0.5);
+     display:block;
+     margin-bottom: 0px;
+ }
+
+ #menu_lateral_esquerda .caixa ul li{
+    padding: 13px;
+    font-size: 1.2em;   
+ }
+ #menu_lateral_esquerda .caixa ul li:hover{
+    background-color: var(--bg-menu-drop-hover);
+    cursor: pointer;
+}
+
+#menu_meio{
+    width: 57%;
+    height: 700px;
+    border: 2px solid #ccc;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+#menu_meio .caixa_sobre_mim,  #menu_meio .caixa_info{
+    width: 95%;
+    height: 300px;
+    border: 2px solid #ccc;
+    margin: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ #menu_meio h3{
+    width: 90%;
+    text-align: left;
+    color: rgb(99, 192, 175);
+    font-size: 1.2em;
+ }
+ #menu_meio .caixa_info #caixa_imagem{
+    width: 35%;
+    height: 250px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ #menu_meio .caixa_info #imagem{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+    background-size: 100%;
+ }
+ #menu_meio .caixa_info #caixa_texto{
+    width: 65%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+ }
+ #menu_meio .caixa_info #caixa_texto #texto{
+    width: 80%;
+    height: 70%;
+    border: 2px solid #ccc;
+    padding: 10px;
+ }
+ #btn_editar{
+   width: 160px;
+   height: 30px;
+   background-color: rgb(49, 197, 153);
+   border-radius: 2%;
+   cursor: pointer;
+   font-size: 1.1em;
+   color: white;
+   margin: 5px;
+ }
+
+ #menu_meio .caixa_sobre_mim .colown{
+    width: 45%;
+    text-align: justify;
+    margin: 10px;
+  }
+
+#menu_lateral_direita{
+    width: 20%;
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #ccc;
+ } 
+ .caixa.concluido, .caixa.pendente, .caixa.cancelado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+ }
+ #menu_lateral_direita h1#titulo{
+    display: none;
+ }
+ .bold{
+    font-weight: bold;
+ }
+ #menu_lateral_direita .caixa.concluido{
+    margin: 10px;
+    width: 80%;
+    height: 100px;
+    border: 2px solid rgba(0, 128, 0);
+ }
+ #menu_lateral_direita .caixa.concluido:hover{
+    background-color: rgba(0, 128, 0, 0.2);
+    cursor: pointer;
+ }
+ #menu_lateral_direita .caixa.pendente{
+    margin: 10px;
+    width: 80%;
+    height: 100px;
+    border: 2px solid rgba(255, 166, 0);
+ }
+ #menu_lateral_direita .caixa.pendente:hover{
+    background-color: rgba(255, 166, 0, 0.2);
+    cursor: pointer;
+ }
+ #menu_lateral_direita .caixa.cancelado{
+    margin: 10px;
+    width: 80%;
+    height: 100px;
+    border: 2px solid rgba(255, 0, 0);;
+ }
+ #menu_lateral_direita .caixa.cancelado:hover{
+    background-color: rgba(255, 0, 0, 0.2);
+    cursor: pointer;
+ }
+ #menu_lateral_direita .icone_usuario{
+    margin: 10px;
+    width: 40%;
+    height: 50%;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload) no-repeat center center;
+    background-size: 100%;
+ }
+ #menu_lateral_direita a{
+    font-size: 1.1em;
+    margin-top: 15px;
+    text-decoration:underline;
+    color: var(--all-color-font);
+ }
+ #menu_lateral_direita a:hover{
+    font-size: 1.15em;
+    color:rgb(0, 192, 135);
+ }
+
+
+@media (max-width: 1250px) {
+    
+   /* Header */
+   #botoes_header{
+       display: none;
+   }
+   #menu_drop{
+       display: block;
+   }
+   header #nav_drop_down ul li a:hover{
+    color: var(--all-color-font);
+    transition: 0.5s;
+    }
+    #nav_drop_down{
+        display: none;
+        position: absolute;
+        width: 450px;
+        z-index: 100;
+        background-color: var(--bg-menu-drop-celular);
+        border-radius: 0%;
+        height: calc(100vh);
+        text-align: left;
+
+        right: 0; 
+        top: 70px;
+    }
+    #nav_drop_down li{
+        width: 100%;
+        height: calc(14.3vh);
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    #nav_drop_down ul li a{
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        width: 86%;
+        height: 80px;
+        border: transparent;
+    }
+
+    #nav_drop_down li:hover{
+        background-color: var(--bg-menu-drop-hover);
+        cursor: pointer;
+    }
+    #menu_drop.active #nav_drop_down{
+        display: block;
+
+    }
+    .ViewCelular{
+        display:none;
+    }
+    /* Fim Header */
+
+     #container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+     #container #conteudo_principal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    #menu_lateral_esquerda{
+        width: 90%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: initial;
+        border: 2px solid #ccc;
+        margin-bottom: 30px;
+     }
+     #menu_lateral_esquerda .caixa{
+         width: 1000%;
+      }
+     #menu_lateral_esquerda .caixa h3{
+         text-align: center;
+         margin: 2px 0px;
+         color: rgb(99, 192, 175);
+         font-size: 1.4em;
+      }
+      .barra{
+          height: 80%;
+      }
+      .barra::after{
+          content: " ";
+          text-indent: -5000px;
+          height: 100%;
+          width: 1px;
+          background-color: rgb(0,0,0,0.5);
+      }
+     
+      #menu_lateral_esquerda .caixa ul li{
+         padding: 10px 15px;
+         font-size: 1.2em;   
+         text-align: center;
+      }
+      #menu_lateral_esquerda .caixa ul li:hover{
+         background-color: var(--bg-menu-drop-hover);
+         cursor: pointer;
+     }
+
+     #menu_meio{
+        width: 90%;
+        height: 700px;
+        border: 2px solid #ccc;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+     }
+     #menu_meio .caixa_info #caixa_imagem #imagem{
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        border: 1px solid #ccc;
+        background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+        background-size: 80%;
+
+     }
+
+     #menu_lateral_direita{
+        width: 90%;    
+        display: flex;
+        align-items: center;
+       /* justify-content: center; */
+        flex-direction: column;
+        border: 2px solid #ccc;
+        margin-bottom: 30px;
+     } 
+     #menu_lateral_direita .icone_usuario{
+        margin: 10px;
+        width: 20%;
+        height: 80%;
+        border: 1px solid rgb(0, 0, 0, 0.4);
+        background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload) no-repeat center center;
+        background-size: 100%;
+     }
+     #container h1#titulo{
+        display: block;
+     }
+    
+    
+}
+
+@media (max-width: 750px) {
+    /* Header */
+    .ViewCelular{
+        display:block;
+    }
+    header nav{
+        display: none;
+    }
+    #logo{
+        width: 16.5%;
+    }
+    #logo a img{
+        width: 100px;
+        height: 70px;
+    }   
+    #nav_drop_down{
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        background-color: var(--bg-menu-drop-celular);
+        border-radius: 0%;
+        height: calc(100vh);
+        text-align: left;
+         
+    }
+    #nav_drop_down li{
+        width: 100%;
+        height: calc(25vh);
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    #nav_drop_down ul li a{
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        width: 85%;
+    }
+    /* FIM Header */
+    #menu_meio .caixa_info{
+        width: 80%;
+        height: 50%;
+        border: 2px solid #ccc;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+     
+    #container #conteudo_principal{
+        justify-content: center;
+    }
+    #menu_lateral_esquerda{
+        display: none;
+     }
+    #menu_lateral_direita{
+        display: none;
+     }
+
+     #menu_meio{
+        width: 90%;
+        height: 1000px;
+        border: 2px solid #ccc;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+    #menu_meio .caixa_sobre_mim,  #menu_meio .caixa_info{
+        width: 95%;
+        height: 600px;
+        border: 2px solid #ccc;
+        margin: 10px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     #menu_meio .caixa_info #caixa_imagem{
+        width: 80%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     #menu_meio .caixa_info #imagem{
+       
+        background: url(../img/configuracao_usuario/icone_usuario.png) center center no-repeat;
+        background-size: 70%;
+     }
+     #menu_meio .caixa_info #caixa_texto{
+        width: 100%;
+        height: 400px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+     }
+     #menu_meio .caixa_info #caixa_texto #texto{
+        width: 90%;
+        height: 70%;
+        border: 2px solid #ccc;
+        padding: 10px;
+     }
+ }
+
