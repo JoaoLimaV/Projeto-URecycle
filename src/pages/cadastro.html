@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/src/css/cadastro.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"/>
     <title>Cadastro U-Recycle</title>
 </head>
 <body>
     <header class="">
         <a href="">
-            <img src="/src/img/logo.png">
+            <img src="../img/logo.png">
         </a>
         <div>
             <p>Dark mode</p>
@@ -20,40 +21,49 @@
         <fieldset class="container">
             <div class="img_form">
                 <h1>Você faz a diferença</h1>
-                <img src="/src/img/Cadastro.png" alt="">
+                <img src="../img/Cadastro.png" alt="">
             </div>
-            <form action="">
+            <div class="form_div">
                 <h1>Cadastro</h1>
-
-                <div class="nome" id="nomeCompleto">
-                    <div id="nomeDiv"><input type="text" placeholder="Nome" id="nome"></div>
-                    <div id="sobrenomeDiv"><input type="text" placeholder="Sobrenome" id="sobrenome"></div>
-                </div>
+                <form action="">
+                     <div class="form_nome">
+                        <input type="text" placeholder="Nome" id="nome">
+                        
+                        <input type="text" placeholder="Sobrenome" id="sobrenome">
+                     </div>   
+                    
                 
-                <div class="data">
+                <div>
                     <input type="text" placeholder="E-mail">
                     <input type="text" placeholder="Senha">
                     <input type="text" placeholder="Telefone">
                     <input type="text" placeholder="Cidade">
                 </div>
-
-                <div class="radio">
-                    <div id="pf">
-                        <input type="radio" name="pessoaFisica" id="pessoaFisica"><label for=pessoaFisica">Pessoa Fisica</label>
+                    
+                    <div class="radio">
+                        <div id="pf">
+                            <input type="radio" name="userType" id="pessoaFisica" class="radio"><label for=pessoaFisica">Pessoa Fisica</label>
+                        </div>
+                        <div id="pj">
+                            <input type="radio" name="userType" id="pessoaJuridica" class="radio"><label for="pessoaJuridica">Pessoa Juridica</label>
+                        </div>
+                    </div> 
+                    <button id="btn_cadastrar">Cadastrar</button>
+                    <div class="redes_sociais">
+                        <button id="btn_facebook">Facebook</button>
+                        <button id="btn_google">
+                            <p class="G">G</p>
+                            <p class="o">o</p>
+                            <p class="o">o</p>
+                            <p class="g">g</p>
+                            <p class="l">l</p>
+                            <p class="e">e</p>
+                        </button>
                     </div>
-                    <div id="pj">
-                        <input type="radio" name="pessoaJuridica" id="pessoaJuridica"><label for="pessoaJuridica">Pessoa Juridica</label>
-                    </div>
-                </div> 
-                <button>Cadastrar</button>
-                <div class="redes_sociais">
-                    <button>Facebook</button>
-                    <button>Google</button>
-                </div>
-                <a href="">Já possuo cadastro</a>
-                <img src="/src/img/logo.png">
-            </form>
-        </fieldset>     
-   
+                </form>
+                <a href="" class="possui_cadastro">Já possuo cadastro</a>
+                <img src="../img/logo.png">
+            </div>
+        </fieldset>
 </body>
 </html>
