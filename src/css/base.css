@@ -8,7 +8,7 @@
     background-color: transparent;
 }
  :root{
-    --bg-padrao:rgba(144, 247, 113, 0.11);
+    --bg-padrao:rgb(247, 252, 245);
     --bg-destaque: rgb(255, 255, 255);
     --logo-imagem: url(../img/logo.png);
 
@@ -21,6 +21,7 @@
 
     --btn-dark-bg: url(../img/lua.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
+    --btn-perfil-bg:url(../img/icone_usuario_preto.png) no-repeat center center;
     --btn-border: 2px solid black;
     
  }
@@ -39,6 +40,7 @@
 
     --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
     --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
+    --btn-perfil-bg:url(../img/icone_usuario.png) no-repeat center center;
     --btn-border: 2px solid white;
  }
 
@@ -130,7 +132,6 @@ header nav ul li a:hover{
 #botoes_header #darkmode:hover{
     background: url(../img/lua_inverso.png) center center no-repeat;
     background-color:  rgba(150, 150, 150, 0.377);
-    border: 2px solid transparent;
     text-indent: -3000px;
     background-size: 90%;
     overflow: hidden;
@@ -146,9 +147,21 @@ header nav ul li a:hover{
 #botoes_header #interrogacao:hover{
     background: url(../img/interrogacao_inverso.png) center center no-repeat;
     background-color:  rgba(150, 150, 150, 0.377);
-    border: 2px solid transparent;
     text-indent: -3000px;
     background-size: 85%;
+    overflow: hidden;
+}
+#botoes_header #perfil{
+    text-indent: 5000px;
+    background: var(--btn-perfil-bg);
+    background-size: 110%;
+    border: var(--btn-border);
+ }
+ #botoes_header #perfil:hover{
+    background: url(../img/icone_usuario.png) center center no-repeat;
+    background-size: 110%;
+    background-color:  rgba(150, 150, 150, 0.377);
+    text-indent: -3000px;
     overflow: hidden;
 }
 
@@ -167,6 +180,7 @@ header nav ul li a:hover{
     border: 2px solid transparent;
     color: white;
 }
+
 
 /* MENU DROPDOWN PARA O MOBILE */
 
@@ -308,27 +322,13 @@ header nav ul li a:hover{
     }
 }
 /* Fim Header Mobile 750px*/
-
-/* ARTICLE - BOX TEXTO */
-article{
-    font-size: 1.1em;
-    background-color: var(--bg-padrao);
-}
-article .titulo{
-    font-size: 2em;
-    text-align: center;
-    color: rgb(0, 192, 135);
-    margin: 20px;
-}
-.clear{
-    clear: both;
-}
 /* Footer */
 footer{
     display: flex;
     align-items: center;
     justify-content:center;
 
+    border-top: 2px solid rgba(204, 204, 204);
     margin-top: 30px;
     background-color: var(--bg-destaque);
     height: 50px;

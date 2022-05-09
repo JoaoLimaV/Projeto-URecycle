@@ -5,55 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/configuracao_usuario.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
     <script type="text/javascript" src="../js/funcionalidades.js"></script>
     <title>Meu Perfil</title>
 </head>
 <body>
     <main>
-        <!-- Inicio Cabeçalho-->
         <header>
             <!-- Inicio Logo-->
-                <div id="logo"> 
-                    <a href="">
-                        U-Recycle
-                    </a>
-                </div> <!-- FIM Logo-->
-
-                <!-- Inicio BOTÕES-->
-                <div id="botoes_header">
-                    <button class = "btn_redondo" id = "interrogacao" onclick= 'trocarPag()'>Dúvidas</button>
-                    <button class = "btn_redondo"  id = "darkmode" onclick="darkmode()">Dark Mode</button>
-                    <button class = "btn_redondo"  id = "perfil" onclick="darkmode()">PERFIL</button>
-                </div><!-- FIM BOTÕES-->
-
-                <div id="menu_drop">
-                    <button onclick="dropdown()" id ="btn_drop">
-                        <img src="/src/img/download-removebg-preview.png">
-                    </button>
-                    
-                    <nav id = nav_drop_down> 
-                        <ul>
-                            <li >
-                                <a href="">Entrar</a>
-                            </li>
-                            <li>
-                                <a href="">Cadastrar</a>
-                            </li>
-                            <li>
-                                <a onclick="darkmode()">Dark-Mode</a>
-                            </li>
-                            <li>
-                                <a href="">Dúvidas</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header><!-- FIM Cabeçalho-->
-
+            <div id="logo"> 
+                <a href="">
+                    U-Recycle
+                </a>
+            </div> <!-- FIM Logo-->
+    
+            <!-- Inicio BOTÕES-->
+            <div id="botoes_header">
+                <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+                <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
+                <button class = "btn_redondo"  id = "perfil">PERFIL</button>
+            </div><!-- FIM BOTÕES-->
+            <div id="menu_drop">
+                <button onclick="dropdown()" id ="btn_drop">
+                    Menu
+                </button>
+            
+                <nav id = nav_drop_down> 
+                    <ul>
+                        <li>
+                            <a onclick="darkmode()">Dark-Mode</a>
+                        </li>
+                        <li>
+                            <a href="">Dúvidas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header><!-- FIM Cabeçalho-->
+        <div id = "separador"> </div>
             <!-- COMEÇO BARRA-LATERAL-ESQUERDA-->
             <article id = "container">
-
+                <!-- <button class = "btn_redondo"  id = "perfil" onclick="darkmode()">PERFIL</button>  -->
                 <h1 id="titulo">MINHA CONTA</h1>
                 <article id="conteudo_principal">
                     <article id="menu_lateral_esquerda">
