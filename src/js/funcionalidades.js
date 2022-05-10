@@ -1,7 +1,8 @@
+const $html = document.querySelector('html')
+const dark = document.getElementById('btn-dark')
+
 function darkmode(){
-    const $html = document.querySelector('html')
-    $html.classList.toggle('dark-mode')
-}
+        $html.classList.toggle('dark-mode')}
 
 function dropdown(){
     const nav = document.getElementById ('menu_drop'); 
@@ -10,4 +11,12 @@ function dropdown(){
 
 function envia_contato(){
     alert("Enviou legal!");
+}
+
+function duvidas(){
+    window.location.href = "/src/pages/pergunta_frequentes.html"
+}
+
+function cadastrar(){
+    window.location.href = "/src/pages/cadastro.html"
 }

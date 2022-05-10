@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/perguntas.css" media="screen" />
     
     <script type="text/javascript" src="../js/funcionalidades.js"></script>
+    <script type="text/javascript" src="../js/mudartexto.js"></script>
 
     <title>Document</title>
 
@@ -83,34 +84,113 @@
         <!---Inicio Barra Lateral-->
         <article id="lateral">
             <ul id="botoes_lateral">
-                <li><button class="btn_normal">Tópicos Recomendados</button></li>
-                <li><button class="btn_normal">Gerenciando sua conta</button></li>
-                <li><button class="btn_normal">Segurança e privacidade</button></li>
-                <li><button class="btn_normal">Dispositivos & Serviços Digitais</button></li>
-                <li><button class="btn_normal">Outros Tópicos e páginas de ajuda</button></li>
-                <li><button class="btn_normal">Lima Bobão</button></li>
+                <li><input label="Tópicos Recomendados" type="radio" id="recomendados" name="ajuda" value="recomendados" class="btn_normal" checked onchange="mudatexto1()"></li>
+                <li><input label="Gerenciamento de conta" type="radio" id="conta" name="ajuda" value="conta" class="btn_normal" onchange="mudatexto2()"></li>
+                <li><input label="Segurança e privacidade" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto3()"></li>
+                <li><input label="Dispositivos & Serviços Digitais" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto4()"></li>
+                <li><input label="Outros Tópicos e páginas de ajuda" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto5()"></li>
             </ul>
         </article>
         <!---Fim Barra Lateral-->
         <!---Inicio Caixas de perguntas-->
-        <article class="caixa">
-                <h4>Como fazer um pedido</h4>
-                <p class="texto_caixa">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
-                </p>
+        <article id="ajuda1">
+            <article class="caixa">
+                    <h4>Como fazer um pedido</h4>
+                    <p class="texto_caixa">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                    </p>
+                </article>
+            <article class="caixa">
+                    <h4>Nova legislação</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
             </article>
-        <div class="caixa">
-                <h4>Nova legislação</h4>
+            <article class="caixa">
+                <h4>Como reciclar</h4>
                 <p class="texto_caixa">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
-        </div>
-        <div class="caixa">
-            <h4>Que tesao</h4>
-            <p class="texto_caixa">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-        </div>
+            </article>
+        </article>
+
+        <article id="ajuda2">
+            <article class="caixa">
+                    <h4>Como criar uma conta</h4>
+                    <p class="texto_caixa">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                    </p>
+                </article>
+            <article class="caixa">
+                    <h4>Termos de serviço</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+            </article>
+            <article class="caixa">
+                <h4>Recuperação de conta</h4>
+                <p class="texto_caixa">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </article>
+        </article>
+
+        <article id="ajuda3">
+            <article class="caixa">
+                    <h4>Gerenciamento de senhas</h4>
+                    <p class="texto_caixa">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                    </p>
+                </article>
+            <article class="caixa">
+                    <h4>Deletar conta</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+            </article>
+            <article class="caixa">
+                <h4>Senha em duas etapas</h4>
+                <p class="texto_caixa">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </article>
+        </article>
+
+        <article id="ajuda4">
+            <article class="caixa">
+                    <h4>Como baixar o app</h4>
+                    <p class="texto_caixa">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                    </p>
+                </article>
+            <article class="caixa">
+                    <h4>Serviços unicos web</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+            </article>
+            <article class="caixa">
+                <h4>Dispositivos compativeis</h4>
+                <p class="texto_caixa">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+            </article>
+        </article>
+
+        <article id="ajuda5">
+            <article class="caixa">
+                    <h4>Metodos de pagamento</h4>
+                    <p class="texto_caixa">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                    </p>
+                </article>
+            <article class="caixa">
+                    <h4>Geolocalização</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+            </article>
+        </article>
         <!---Fim Caixas de perguntas-->
     </article>
     <article class="clear">
