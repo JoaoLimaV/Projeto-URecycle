@@ -85,7 +85,10 @@ header{
 }
 
 /* NAV HEADER */
-
+header nav{
+    float: left;
+    font-size: 1.2em;
+}
 header nav ul li{
     float: left;
     font-size: 1.3em;
@@ -108,7 +111,7 @@ header nav ul li a:hover{
 #botoes_header{
     display: flex;
     align-items: center;
-   
+    width: 16.5%;
 }
 #botoes_header .btn_redondo{
     text-align: center;
@@ -204,7 +207,9 @@ header nav ul li a:hover{
 /* Header Mobile 1024px*/
 
 @media (max-width: 1024px) {
-
+    header nav{
+        display: none;
+    }
     #botoes_header{
         display: none;
     }
@@ -260,18 +265,11 @@ header nav ul li a:hover{
          background-color: var(--bg-menu-drop-hover);
          cursor: pointer;
      }
-     .ViewCelular{
-         display:none;
-     }
 }
 /* Fim Header Mobile 1024px*/
 
 /* Header Mobile 750px*/
 @media (max-width: 750px) {
-    
-    .ViewCelular{
-        display:block;
-    }
     header nav{
         display: none;
     }
