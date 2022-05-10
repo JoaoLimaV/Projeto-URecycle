@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" type="text/css" href="/src/css/historico.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/src/fonts/font.css" media="screen">
+
+    <title>Historico</title>
+</head>
+<body>
+    <!-- Começo da Base HTML -->
+    <main>
+        <header>
+            <!-- Inicio Logo-->
+            <div id="logo"> 
+                <a href="/index.html">
+                    U-Recycle
+                </a>
+            </div> <!-- FIM Logo-->
+    
+            <!-- Inicio BOTÕES-->
+            <div id="botoes_header">
+                <button class="btn_redondo" id="interrogacao" onclick="duvidas()">Dúvidas</button>
+                <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
+                <button class="btn_normal" onclick="cadastrar()">Cadastrar</button>
+                <button class="btn_normal" onclick="cadastrar()">Entrar</button>
+            </div><!-- FIM BOTÕES-->
+            <div id="menu_drop">
+                <button onclick="dropdown()" id ="btn_drop">
+                    Menu
+                </button>
+                
+                <nav id = nav_drop_down> 
+                    <ul>
+                        <li class="ViewCelular">
+                            <a href="/index.html" >Home</a>
+                        </li>
+                        <li class="ViewCelular">
+                            <a href="/src/pages/reciclagem.html">Reciclagem</a>
+                        </li>
+                        <li class="ViewCelular">
+                            <a href="" >Dicas</a>
+                        </li>
+                        <li >
+                            <a href="/src/pages/cadastro.html">Entrar</a>
+                        </li>
+                        <li>
+                            <a href="/src/pages/cadastro.html">Cadastrar</a>
+                        </li>
+                        <li id="btn-dark">
+                            <a onclick="darkmode()">Dark-Mode</a>
+                        </li>
+                        <li>
+                            <a href="/src/pages/pergunta_frequentes.html">Dúvidas</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- FIM Cabeçalho-->
+    </main>
+    </header>
+    <!-- Fim da Base HTML -->
+
+    <!-- Começo do Historico -->
+    <div id="titulo">
+        <h1>Historico</h1>
+    </div>
+    <section>
+        <img id="produto" src="/src/img/historico/lata.png" alt="Exemplo de imagem">
+        <div id="detalhes">
+        <ul id="cima">
+            <li><strong>Endereço:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li><strong>Data do Pedido:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li><strong>Ponto de Referencia:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li><strong>Empresa Encarregada:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+        </div>
+        
+        <div id="status">
+        <svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg>
+        <p>Aprovado</p>
+          </div>
+
+          
+    </section>
+
+    <div id="baixo">
+        <p><strong>Descrição:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p><strong>Tipo:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p><strong>Fotos Enviadas:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p><strong>Nome do Cliente:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    
+    
+    
+    
+</body>
+<script src="/src/js/historico.js"></script>
+<script src="/src/js/funcionalidades.js"></script>
+</html>
