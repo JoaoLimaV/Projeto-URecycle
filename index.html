@@ -8,26 +8,141 @@
     <title>U-Recycle</title>
 
     <!-- Carrega o arquivo CSS da página -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/base.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="src/fonts/font.css" media="screen"/>
 
     <!-- Carrega o arquivo de Scripts da página -->
-    <script src="js/scripts.js"></script>
+    <script type="text/javascript" src="src/js/funcionalidades.js"></script>
 
 </head>
-    <body onload="loadPage()">
-        <header>
-
-            <nav></nav>
-    
-        </header>
-
-        <div class="wrapper">
-            <h1>U-Recycle</h1>
-        </div>
+    <body>
+        <main>
+            <header>
+                <!-- Inicio Logo-->
+                <div id="logo"> 
+                    <a href="index.html">
+                        U-Recycle
+                    </a>
+                </div> <!-- FIM Logo-->
         
-        <footer>
-            
-        </footer>
+                <!-- Inicio BOTÕES-->
+                <div id="botoes_header">
+                    <button class="btn_redondo" id="interrogacao" onclick="location.href='src/pages/pergunta_frequentes.html'">Dúvidas</button>
+                    <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
+                    <button class="btn_normal" onclick="location.href='src/pages/cadastro.html'">Cadastrar</button>
+                    <button class="btn_normal" onclick="location.href='src/pages/login.html'">Entrar</button>
+                </div><!-- FIM BOTÕES-->
+                <div id="menu_drop">
+                    <button onclick="dropdown()" id ="btn_drop">
+                        Menu
+                    </button>
+                    
+                    <nav id = nav_drop_down> 
+                        <ul>
+                            <li class="ViewCelular">
+                                <a href="" >Home</a>
+                            </li>
+                            <li class="ViewCelular">
+                                <a href="" class="aqui" >Reciclagem</a>
+                            </li>
+                            <li class="ViewCelular">
+                                <a href="" >Dicas</a>
+                            </li>
+                            <li >
+                                <a href="">Entrar</a>
+                            </li>
+                            <li>
+                                <a href="">Cadastrar</a>
+                            </li>
+                            <li>
+                                <a onclick="darkmode()">Dark-Mode</a>
+                            </li>
+                            <li>
+                                <a href="">Dúvidas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header><!-- FIM Cabeçalho-->
+            <div id = "separador">
+        
+            </div>
+            <!-- INICIO CONTEÚDOS-PRINCIPAIS-->
+            <article>
+                <!-- INICIO Carrossel-->
+                <article id ="box_imagem_Apresentacao">
+                    <h1 class = "titulo">
+                        Novidades
+                    </h1>
+                </article><!-- FIM Carrossel-->
+                
+                <!-- INICIO Título Quem Somos-->
+                <article id ="box_informativo">
+                    <h1 class = "titulo">
+                        Quem Somos
+                    </h1>
+                </article><!-- FIM  Título Quem Somos-->
+
+            </article><!-- FIM Imagem-Apresentacao-->
+
+                 <!-- INICIO Textos Informativos-->
+                <article id ="box_informativo">
+                    <p class = "caixa_texto">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                        sint quos nisi dolorem sequi, ex neque asperiores minima?
+                    </p>
+                    <br>
+                    <p class = "caixa_texto">
+                        Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                    </p>
+                    <br>
+                    <p class = "caixa_texto">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                        sint quos nisi dolorem sequi, ex neq
+                        sint quos nisi dolorem sequi, ex neque asperiores minima?
+                    </p>
+                    <br>
+                    <p class = "caixa_texto">
+                        Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, molestiae animi possimus 
+                    </p>
+                    <br>
+                </article>
+                
+                    <article id="box_informativo_contato">
+                        <h1 class = "titulo">Fale Conosco</h1>
+
+                        <p class = "caixa_texto_contato">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                            sint quos nisi dolorem sequi, ex neque asperiores minima?
+                        </p>
+
+                        <!-- INÍCIO Formulário de Contato -->
+                        <div id="form-contato">
+                            <form id="contato">
+                                <fieldset>
+                                    <label for="email">E-mail:</label>
+                                    <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                                    <label for="assunto">Assunto:</label>
+                                    <input type="text" id="assunto" name="assunto" placeholder="Ex.: Sugestão">
+
+                                    <label for="mensagem">Mensagem:</label>
+                                    <textarea id="mensagem" name="mensagem" placeholder="Ficou com alguma dúvida? Tem alguma sugestão? Escreva para nós"></textarea>
+
+                                    <input type="submit" value="Enviar" onclick="envia_contato()">
+                                </fieldset>
+                            </form>
+                        </div>
+                        <!-- FIM Formulário de Contato -->
+                    </article>
+            <footer>
+                Todos os Direitos Reservados &thinsp; <div class="aqui"> U-Recycle</div>
+            </footer>
+        </main>
     </body>
     
 </html>

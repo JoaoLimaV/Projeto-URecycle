@@ -1,16 +1,68 @@
-@font-face {
-    font-family: SourceSans;
-    src: url("SourceSansPro-SemiBold.ttf");
-    src: url("SourceSansPro-Regular.ttf");
+
+/* ARTICLE - CONTEÚDOS PRINCIPAIS */
+
+/* ARTICLE - Imagem Apresentacao */
+#box_imagem_Apresentacao{
+    background: var(--bg-destaque) url(https://studiosol-a.akamaihd.net/uploadfile/letras/playlists/3/4/5/b/345bf64886b24a82899bf05ab394e48e.jpg) no-repeat center center;
+    height: 430px;
+    width: 100%;
+}
+#box_imagem_Apresentacao h1{
+    font-size: 4em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
+}
+/* ARTICLE - BOX TEXTO */
+article{
+    font-size: 1.1em;
+    background-color: var(--bg-padrao);
+}
+article .titulo{
+    background-color: transparent;
+
+    width: 100%;  
+    font-size: 2em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+}
+#box_informativo p{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 0 150px;
 }
 
-h1 {
-    font-family: "SourceSans", sans-serif;
-    color: white;
+#box_informativo h1{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
 }
 
-.wrapper {
-    width: 1920px;
-    height: 1080px;
-    background-color: grey;
+#box_informativo_contato h1{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
+}
+
+#box_informativo_contato p{
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 0 150px;
+
+}
+
+#form-contato {
+    border: 2px solid black;
+
+}
+
+#contato {
+    display: inline;
+    border: 2px solid black;
+    height: 200px;
 }
