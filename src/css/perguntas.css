@@ -2,7 +2,7 @@
 
 /* ARTICLE - BOX TEXTO */
 article{
-    margin: 50px 6%;
+    margin: 50px 0 0 6%;
 }
 article .titulo{
     font-size: 4em;
@@ -16,7 +16,7 @@ label#pergunta{
     min-width: 400px;
 }
 input#pergunta{
-    width: 100%;
+    width: 94%;
     min-width: 400px;
     border: 1px solid rgb(210,210,210);
     padding: 2px;
@@ -30,7 +30,7 @@ input#pergunta::placeholder{
 }
 .caixa{
 	float: left;
-	margin: 0 0 25px 50px;
+	margin: 0 0 25px 25px;
     padding: 10px;
     border: 1px solid rgb(210,210,210);
     border-radius: 10px;
@@ -43,7 +43,7 @@ input#pergunta::placeholder{
 }
 #lateral{
     width: 220px;
-    height: 450px;
+    height: 100%;
 	float: left;
     margin: 0;
     font-size: 20px;;
@@ -106,11 +106,8 @@ footer{
     font-size: 1.3em;
 }
 @media (max-width: 1280px) {
-
     .caixa{
-        margin: 0 0 25px 25px;
         width: 370px;
-
     }
 }
 @media (max-width: 1024px) {

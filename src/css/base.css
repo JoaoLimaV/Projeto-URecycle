@@ -95,13 +95,17 @@ header nav ul li{
 }
 header nav ul li a{
     padding: 0 30px;
-    transition: 0.5s;
     color: var(--all-color-font);
 }
 header nav ul li a:hover{
     color: rgb(0, 192, 135);
     transition: 0.5s;
 }
+/* Não é pra estar aqui */
+#container #nav_itens ul li a{
+    color: var(--all-color-font);
+}
+/* Não é pra estar aqui */
 .aqui{
     color: var(--destaque-color-font);
 }
@@ -110,7 +114,8 @@ header nav ul li a:hover{
 
 #botoes_header{
     display: flex;
-    align-items: center;
+    align-items:end;
+    justify-content: end;
     width: 16.5%;
 }
 #botoes_header .btn_redondo{
