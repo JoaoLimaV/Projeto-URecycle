@@ -78,7 +78,7 @@ header{
 #logo a{
     display: block;
     width: 135px;
-    background: var(--logo-imagem) center right no-repeat;
+    background: var(--logo-imagem) center left no-repeat;
     background-size: 100%;
     text-indent: -3000px;
     height: 70px;
