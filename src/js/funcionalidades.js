@@ -13,10 +13,3 @@ function envia_contato(){
     alert("Enviou legal!");
 }
 
-function duvidas(){
-    window.location.href = "/src/pages/pergunta_frequentes.html"
-}
-
-function cadastrar(){
-    window.location.href = "/src/pages/cadastro.html"
-}

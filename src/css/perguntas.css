@@ -23,7 +23,11 @@ label#pergunta{
     margin: 0 6% 5px 6%;
 }
 input#pergunta{
+<<<<<<< HEAD
     width: 87.5%;
+=======
+    width: 94%;
+>>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
     min-width: 400px;
     border: 1px solid rgb(210,210,210);
     padding: 2px;
@@ -36,9 +40,24 @@ input#pergunta::placeholder{
     font-size: 20px;
     font-weight: bold;
 }
+<<<<<<< HEAD
 #conteudo{
     height: 45%;
     align-items: center;
+=======
+.caixa{
+	float: left;
+	margin: 0 0 25px 25px;
+    padding: 10px;
+    border: 1px solid rgb(210,210,210);
+    border-radius: 10px;
+    width: 450px;
+    height: 75px;
+}
+.texto_caixa{
+    font-size: medium;
+    padding: 10px 0;
+>>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
 }
 /* Botoes */
 #lateral{

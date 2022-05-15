@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="">
-        <a href="">
+        <a href="/index.html">
             <img src="../img/logo.png">
         </a>
         <div>
@@ -41,11 +41,12 @@
                 </div>
                     
                     <div class="radio">
-                            <input type="radio" name="userType" id="pessoaFisica" class="radio"><label for=pessoaFisica">Pessoa Fisica</label>
+                            <input type="radio" name="userType" id="pessoaFisica" class="radio"><label for="pessoaFisica">Pessoa Fisica</label>
                             <input type="radio" name="userType" id="pessoaJuridica" class="radio"><label for="pessoaJuridica">Pessoa Juridica</label>
                     </div>
                      
-                    <button id="btn_cadastrar">Cadastrar</button>
+                   
+
                     <div class="redes_sociais">
                         <button id="btn_facebook">Facebook</button>
                         <button id="btn_google">
@@ -58,9 +59,12 @@
                         </button>
                     </div>
                 </form>
+                <button id="btn_cadastrar" onclick="location.href='dashboard.html'">Cadastrar</button>
                 <a href="" class="possui_cadastro">Já possuo cadastro</a>
                 <img class="logo_form" src="../img/logo.png" >
             </div>
         </fieldset>
+
+        <script src="/src/js/funcionalidades.js"></script>
 </body>
 </html>
