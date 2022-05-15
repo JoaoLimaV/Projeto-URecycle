@@ -20,17 +20,17 @@
     <header>
         <!-- Inicio Logo-->
         <div id="logo">
-            <a href="">
+            <a href="/index.html">
                 <img src="../img/logo.png" width="100%">
             </a>
         </div> <!-- FIM Logo-->
 
         <!-- Inicio BOTÕES-->
         <div id="botoes_header">
-            <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+            <button class="btn_redondo" id="interrogacao" onclick="location.href='pergunta_frequentes.html'">Dúvidas</button>
             <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
-            <button class="btn_normal">Cadastrar</button>
-            <button class="btn_normal">Entrar</button>
+            <button class="btn_normal"  onclick="location.href='cadastro.html'">Cadastrar</button>
+            <button class="btn_normal"  onclick="location.href='em_producao.html'">Entrar</button>
         </div>
         <!-- FIM BOTÕES-->
         <!-- Inicio DROPDOWN-->
@@ -42,25 +42,25 @@
             <nav id = nav_drop_down> 
                 <ul>
                     <li class="ViewCelular">
-                        <a href="" >Home</a>
+                        <a href="/index.html" >Home</a>
                     </li>
                     <li class="ViewCelular">
-                        <a href="" class="aqui" >Reciclagem</a>
+                        <a href="/src/pages/reciclagem.html" class="aqui" >Reciclagem</a>
                     </li>
                     <li class="ViewCelular">
-                        <a href="" >Dicas</a>
+                        <a href="/src/pages/em_producao.html" >Dicas</a>
                     </li>
                     <li >
-                        <a href="">Entrar</a>
+                        <a href="/src/pages/em_producao.html">Entrar</a>
                     </li>
                     <li>
-                        <a href="">Cadastrar</a>
+                        <a href="/src/pages/cadastro.html">Cadastrar</a>
                     </li>
                     <li>
                         <a onclick="darkmode()">Dark-Mode</a>
                     </li>
                     <li>
-                        <a href="">Dúvidas</a>
+                        <a href="/src/pages/pergunta_frequentes.html">Dúvidas</a>
                     </li>
                 </ul>
             </nav>
@@ -70,17 +70,18 @@
     <br><br>
     <article>
         <article class="titulo"> Perguntas Frequentes</article>
+
+    </article>
         <!---Inicio Barra de Pesquisa-->
         <form>
             <label for="pergunta" id="pergunta" class="texto_basico">Pesquise para achar a resposta de que procura:<br></label>
             <input type="text" name="pergunta" id="pergunta" placeholder="Digite algo como &#34como fazer um pedido&#34">
         </form>
         <!---Fim Barra de Pesquisa-->
-    </article>
     <article class="texto_basico">
     Tópicos de ajuda
     </article>
-    <article>
+    <article id="conteudo">
         <!---Inicio Barra Lateral-->
         <article id="lateral">
             <ul id="botoes_lateral">
@@ -134,12 +135,24 @@
                 </p>
             </article>
             <article class="caixa">
+<<<<<<< HEAD
+                <h4>Contas compartilhadas</h4>
+=======
                 <h4>Como criar uma conta</h4>
+>>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
                 <p class="texto_caixa">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
                 </p>
             </article>
             <article class="caixa">
+<<<<<<< HEAD
+                    <h4>Problemas com o acesso</h4>
+                    <p class="texto_caixa">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+            </article>
+            </article>
+=======
                     <h4>Termos de serviço</h4>
                     <p class="texto_caixa">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -152,6 +165,7 @@
             </p>
         </article>
         </article>
+>>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
 
         <article id="ajuda3">
             <article class="caixa">
@@ -211,5 +225,12 @@
         </article>
         <!---Fim Caixas de perguntas-->
     </article>
+<<<<<<< HEAD
+    <footer class="clear">
+        Todos os Direitos Reservados &thinsp; <div class="aqui"> U-Recycle</div>
+    </footer>
+    
+=======
+>>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
 </body>
 </html>

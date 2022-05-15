@@ -19,29 +19,29 @@
             <header>
                 <!-- Inicio Logo-->
                 <div id="logo"> 
-                    <a href="">
+                    <a href="/index.html">
                         U-Recycle
                     </a>
                 </div> <!-- FIM Logo-->
                 <nav> 
                     <ul>
                         <li>
-                            <a href="" >Home</a>
+                            <a href="/index.html" >Home</a>
                         </li>
                         <li>
-                            <a href="" class="aqui">Reciclagem</a>
+                            <a href="/src/pages/reciclagem.html" class="aqui">Reciclagem</a>
                         </li>
                         <li>
-                            <a href="" >Dicas</a>
+                            <a href="/src/pages/em_producao.html" >Dicas</a>
                         </li>
                         <li>
                     </nav>
                 <!-- Inicio BOTÕES-->
                 <div id="botoes_header">
-                    <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+                    <button class="btn_redondo" id="interrogacao"  onclick="location.href='pergunta_frequentes.html'">Dúvidas</button>
                     <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
-                    <button class="btn_normal">Cadastrar</button>
-                    <button class="btn_normal">Entrar</button>
+                    <button class="btn_normal"  onclick="location.href='cadastro.html'">Cadastrar</button>
+                    <button class="btn_normal"  onclick="location.href='em_producao.html'">Entrar</button>
                 </div><!-- FIM BOTÕES-->
                 <div id="menu_drop">
                     <button onclick="dropdown()" id ="btn_drop">
@@ -51,25 +51,25 @@
                     <nav id = nav_drop_down> 
                         <ul>
                             <li class="ViewCelular">
-                                <a href="" >Home</a>
+                                <a href="/index.html" >Home</a>
                             </li>
                             <li class="ViewCelular">
-                                <a href="" class="aqui" >Reciclagem</a>
+                                <a href="/src/pages/reciclagem.html" class="aqui" >Reciclagem</a>
                             </li>
                             <li class="ViewCelular">
-                                <a href="" >Dicas</a>
+                                <a href="/src/pages/em_producao.html" >Dicas</a>
                             </li>
                             <li >
-                                <a href="">Entrar</a>
+                                <a href="/src/pages/em_producao.html">Entrar</a>
                             </li>
                             <li>
-                                <a href="">Cadastrar</a>
+                                <a href="/src/pages/cadastro.html">Cadastrar</a>
                             </li>
                             <li>
                                 <a onclick="darkmode()">Dark-Mode</a>
                             </li>
                             <li>
-                                <a href="">Dúvidas</a>
+                                <a href="/src/pages/pergunta_frequentes.html">Dúvidas</a>
                             </li>
                         </ul>
                     </nav>
@@ -132,11 +132,9 @@
                     </article>
                 </article><!-- FIM Imagem-Apresentacao-->
             </article>
-
+        </main>
             <footer>
                 Todos os Direitos Reservados &thinsp; <div class="aqui"> U-Recycle</div>
             </footer>
-        </main>
-
     </body>
 </html>
