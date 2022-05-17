@@ -78,7 +78,7 @@ header{
 #logo a{
     display: block;
     width: 135px;
-    background: var(--logo-imagem) center right no-repeat;
+    background: var(--logo-imagem) center left no-repeat;
     background-size: 100%;
     text-indent: -3000px;
     height: 70px;
@@ -114,13 +114,8 @@ header nav ul li a:hover{
 
 #botoes_header{
     display: flex;
-<<<<<<< HEAD
     align-items: center;
     justify-content: flex-end;
-=======
-    align-items:end;
-    justify-content: end;
->>>>>>> 8b155dd6c11d8097e25c5a53d7a1aa7ef6fc36a4
     width: 16.5%;
 }
 #botoes_header .btn_redondo{
