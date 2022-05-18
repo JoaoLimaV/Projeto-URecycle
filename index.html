@@ -16,22 +16,37 @@
     <script type="text/javascript" src="src/js/funcionalidades.js"></script>
 
 </head>
-    <body>
+
+<script>function informar(){alert("ATENÇÃO\nTodas as imagens estão sendo utilizadas para fins educativos e não comerciais")}</script>
+    <body onload="informar()">
         <main>
             <header>
                 <!-- Inicio Logo-->
                 <div id="logo"> 
-                    <a href="index.html">
+                    <a href="../../index.html">
                         U-Recycle
                     </a>
                 </div> <!-- FIM Logo-->
         
+                <nav> 
+                    <ul>
+                        <li>
+                            <a href=""class="aqui" >Home</a>
+                        </li>
+                        <li>
+                            <a href="src/pages/reciclagem.html" >Reciclagem</a>
+                        </li>
+                        <li>
+                            <a href="src/pages/dicas.html" >Dicas</a>
+                        </li>
+                        <li>
+                    </nav>
                 <!-- Inicio BOTÕES-->
                 <div id="botoes_header">
-                    <button class="btn_redondo" id="interrogacao" onclick="location.href='src/pages/pergunta_frequentes.html'">Dúvidas</button>
+                    <button class="btn_redondo" id="interrogacao"  onclick="location.href='src/pages/pergunta_frequentes.html'">Dúvidas</button>
                     <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
                     <button class="btn_normal" onclick="location.href='src/pages/cadastro.html'">Cadastrar</button>
-                    <button class="btn_normal" onclick="location.href='src/pages/em_producao.html'">Entrar</button>
+                    <button class="btn_normal" onclick="location.href='src/pages/entrar.html'">Entrar</button>
                 </div><!-- FIM BOTÕES-->
                 <div id="menu_drop">
                     <button onclick="dropdown()" id ="btn_drop">
@@ -40,33 +55,33 @@
                     
                     <nav id = nav_drop_down> 
                         <ul>
-                            <li class="ViewCelular">
-                                <a href="" >Home</a>
+                            <li>
+                                <a class="ViewCelular" class="aqui" href="../../index.html" >Home</a>
                             </li>
                             <li class="ViewCelular">
-                                <a href="" class="aqui" >Reciclagem</a>
+                                <a href="src/pages/reciclagem.html">Reciclagem</a>
                             </li>
                             <li class="ViewCelular">
-                                <a href="" >Dicas</a>
-                            </li>
-                            <li >
-                                <a href="">Entrar</a>
+                                <a href="src/pages/dicas.html" >Dicas</a>
                             </li>
                             <li>
-                                <a href="">Cadastrar</a>
+                                <a href="src/pages/entrar.html">Entrar</a>
+                            </li>
+                            <li>
+                                <a href="src/pages/cadastro.html'">Cadastrar</a>
                             </li>
                             <li>
                                 <a onclick="darkmode()">Dark-Mode</a>
                             </li>
                             <li>
-                                <a href="">Dúvidas</a>
+                                <a href="src/pages/pergunta_frequentes.html">Dúvidas</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </header><!-- FIM Cabeçalho-->
             <div id = "separador">
-        
+                
             </div>
             <!-- INICIO CONTEÚDOS-PRINCIPAIS-->
             <article>
@@ -145,9 +160,28 @@
                             </fieldset>
                         <!-- FIM Formulário de Contato -->
                     </article>
-            <footer>
-                Todos os Direitos Reservados &thinsp; <div class="aqui"> U-Recycle</div>
-            </footer>
+           
+                    <footer>
+                        <p>@Copyright 2022 Todos os direitos reservados<span class="aqui"> U-Recycle</span></p>
+                        
+                        <article id = "redes_sociais">
+                        <span class="box_social">
+                                <a href="" class="face">F</a>
+                        </span>   
+
+                        <span class="box_social">
+                                <a href="" class="insta">I</a>
+                        </span>  
+
+                        <span class="box_social">
+                                <a href="" class="twitter">T</a>
+                        </span>   
+
+                        <span class="box_social">
+                                <a href="" class="whats">W</a>
+                        </span> 
+                        </article>
+                    </footer>
         </main>
     </body>
     

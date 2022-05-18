@@ -10,7 +10,7 @@
  :root{
     --bg-padrao:rgb(247, 252, 245);
     --bg-destaque: rgb(255, 255, 255);
-    --logo-imagem: url(../img/logo.png);
+    --logo-imagem: url(../img/logo.png) center left no-repeat;
 
     --bg-menu-drop-celular:rgb(255, 255, 255);
     --bg-menu-drop-hover:rgb(206, 248, 195);
@@ -20,16 +20,21 @@
     --destaque-color-font: rgb(0, 192, 135);
 
     --btn-dark-bg: url(../img/lua.png) center center no-repeat;
+    --btn-dark-tamanho-imagem: 100%;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
     --btn-perfil-bg:url(../img/icone_usuario_preto.png) no-repeat center center;
     --btn-border: 2px solid black;
-    
+
+    --img-face: url(../img/face.png) center center no-repeat;
+    --img-insta: url(../img/insta.png) center center no-repeat;
+    --img-twitter: url(../img/twitter.png) center bottom no-repeat;
+    --img-whats: url(../img/whats.png) center bottom no-repeat;
  }
 
  .dark-mode:root{
     --bg-padrao: rgb(43, 43, 43);
     --bg-destaque:rgb(59, 60, 61);
-    --logo-imagem: url(../img/logo_branca.png);
+    --logo-imagem: url(../img/logo_branca.png) center center no-repeat;
     
     --bg-menu-drop-celular:rgb(59, 60, 61);;
     --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
@@ -38,10 +43,16 @@
     --all-color-font: rgba(255, 255, 255, 0.9);
     --destaque-color-font: rgb(219, 255, 17);
 
-    --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
+    --btn-dark-bg: url(../img/sol.png) center center no-repeat;
+    --btn-dark-tamanho-imagem: 150%;
     --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
     --btn-perfil-bg:url(../img/icone_usuario.png) no-repeat center center;
     --btn-border: 2px solid white;
+
+    --img-face: url(../img/face.png) center center no-repeat;
+    --img-insta: url(../img/insta.png) center center no-repeat;
+    --img-twitter: url(../img/twitter.png) center bottom no-repeat;
+    --img-whats: url(../img/whats.png) center bottom no-repeat;
  }
 
 /* HEADER */
@@ -78,7 +89,7 @@ header{
 #logo a{
     display: block;
     width: 135px;
-    background: var(--logo-imagem) center left no-repeat;
+    background: var(--logo-imagem);
     background-size: 100%;
     text-indent: -3000px;
     height: 70px;
@@ -134,30 +145,29 @@ header nav ul li a:hover{
     text-indent: -3000px;
     background: var(--btn-dark-bg);
     border: var(--btn-border);
-    background-size: 90%;
+    background-size: var(--btn-dark-tamanho-imagem);
     overflow: hidden;
 }
 #botoes_header #darkmode:hover{
-    background: url(../img/lua_inverso.png) center center no-repeat;
     background-color:  rgba(150, 150, 150, 0.377);
     text-indent: -3000px;
-    background-size: 90%;
     overflow: hidden;
+    transition: all 0.7s;
 }
 
 #botoes_header #interrogacao{
     text-indent: -3000px;
     background: var(--btn-interrogacao-bg);
     border: var(--btn-border);
-    background-size: 85%;
+    background-size: 90%;
     overflow: hidden;
 }
 #botoes_header #interrogacao:hover{
-    background: url(../img/interrogacao_inverso.png) center center no-repeat;
     background-color:  rgba(150, 150, 150, 0.377);
     text-indent: -3000px;
-    background-size: 85%;
+    background-size: 90%;
     overflow: hidden;
+    transition: all 0.7s;
 }
 #botoes_header #perfil{
     text-indent: 5000px;
@@ -171,6 +181,7 @@ header nav ul li a:hover{
     background-color:  rgba(150, 150, 150, 0.377);
     text-indent: -3000px;
     overflow: hidden;
+    transition: all 1s;
 }
 
 #botoes_header .btn_normal{
@@ -208,6 +219,58 @@ header nav ul li a:hover{
 }
 
 /* FIM HEADER */
+
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-destaque);
+    font-size: 1.3em;
+    border-top: 2px solid rgba(204, 204, 204, 0.37);
+}
+footer p{
+   margin-top: 10px;
+   text-align: center;
+}
+footer #redes_sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    background-color: transparent;
+}
+footer .box_social{
+   margin: 0 5px;
+   width: 50px;
+   height: 45px;
+}
+footer .box_social a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: var(--cor-menu-drop);
+    text-indent: -3000px;
+ }
+footer .box_social a.face{
+   background: var(--img-face);
+   background-size: 100%;
+}
+footer .box_social a.insta{
+    background: var(--img-insta);
+    background-size: 100%;
+}
+footer .box_social a.twitter{
+    background: var(--img-twitter);
+    background-size: 100%;
+}
+footer .box_social a.whats{
+    background: var(--img-whats);
+    background-size: 100%;
+}
+   
 
 /* Header Mobile 1024px*/
 
@@ -325,20 +388,3 @@ header nav ul li a:hover{
     }
 }
 /* Fim Header Mobile 750px*/
-/* Footer */
-footer{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    border-top: 2px solid rgba(204, 204, 204);
-    margin-top: 30px;
-    background-color: var(--bg-destaque);
-    height: 50px;
-    font-size: 1.3em;
-}
-footer p{
-   
-}
-footer #icon_social{
-   
-}

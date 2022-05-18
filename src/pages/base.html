@@ -18,7 +18,7 @@
     <header>
         <!-- Inicio Logo-->
         <div id="logo"> 
-            <a href="">
+            <a href="../../index.html">
                 U-Recycle
             </a>
         </div> <!-- FIM Logo-->
@@ -26,22 +26,22 @@
         <nav> 
             <ul>
                 <li>
-                    <a href="" >Home</a>
+                    <a href="../../index.html" >Home</a>
                 </li>
                 <li>
-                    <a href="" class="aqui">Reciclagem</a>
+                    <a href="reciclagem.html" class="aqui">Reciclagem</a>
                 </li>
                 <li>
-                    <a href="" >Dicas</a>
+                    <a href="dicas.html" >Dicas</a>
                 </li>
                 <li>
             </nav>
         <!-- Inicio BOTÕES-->
         <div id="botoes_header">
-            <button class="btn_redondo" id="interrogacao" onclick='trocarPag()'>Dúvidas</button>
+            <button class="btn_redondo" id="interrogacao" onclick="location.href='pergunta_frequentes.html'">Dúvidas</button>
             <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
-            <button class="btn_normal">Cadastrar</button>
-            <button class="btn_normal">Entrar</button>
+            <button class="btn_normal" onclick="location.href='cadastro.html'">Cadastrar</button>
+            <button class="btn_normal" onclick="location.href='entrar.html'">Entrar</button>
         </div><!-- FIM BOTÕES-->
         <div id="menu_drop">
             <button onclick="dropdown()" id ="btn_drop">
@@ -51,45 +51,54 @@
             <nav id = nav_drop_down> 
                 <ul>
                     <li>
-                        <a class="ViewCelular" href="" >Home</a>
+                        <a class="ViewCelular" href="../../index.html" >Home</a>
                     </li>
                     <li class="ViewCelular">
-                        <a href="" class="aqui" >Reciclagem</a>
+                        <a href="reciclagem.html" class="aqui" >Reciclagem</a>
                     </li>
                     <li class="ViewCelular">
-                        <a href="" >Dicas</a>
+                        <a href="dicas.html" >Dicas</a>
                     </li>
                     <li>
-                        <a href="">Entrar</a>
+                        <a href="entrar.html">Entrar</a>
                     </li>
                     <li>
-                        <a href="">Cadastrar</a>
+                        <a href="cadastro.html">Cadastrar</a>
                     </li>
                     <li>
                         <a onclick="darkmode()">Dark-Mode</a>
                     </li>
                     <li>
-                        <a href="">Dúvidas</a>
+                        <a href="pergunta_frequentes.html">Dúvidas</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header><!-- FIM Cabeçalho-->
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
-    a<br>
+    <div id = "separador">
+        
+    </div>
 </main>
+
 <footer>
-    <p>Todos os Direitos Reservados &thinsp; <span class="aqui"> U-Recycle</span></p>
+        <p>@Copyright 2022 Todos os direitos reservados<span class="aqui"> U-Recycle</span></p>
+        
+    <article id = "redes_sociais">
+       <span class="box_social">
+            <a href="" class="face">F</a>
+       </span>   
+
+       <span class="box_social">
+            <a href="" class="insta">I</a>
+       </span>  
+
+       <span class="box_social">
+            <a href="" class="twitter">T</a>
+       </span>   
+
+       <span class="box_social">
+            <a href="" class="whats">W</a>
+       </span> 
+    </article>
 </footer>
 </body>

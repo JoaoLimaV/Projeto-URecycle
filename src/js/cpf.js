@@ -5,6 +5,9 @@ function validaCpf(){
     let cpfSeparado2 = [];
     let soma = 0, resto = 0;
 
+    valor = valor.replace('.', '');
+    valor = valor.replace('.', '');  
+    valor = valor.replace('-', ''); 
 
     if(valor == '11111111111' || 
         valor == '22222222222' || 
@@ -19,11 +22,10 @@ function validaCpf(){
         valor.length < 11){
 
 
-        cpf.style.borderColor = "red";
+        cpf.style.border = "solid red";
 
 
     }else{
-
         // Separando os Dígitos do CPF 
         for(let x = 0, j = 1; x < 11; x++,j++){
             if(j == 12){
@@ -64,13 +66,13 @@ function validaCpf(){
             if(resto == 10) {resto = 0;}
             
             if( resto == onze){
-                cpf.style.borderColor = "blue";
+                cpf.style.border = "solid green";
             }else{
-                cpf.style.borderColor = "red";
+                cpf.style.border = "solid red";
             }
             
         }else{
-            cpf.style.borderColor = "red";
+            cpf.style.border = "solid red";
         }
     }
 }
