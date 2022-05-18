@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-     body{background-color: rgba(0, 0, 0, 0.719); color:white; font-size: 1.3em;} 
-     input:focus{box-shadow: 0 0 0 0; outline: 0;}
-</style>
-<body>
-    <form name="formulario" style="margin: 50px">
-        Sem pontos e traços
-        <input id="cpf" type="text" name="cpf" onchange="borda()" maxlength="11">
-    </form> 
-    
-    <script>
-        function borda(){
+function validaCpf(){
     let cpf = document.getElementById("cpf");
-    const valor = document.getElementById("cpf").value;
+    let valor = document.getElementById("cpf").value;
     let cpfSeparado = [];
     let cpfSeparado2 = [];
-    let dez = 0, onze = 0, soma = 0, resto = 0;
+    let soma = 0, resto = 0;
 
 
-    if(valor == '11111111111' || valor == '22222222222' || valor == '33333333333' ||
-    valor == '44444444444' || valor == '55555555555' || valor == '66666666666' ||
-    valor == '77777777777' || valor == '88888888888' || valor == '99999999999' || valor == '00000000000' || valor.length < 11){
+    if(valor == '11111111111' || 
+        valor == '22222222222' || 
+        valor == '33333333333' ||
+        valor == '44444444444' || 
+        valor == '55555555555' || 
+        valor == '66666666666' ||
+        valor == '77777777777' || 
+        valor == '88888888888' || 
+        valor == '99999999999' || 
+        valor == '00000000000' || 
+        valor.length < 11){
+
+
         cpf.style.borderColor = "red";
+
+
     }else{
+
         // Separando os Dígitos do CPF 
         for(let x = 0, j = 1; x < 11; x++,j++){
             if(j == 12){
@@ -41,7 +35,7 @@
         // Atribuição dos Números Verificadores
         let dez = cpfSeparado[9];
         let onze = cpfSeparado[10];
-         e
+
         // PRIMEIRO DÌGITO VERIFICADOR 
         // Convert - String to INT
         for (let x = 0; x < 9; x++) {
@@ -70,7 +64,7 @@
             if(resto == 10) {resto = 0;}
             
             if( resto == onze){
-                cpf.style.borderColor = "green";
+                cpf.style.borderColor = "blue";
             }else{
                 cpf.style.borderColor = "red";
             }
@@ -80,6 +74,3 @@
         }
     }
 }
-    </script>
-</body>
-</html>
