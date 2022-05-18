@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <link rel="stylesheet" type="text/css" href="../css/cadastro.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css" media="screen"/>
+    <link rel="icon" type="image/x-icon" href="/src/img/logo.png">
     <title>Cadastro U-Recycle</title>
 </head>
 <body>
     <header class="">
-        <a href="">
+        <a href="/index.html">
             <img src="../img/logo.png">
         </a>
-        <div>
-            <p>Dark mode</p>
-        </div>
+        
+        <p>Dark mode</p>
     </header>
         <fieldset class="container">
             <div class="img_form">
@@ -27,17 +28,18 @@
                 <h1>Cadastro</h1>
                 <form>
                      <div class="form_nome">
-                        <input type="text" placeholder="Nome" id="nome">
+                        <input type="text" placeholder="Nome" id="nome" name="nome">
                         
-                        <input type="text" placeholder="Sobrenome" id="sobrenome">
+                        <input type="text" placeholder="Sobrenome" id="sobrenome" name="sobrenome">
                      </div>   
                     
                 
                 <div>
-                    <input type="text" placeholder="E-mail">
-                    <input type="text" placeholder="Senha">
-                    <input type="text" placeholder="Telefone">
-                    <input type="text" placeholder="Cidade">
+                    <input type="text" placeholder="CPF" name="cpf" id="cpf" onChange="validaCpf()" maxlength="11">
+                    <input type="email" placeholder="E-mail" name="email" id="email">
+                    <input type="password" placeholder="Senha" name="senha" id="senha">
+                    <input type="text" placeholder="Telefone" name="telefone" id="telefone">
+                    <input type="text" placeholder="Cidade" name="cidade" id="cidade">
                 </div>
                     
                     <div class="radio">
@@ -45,7 +47,12 @@
                             <input type="radio" name="userType" id="pessoaJuridica" class="radio"><label for="pessoaJuridica">Pessoa Juridica</label>
                     </div>
                      
+<<<<<<< HEAD
                     <button id="btn_cadastrar" onclick="fazCadastro()">Cadastrar</button>
+=======
+                   
+
+>>>>>>> 7a218d442de5724aebbb84c130d43682cf2b2b51
                     <div class="redes_sociais">
                         <button id="btn_facebook">Facebook</button>
                         <button id="btn_google">
@@ -58,10 +65,16 @@
                         </button>
                     </div>
                 </form>
+                <button id="btn_cadastrar" onclick="location.href='dashboard.html'">Cadastrar</button>
                 <a href="" class="possui_cadastro">Já possuo cadastro</a>
                 <img class="logo_form" src="../img/logo.png">
             </div>
         </fieldset>
 </body>
+<<<<<<< HEAD
 <script src="../src/js/funcionalidades.js"></script>
+=======
+<script src="/src/js/funcionalidades.js"></script>
+<script src="/src/js/cpf.js"></script>
+>>>>>>> 7a218d442de5724aebbb84c130d43682cf2b2b51
 </html>

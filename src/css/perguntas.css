@@ -1,25 +1,32 @@
 /* ARTICLE - CONTEÚDOS PRINCIPAIS */
-
 /* ARTICLE - BOX TEXTO */
+body, html{
+    height: 100%;
+}
+.clear{
+    clear: both;
+}
 article{
     margin: 50px 0 0 6%;
 }
 article .titulo{
+    color: rgb(0, 192, 135);;
     font-size: 4em;
-    margin: 50px 0;
+    margin: 75px 0 50px 0;
 }
 form #pergunta{
     font-size: 20px;
-    margin-bottom: 5px;
 }
 label#pergunta{
     min-width: 400px;
+    margin: 0 6% 5px 6%;
 }
 input#pergunta{
-    width: 94%;
+    width: 87.5%;
     min-width: 400px;
     border: 1px solid rgb(210,210,210);
     padding: 2px;
+    margin: 0 6% 5px 6%;
 }
 input#pergunta::placeholder{
     color: rgb(210,210,210);
@@ -28,19 +35,11 @@ input#pergunta::placeholder{
     font-size: 20px;
     font-weight: bold;
 }
-.caixa{
-	float: left;
-	margin: 0 0 25px 25px;
-    padding: 10px;
-    border: 1px solid rgb(210,210,210);
-    border-radius: 10px;
-    width: 450px;
-    height: 75px;
+#conteudo{
+    height: 45%;
+    align-items: center;
 }
-.texto_caixa{
-    font-size: medium;
-    padding: 10px 0;
-}
+/* Botoes */
 #lateral{
     width: 220px;
     height: 100%;
@@ -89,22 +88,34 @@ input#pergunta::placeholder{
 	content: attr(label);
 	width: 100%;
 }
+/* Fim botoes */
+.caixa{
+	float: left;
+	margin: 0 0 25px 25px;
+    padding: 10px;
+    border: 1px solid rgb(210,210,210);
+    border-radius: 10px;
+    width: 450px;
+    height: 75px;
+}
+.texto_caixa{
+    font-size: medium;
+    padding: 10px 0;
+}
 /* Divs informações */
 #ajuda1, #ajuda2, 
 #ajuda3, #ajuda4, 
 #ajuda5{
     display: none;
+    height: 100%;
+    margin-left: 225px;
 }
 /* Footer */
 footer{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin-top: 30px;
-    background-color: rgb(210,210,210);
-    height: 50px;
-    font-size: 1.3em;
+    display: block;
+
 }
+
 @media (max-width: 1280px) {
     .caixa{
         width: 370px;
@@ -116,4 +127,8 @@ footer{
         align-items: center;
         text-align: center;
     } 
+    #conteudo{
+        margin: 0 18.7% 0 18.7%;
+
+    }
 }
