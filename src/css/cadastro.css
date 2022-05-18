@@ -252,7 +252,7 @@ input[type="radio"] {
 }
 
 #btn_google:hover{
-    background: #ff9100;
+    background: #f5d680;
     color: white;
     transition: 1s;
 }
