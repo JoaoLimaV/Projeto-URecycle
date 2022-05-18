@@ -12,19 +12,6 @@ body{
     flex-direction: column;
     align-items: center; 
 }
-
-header{
-    width: 98%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header > a > img {
-    width: 135px;
-    height: 90px;
-}
-
 fieldset{
     width: 98%;
     height: 40%;
