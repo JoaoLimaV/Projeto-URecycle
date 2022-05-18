@@ -220,6 +220,7 @@ input[type="radio"] {
 }
 
 #btn_google:hover{
+    /* background: #ff9100; */
     background: #ff9100;
     color: white;
     transition: 1s;

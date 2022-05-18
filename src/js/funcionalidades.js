@@ -20,3 +20,8 @@ function duvidas(){
 function cadastrar(){
     window.location.href = "/src/pages/cadastro.html"
 }
+
+function fazCadastro(){
+    alert("Botão deu bom");
+/*     window.location.href = "/src/pages/dashboard.html"
+ */}

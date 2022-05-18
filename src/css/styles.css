@@ -53,16 +53,19 @@ article .titulo{
     font-size: 1.2em;
     text-align: justify;
     margin: 0 150px;
+    display: flex;
+    flex:1;
 
 }
 
 #form-contato {
-    border: 2px solid black;
+    display: flex;
+    flex: 1;
 
 }
 
 #contato {
-    display: inline;
-    border: 2px solid black;
+    display: flex;
     height: 200px;
+    flex: 1;
 }
