@@ -1,415 +1,96 @@
-* {
-  padding:0;
-  margin:0;
-  vertical-align:baseline;
-  list-style:none;
-  text-decoration: none;
-  border:0;
-  background-color: transparent;
-}
-
 :root{
-  --bg-padrao:rgb(247, 252, 245);
-  --bg-destaque: rgb(255, 255, 255);
-  --logo-imagem: url(../img/logo.png);
-
-  --bg-menu-drop-celular:rgb(255, 255, 255);
-  --bg-menu-drop-hover:rgb(206, 248, 195);
-  --cor-menu-drop: invert(0%);
-
-  --all-color-font: rgb(0, 0, 0, 0.9);
-  --destaque-color-font: rgb(0, 192, 135);
-
-  --btn-dark-bg: url(../img/lua.png) center center no-repeat;
-  --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
-  --btn-perfil-bg:url(../img/icone_usuario_preto.png) no-repeat center center;
-  --btn-border: 2px solid black;
-  
+  --color: rgb(0, 192, 135);
 }
 
-.dark-mode:root{
-  --bg-padrao: rgb(43, 43, 43);
-  --bg-destaque:rgb(59, 60, 61);
-  --logo-imagem: url(../img/logo_branca.png);
-  
-  --bg-menu-drop-celular:rgb(59, 60, 61);;
-  --bg-menu-drop-hover:rgba(203, 215, 227, 0.6);
-  --cor-menu-drop: invert(100%);
-  
-  --all-color-font: rgba(255, 255, 255, 0.9);
-
-
-  --btn-dark-bg: url(../img/lua_inverso.png) center center no-repeat;
-  --btn-interrogacao-bg: url(../img/interrogacao_inverso.png) center center no-repeat;
-  --btn-perfil-bg:url(../img/icone_usuario.png) no-repeat center center;
-  --btn-border: 2px solid white;
+h1{
+  color: var(--color);
+  font-size: 2.7rem;
+  padding-top: 7%;
+  padding-left: 10%;
+  margin-bottom: 1rem;
 }
 
-/* HEADER */
-
-body{
-  color: var(--all-color-font);
-  background-color: var(--bg-padrao);
-  min-width: 200px;
-  max-width: 2000px;
-  margin: 0 auto;
-}
-header{
-  height: 70px;
-  width: 100%;
-  background-color: var(--bg-destaque);
-  position: fixed;
-
-  display: flex;
-  align-items:center;
-  justify-content: space-between;
-  z-index: 100;
-  border-bottom: 2px solid rgba(204, 204, 204, 0.37);
-}
-#separador{
-  height: 70px;width: 100%;
-}
-/* LOGO HEADER */
-
-#logo{
-  width: 16.5%;
-  height: 70px;
+#ancora{
+  margin: 2rem;
+  padding: 5px 2px;
+  border: var(--color) solid 2px;
+  border-radius: 1.5rem;
 }
 
-#logo a{
-  display: block;
-  width: 135px;
-  background: var(--logo-imagem) center right no-repeat;
-  background-size: 100%;
-  text-indent: -3000px;
-  height: 70px;
-}
-
-/* NAV HEADER */
-
-header nav ul li{
-  float: left;
-  font-size: 1.3em;
-}
-header nav ul li a{
-  padding: 0 30px;
-  transition: 0.5s;
-  color: var(--all-color-font);
-}
-header nav ul li a:hover{
-  color: rgb(0, 192, 135);
-  transition: 0.5s;
-}
-.aqui{
-  color: var(--destaque-color-font);
-}
-
-/*  BOTOES HEADER */
-
-#botoes_header{
-  display: flex;
-  align-items: center;
- 
-}
-#botoes_header .btn_redondo{
-  text-align: center;
-  font-size: 1.3em;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  border-radius: 100%;
-  border: 2px solid rgb(2, 2, 2, 0.5);
-  padding: 0 15px;    
-  margin: 0 5px;
-}
-
-#botoes_header #darkmode{
-  text-indent: -3000px;
-  background: var(--btn-dark-bg);
-  border: var(--btn-border);
-  background-size: 90%;
-  overflow: hidden;
-}
-#botoes_header #darkmode:hover{
-  background: url(../img/lua_inverso.png) center center no-repeat;
-  background-color:  rgba(150, 150, 150, 0.377);
-  text-indent: -3000px;
-  background-size: 90%;
-  overflow: hidden;
-}
-
-#botoes_header #interrogacao{
-  text-indent: -3000px;
-  background: var(--btn-interrogacao-bg);
-  border: var(--btn-border);
-  background-size: 85%;
-  overflow: hidden;
-}
-#botoes_header #interrogacao:hover{
-  background: url(../img/interrogacao_inverso.png) center center no-repeat;
-  background-color:  rgba(150, 150, 150, 0.377);
-  text-indent: -3000px;
-  background-size: 85%;
-  overflow: hidden;
-}
-#botoes_header #perfil{
-  text-indent: 5000px;
-  background: var(--btn-perfil-bg);
-  background-size: 110%;
-  border: var(--btn-border);
-}
-#botoes_header #perfil:hover{
-  background: url(../img/icone_usuario.png) center center no-repeat;
-  background-size: 110%;
-  background-color:  rgba(150, 150, 150, 0.377);
-  text-indent: -3000px;
-  overflow: hidden;
-}
-
-#botoes_header .btn_normal{
-  font-size: 1.2em;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 5%;
-  border: 2px solid rgb(0, 192, 135, 0.5);
-  padding: 0 15px;
-  margin: 0 5px;
-  color: rgb(0, 192, 135);
-}
-#botoes_header .btn_normal:hover{
-  background-color:rgb(0, 192, 135, 0.5);
-  border: 2px solid transparent;
-  color: white;
-}
-
-
-/* MENU DROPDOWN PARA O MOBILE */
-
-#menu_drop{
-  height: 40px;
-  width: 50px;
-  display: none;
-}
-#menu_drop #btn_drop{
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  filter: var(--cor-menu-drop);
-  background: url(../img/menu_hamburguer.png) no-repeat center center;
-  background-size: 100%;
-  text-indent: 1000px;
-}
-
-/* FIM HEADER */
-
-/* Header Mobile 1024px*/
-
-@media (max-width: 1024px) {
-
-  #botoes_header{
-      display: none;
-  }
-  #menu_drop{
-      display: block;
-  }
-  header #nav_drop_down ul li a:hover{
-   color: var(--all-color-font);
-   transition: 0.5s;
-   }
-   #nav_drop_down{
-       display: block;
-       position: absolute;
-       width: 0px;
-       background-color: var(--bg-menu-drop-celular);
-       right: 0; 
-       top: 70px;
-
-       transition: .6s;
-       z-index: 1000;
-       height: calc(100vh - 70px);
-       visibility: hidden;
-       overflow-y: hidden;
-
-   }
-   #menu_drop.active #nav_drop_down{
-      width: 450px;
-      visibility: visible;
-      overflow-y: auto;
-
-   }
-   #menu_drop.active #btn_drop{
-      background-image: url(../img/menu_hamburguer_X.png);
-    }
-   #nav_drop_down li{
-       width: 100%;
-       height: calc(14vh);
-       
-       display: flex;
-       align-items: center;
-       justify-content:center;
-   }
-   #nav_drop_down ul li a{
-       display: block;
-       font-size: 1.5em;
-       text-align: center;
-       width: 86%;
-       height: 80px;
-       border: transparent;
-   }
-
-   #nav_drop_down li:hover{
-       background-color: var(--bg-menu-drop-hover);
-       cursor: pointer;
-   }
-   .ViewCelular{
-       display:none;
-   }
-}
-/* Fim Header Mobile 1024px*/
-
-/* Header Mobile 750px*/
-@media (max-width: 750px) {
-  
-  .ViewCelular{
-      display:block;
-  }
-  header nav{
-      display: none;
-  }
-  #box_informativo p{
-      font-size: 1.2em;
-      text-align: justify;
-      padding: 0 50px; 
-  }
-  #logo{
-      width: 16.5%;
-  }
-  #logo a img{
-      width: 100px;
-      height: 70px;
-  }
-  #nav_drop_down{
-      display: block;
-      position: absolute;
-      width: 100%;
-      background-color: var(--bg-menu-drop-celular);
-      height: 0px;
-      top: 70px;
-
-      transition: .6s;
-      z-index: 1000;
-      visibility: hidden;
-      overflow-y: hidden;
-  }
-  #menu_drop.active #nav_drop_down{
-      height: calc(100vh - 70px);
-      width: 100%;
-      visibility: visible;
-      overflow-y: auto;
-   }
-  #nav_drop_down li{
-      width: 100%;
-      height: calc(14vh);
-      display: flex;
-      align-items: center;
-      justify-content:center;
-      flex-direction: column;
-  }
-  #nav_drop_down ul li a{
-      display: block;
-      font-size: 1.5em;
-      text-align: center;
-      width: 85%;
-  }
-}
-/* Fim Header Mobile 750px*/
-/* Footer */
-footer{
-  display: flex;
-  align-items: center;
-  justify-content:center;
-
-  border-top: 2px solid rgba(204, 204, 204);
-  margin-top: 30px;
-  background-color: var(--bg-destaque);
-  height: 50px;
-  font-size: 1.3em;
-}
-
-/* FIM HEADER */
-
-#titulo{
-  color: var(--destaque-color-font);
-  z-index: 1000;
-  padding-top: 6.5rem;
-  padding-left: 3rem;
-}
-section{
-  background: var(--bg-destaque); 
+div#conteudo{
   display: grid;
+  grid-template-columns: 1.5fr 5.5fr 1fr;
+  grid-template-areas: "I D S";
+  grid-template-rows: 30vh;
+}
+
+#foto{
+  grid-area: I;
   align-items: center;
-  grid-template-columns: 15% 1fr 20%;
-  margin-inline: 5rem;
-  border-radius: 0.8rem;
-  z-index: 0;
-  margin-top: 1rem;
-}
-
-section #produto{
-  height: 10rem;
-  width: 10rem;
-  z-index: 100;
-}
-
-section div#detalhes{
-font-size: 1.2rem;
-line-height: 1.5rem;
-color: black;
-}
-
-div#status{
-  align-items: center;
-  text-align: center;
   justify-content: center;
-  color: var(--destaque-color-font) ;
-  width: 8rem;
-  padding: 0.5rem;
-  border: 3px solid var(--destaque-color-font) ;
+  display: flex;
 }
 
-section #plus{
-  height: 3rem;
-  width: 3rem;
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background-color: var(--destaque-color-font);
-  border-radius: 1rem;
+#foto img{
+  height: 90%;
+  width: 80%;
 }
 
-section svg path{
-  fill: var(--principal);
-}
-
-section #plus.down{
-  transform: rotate(180deg);
-  transition: all 0.2s;
-}
-
-div#baixo{
-  top: -13px;
-  line-height: 1.5rem;
-  position: relative;
+#detalhes{
+  grid-area: D;
   display: flex;
   flex-direction: column;
-  height: 7rem;
-  visibility: hidden;
-  background: var(--bg-destaque); 
-  padding-left: 2rem;
+  justify-content: center;
   font-size: 1.2rem;
-  transition: all;
-  margin-inline: 5rem;
-  border-radius: 0.8rem;
   color: black;
+  max-height: 200px;
 }
+
+#baixo{
+  max-height: 200px;
+  font-size: 1.2rem;
+  color: black;
+  margin: 0;
+  border: 0;
+  padding-left: 1rem;
+}
+
+#baixo p{
+  overflow: hidden;
+  max-height: 0px;
+  transition:  0.15s;
+}
+
+#baixo input{
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+}
+
+#baixo input:checked ~ p{
+  height: auto;
+  max-height: 400px;
+  transition: 0.15s;
+}
+
+#seta{
+  grid-area: S;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color);
+}
+
+#seta svg{
+  fill: var(--color);
+  height: 3.5rem;
+  width: 3.5rem;
+  cursor: pointer;
+}
+
+
 
