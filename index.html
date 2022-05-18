@@ -111,9 +111,10 @@
                     <br>
                 </article>
                 
-                    
+                <h1 class = "titulo">Fale Conosco</h1>
+
                 <article id="box_informativo_contato">
-                        <h1 class = "titulo">Fale Conosco</h1>
+                        
 
                         <p class = "caixa_texto_contato">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
@@ -122,22 +123,26 @@
                         </p>
 
                         <!-- INÍCIO Formulário de Contato -->
-                        <div id="form-contato">
-                            <form id="contato">
-                                <fieldset>
-                                    <label for="email">E-mail:</label>
-                                    <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+                            <fieldset>
+                                <form id="contato">
+                                        <div id="contato-esquerda">
+                                            <label for="email">E-mail:</label>
+                                            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-                                    <label for="assunto">Assunto:</label>
-                                    <input type="text" id="assunto" name="assunto" placeholder="Ex.: Sugestão">
+                                            <label for="assunto">Assunto:</label>
+                                            <input type="text" id="assunto" name="assunto" placeholder="Ex.: Sugestão">
 
-                                    <label for="mensagem">Mensagem:</label>
-                                    <textarea id="mensagem" name="mensagem" placeholder="Ficou com alguma dúvida? Tem alguma sugestão? Escreva para nós"></textarea>
+                                            <input type="submit" value="Enviar" onclick="envia_contato()">
+                                        </div>
+                                        
+                                        <div id="contato-direita">
+                                            <label for="mensagem">Mensagem:</label>
+                                            <textarea id="mensagem" name="mensagem" placeholder="Ficou com alguma dúvida? Tem alguma sugestão? Escreva para nós"></textarea>
+                                        </div>
 
-                                    <input type="submit" value="Enviar" onclick="envia_contato()">
-                                </fieldset>
-                            </form>
-                        </div>
+                                        
+                                </form>
+                            </fieldset>
                         <!-- FIM Formulário de Contato -->
                     </article>
             <footer>

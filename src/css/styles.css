@@ -21,12 +21,20 @@ article{
 }
 article .titulo{
     background-color: transparent;
-
     width: 100%;  
     font-size: 2em;
     text-align: center;
     color: rgb(0, 192, 135);
 }
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
+}
+
 #box_informativo p{
     font-size: 1.2em;
     text-align: justify;
@@ -41,6 +49,16 @@ article .titulo{
     margin: 0 0;
 }
 
+#box_informativo_contato {
+    display: flex;
+}
+
+fieldset {
+    border: 2px solid rgb(209, 209, 209);
+    border-radius: 4px;
+    margin-right: 10%;
+}
+
 #box_informativo_contato h1{
     font-size: 3em;
     text-align: center;
@@ -53,15 +71,6 @@ article .titulo{
     font-size: 1.2em;
     text-align: justify;
     margin: 0 150px;
-    display: flex;
-    flex:1;
-
-}
-
-#form-contato {
-    display: flex;
-    flex: 1;
-
 }
 
 #contato {
