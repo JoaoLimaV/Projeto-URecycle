@@ -272,7 +272,9 @@ footer .box_social a.whats{
     background: var(--img-whats);
     background-size: 100%;
 }
-   
+.cor_alink{
+    color: var(--all-color-font)
+}
 
 /* Header Mobile 1024px*/
 

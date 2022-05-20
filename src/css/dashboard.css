@@ -4,25 +4,39 @@ html,body,main{
 #container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
 
     height: 90%;
     width: 100%;
 }
-#container h1{
-    font-size: 4em;
-    text-align: center;
-    color: rgb(0, 192, 135);
-    
+#container #container_esquerda{
+ width: 65%;
+ height: 85%;
+ background: url(../img/dashboard/imagem_principal.png) center center no-repeat;
+ background-size: 65%;
 }
-#container #nav_itens{
-    font-size: 2.5em;
+#container #container_direita{
+    width: 30%;
+    border: 4px solid rgba(204, 204, 204, 0.37);
+    height: 85%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
 }
-#container #nav_itens ul li{
-    float: left;
-    padding: 30px 50px;
+#container #container_direita h1{
+    font-size: 3.5em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    margin-bottom: 50px;
+}
+#container #container_direita a{
+    font-size: 3em;
+    padding: 30px;
+    width: 80%;
+    text-align: center;
+}
+#container #container_direita a:hover{
+    background-color: rgb(0, 192, 135,0.5);
+    
 }
