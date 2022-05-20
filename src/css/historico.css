@@ -42,14 +42,12 @@ div#conteudo{
   flex-direction: column;
   justify-content: center;
   font-size: 1.2rem;
-  color: black;
   max-height: 200px;
 }
 
 #baixo{
   max-height: 200px;
   font-size: 1.2rem;
-  color: black;
   margin: 0;
   border: 0;
   padding-left: 1rem;
