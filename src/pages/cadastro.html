@@ -21,19 +21,19 @@
             </a>
         </div> <!-- FIM Logo-->
 
-        <!-- <nav> 
+        <nav> 
             <ul>
                 <li>
                     <a href="../../index.html" >Home</a>
                 </li>
                 <li>
-                    <a href="reciclagem.html" class="aqui">Reciclagem</a>
+                    <a href="reciclagem.html">Reciclagem</a>
                 </li>
                 <li>
                     <a href="dicas.html" >Dicas</a>
                 </li>
                 <li>
-            </nav> -->
+            </nav>
         <!-- Inicio BOTÕES-->
         <div id="botoes_header">
             <button class="btn_redondo" id="interrogacao" onclick="location.href='pergunta_frequentes.html'">Dúvidas</button>
@@ -48,11 +48,11 @@
             
             <nav id = nav_drop_down> 
                 <ul>
-                    <!-- <li>
+                    <li>
                         <a class="ViewCelular" href="../../index.html" >Home</a>
                     </li>
                     <li class="ViewCelular">
-                        <a href="reciclagem.html" class="aqui" >Reciclagem</a>
+                        <a href="reciclagem.html" >Reciclagem</a>
                     </li>
                     <li class="ViewCelular">
                         <a href="dicas.html" >Dicas</a>
@@ -61,8 +61,8 @@
                         <a href="entrar.html">Entrar</a>
                     </li>
                     <li>
-                        <a href="cadastro.html">Cadastrar</a>
-                    </li> -->
+                        <a href="cadastro.html" class="aqui">Cadastrar</a>
+                    </li>
                     <li>
                         <a onclick="darkmode()">Dark-Mode</a>
                     </li>
@@ -96,7 +96,7 @@
                     <input type="text" placeholder="CPF" name="cpf" id="cpf" onChange="validaCpf()" maxlength="11" onkeypress="$(this).mask('000.000.000-00')">
                     <input type="email" placeholder="E-mail" name="email" id="email">
                     <input type="password" placeholder="Senha" name="senha" id="senha">
-                    <input type="text" placeholder="Telefone" name="telefone" id="telefone">
+                    <input type="text" placeholder="Telefone" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')">
                     <input type="text" placeholder="Cidade" name="cidade" id="cidade">
                 </div>
                     
@@ -113,7 +113,7 @@
                     </div>
                 </form>
                 <button id="btn_cadastrar" onclick="location.href='dashboard.html'">Cadastrar</button>
-                <a href="" class="possui_cadastro">Já possuo cadastro</a>
+                <a href="entrar.html" class="possui_cadastro">Já possuo cadastro</a>
                 <img class="logo_form" src="../img/logo.png">
             </div>
         </fieldset>
