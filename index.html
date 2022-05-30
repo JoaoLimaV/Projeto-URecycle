@@ -141,12 +141,13 @@
                                 <form id="contato">
                                         <div id="contato-esquerda">
                                             <label for="email">E-mail:</label>
-                                            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+                                            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
                                             <label for="assunto">Assunto:</label>
                                             <input type="text" id="assunto" name="assunto" placeholder="Ex.: Sugestão">
 
-                                            <input type="submit" value="Enviar" onclick="envia_contato()">
+                                            <button id="btn_enviar" onclick="enviaContato()">Enviar</button>
+
                                         </div>
                                         
                                         <div id="contato-direita">
