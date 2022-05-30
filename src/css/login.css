@@ -62,7 +62,7 @@ fieldset{
     color: rgb(0, 192, 135);
     text-decoration: underline;
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 form{
@@ -73,6 +73,7 @@ form{
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 form .data{
@@ -828,6 +829,7 @@ button > p{
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
+        margin-bottom: 50px;
     }
     
     form .data{
@@ -1003,5 +1005,6 @@ button > p{
         color: rgb(0, 192, 135);;
         text-decoration: underline;
     }
+
 }
 /* Fim Header Mobile 750px*/

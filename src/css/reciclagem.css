@@ -1,43 +1,74 @@
 /* ARTICLE - CONTEÚDOS PRINCIPAIS */
 
 /* ARTICLE - Imagem Apresentacao */
-#box_imagem_Apresentacao{
-    background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-    height: 650px;
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-#box_imagem_Apresentacao h1{
+#box_1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-destaque)
+}
+#box_1 h1{
     font-size: 4.5em;
     text-align: center;
     color: rgb(0, 192, 135);
     text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
     margin: 0 0;
 }
+#box_1 .box_imagens{
+    background: url(../img/reciclagem/alunos-aprendendo-sobre-varios-materiais-reciclaveis_53876-40276.png) no-repeat center center;
+    background-size: 80%;
+    width: 100%;
+    min-width:60%;
+    height: 650px;
+}
+
 /* ARTICLE - BOX TEXTO */
-article{
-    font-size: 1.1em;
+#box_2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--bg-padrao);
 }
-article .titulo{
-    background-color: transparent;
-
-    width: 100%;  
-    font-size: 2em;
+#box_2 .titulo{
+    font-size: 3.0em;
     text-align: center;
     color: rgb(0, 192, 135);
+    margin: 0 0;
+    margin-bottom: 10px;
 }
-#box_informativo p{
+#box_2 #duas_coluna{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-padrao);
+}
+#box_2 .box_imagens{
+    background: url(../img/reciclagem/pessoas-ajudando-o-planeta-e-reciclar_23-2148526779.png) no-repeat center center;
+    background-size: 1000px;
+    height: 400px;
+    width: 55%;
+}
+#box_2 #duas_coluna p{
+    display: flex;
+    align-items: center;
+
+    padding: 0 0;
+    padding-left: 25px;
+    height: 400px;
+    width: 40%;
+}
+#box_2 p{
     font-size: 1.2em;
     text-align: justify;
-    padding: 0 150px;
+    padding: 0 30px 0 15px;
+    margin-bottom: 20px;
 }
-#box_informativo .box_imagens {
-    background: var(--bg-destaque);
-    background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
-    background-size: 1000px;
-    height: 900px;
-}
-
-#box_informativo .box_videos{
+#box_3{
     display:flex;
     align-items: center;
     justify-content:center;
@@ -45,69 +76,100 @@ article .titulo{
     height: 700px;
     margin-bottom: 30px;
 }
-#box_informativo .box_videos iframe{
-    width: 50%;
+#box_3 h1{
+    font-size: 3.0em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    margin: 0 0;
+    margin-bottom: 10px;
+}
+#box_3 iframe{
+    width: 60%;
     height: 700px;
 }
 
 @media (max-width: 1024px) {
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 800px;
-        
+   #box_1 .box_imagens{
+        background: var(--bg-destaque)  url(../img/reciclagem/alunos-aprendendo-sobre-varios-materiais-reciclaveis_53876-40276.png) no-repeat center center;
+        background-size: 100%;
+        height: 650px;
+    }#box_2 #duas_coluna{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-padrao);
     }
-   #box_informativo .box_imagens{
-        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+    #box_2 .box_imagens{
+        background: url(../img/reciclagem/pessoas-ajudando-o-planeta-e-reciclar_23-2148526779.png) no-repeat center center;
         background-size: 800px;
-        height: 725px;
+        height: 500px;
+        width: 55%;
     }
-    #box_informativo p{
+    #box_2 #duas_coluna p{
+        display: flex;
+        align-items: center;
+    
+        padding: 0 0;
+        padding-left: 25px;
+        height: 650px;  
+        width: 40%;
+    }
+    #box_2 p{
         font-size: 1.2em;
         text-align: justify;
-        padding: 0 100px; 
+        padding: 0 30px 0 15px;
+        margin-bottom: 20px;
+        
     }
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 800px;
-        width: 100%;
+    #box_3 iframe{
+        width: 80%;
         height: 650px;
-    }
-    #box_informativo .box_videos iframe{
-        width: 60%;
-        height: 400px;
     }
 }
 
 @media (max-width: 750px) {
-    #box_informativo .box_videos iframe{
-        width: 80%;
-        height: 300px;
-    }
-    #box_informativo .box_imagens {
-        background: var(--bg-destaque);
-        background: var(--bg-destaque) url(../img/reciclagem/sig_latas.png) no-repeat center center;
+    #box_1 .box_imagens{
+        background: var(--bg-destaque)  url(../img/reciclagem/alunos-aprendendo-sobre-varios-materiais-reciclaveis_53876-40276.png) no-repeat center center;
         background-size: 100%;
-        height: 550px;
-    
+        height: 500px;
     }
-    #box_imagem_Apresentacao{
-        background: var(--bg-destaque) url(../img/reciclagem/imagem_apresentacao.png) no-repeat center center;
-        background-size: 550px;
+    #box_2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-padrao);
+    }
+    #box_2 #duas_coluna{
+        flex-direction: column;
+        background-color: var(--bg-padrao);
+    }
+    #box_2 .box_imagens{
+        background: url(../img/reciclagem/pessoas-ajudando-o-planeta-e-reciclar_23-2148526779.png) no-repeat center center;
+        background-size: 800px;
         height: 400px;
-    }
-    #box_imagem_Apresentacao h1{
-        font-size: 2.5em;
-        text-align: center;
-        color: rgb(0, 192, 135);
-        text-shadow: 3px 3px rgba(255, 255, 255, 0.1); /* Vertical, Horizontal*/
-        margin: 0 0;
-    }
-    #box_informativo .titulo{
-        font-size: 1.4em;
-        text-align: center;
-        color: rgb(0, 192, 135);
-        margin: 20px;
         width: 90%;
+        border-bottom: 50px;
+    }
+    #box_2 #duas_coluna p{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 0 0 0;
+        height: 650px;  
+        width: 90%;
+        height: auto;
+    }
+    #box_2 p{
+        font-size:  1.2em;
+        text-align: justify;
+        padding: 0 0 0 0;
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+    #box_3 iframe{
+        width: 80%;
+        height: 500px;
     }
  }
 
