@@ -32,8 +32,8 @@ div#conteudo{
 }
 
 #foto img{
-  height: 90%;
-  width: 80%;
+  height: 14rem;
+  width: 15rem;
 }
 
 #detalhes{
@@ -41,8 +41,16 @@ div#conteudo{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 2.5rem;
   font-size: 1.2rem;
   max-height: 200px;
+}
+
+#detalhes p#culto1{
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+ 
 }
 
 #baixo{
@@ -50,7 +58,8 @@ div#conteudo{
   font-size: 1.2rem;
   margin: 0;
   border: 0;
-  padding-left: 1rem;
+  padding: 1.5rem 1.5rem;
+  line-height: 1.7rem;
 }
 
 #baixo p{
@@ -69,6 +78,14 @@ div#conteudo{
   height: auto;
   max-height: 400px;
   transition: 0.15s;
+
+}
+
+#baixo p#oculto{
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+ 
 }
 
 #seta{
@@ -89,6 +106,39 @@ div#conteudo{
   width: 3.5rem;
   cursor: pointer;
 }
+
+@media (max-width: 690px) {
+
+  #ancora p{
+    font-size: 1rem;
+  }
+
+  #detalhes p#oculto1{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  }
+
+
+
+  #baixo p#oculto{
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+   
+  }
+
+  #seta svg{
+    height: 3rem;
+  }
+
+  #foto img{
+    height: 10rem;
+    width: 11rem; 
+  }
+
+}
+
 
 
 
