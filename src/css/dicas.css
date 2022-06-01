@@ -1,0 +1,92 @@
+:root{
+    --destaque-color-font: rgb(0, 192, 135);
+}
+div#ancora{
+    padding: 2rem 2rem;
+}
+h1#H01{
+    color: var(--destaque-color-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#img01{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p#p1{
+    font-size: 1.2rem;
+}
+div#p3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+p#p2,p#p4{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+p#p4{
+    padding-top:1rem;
+}
+div#img02 img{
+    height: 35rem;
+    width: 35rem;
+}
+div#H03{
+    border: 2px solid grey;
+}
+div#botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--destaque-color-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+div#b1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 1rem;
+}
+div#b1 button{
+    color: blueviolet;
+    border: 1.6px solid gray;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+div#cor{
+ display: flex;
+ line-height: 2rem;
+}
+div#cor1{
+    color: blue;
+}
+div#cor2{
+    color: red;
+}
+div#cor3{
+    color: green;
+}
+div#cor4{
+    color: yellow;
+}
+div#cor5{
+    color: black;
+}
+div#cor6{
+    color:brown;
+}
+div#cor7{
+    color: rgb(101, 101, 101);
+}
+div#cor8{
+    color:rgb(209, 208, 208);
+}
+div#cor9{
+    color: orange;
+}
+div#cor10{
+    color: rgb(176, 7, 176);
+}
