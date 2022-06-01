@@ -45,7 +45,7 @@
                     <button class="btn_redondo" id="interrogacao"  onclick="location.href='src/pages/pergunta_frequentes.html'">Dúvidas</button>
                     <button class="btn_redondo" id="darkmode" onclick="darkmode()">Dark Mode</button>
                     <button class="btn_normal" onclick="location.href='src/pages/cadastro.html'">Cadastrar</button>
-                    <button class="btn_normal" onclick="location.href='src/pages/entrar.html'">Entrar</button>
+                    <button class="btn_normal" onclick="location.href='src/pages/login.html'">Entrar</button>
                 </div><!-- FIM BOTÕES-->
                 <div id="menu_drop">
                     <button onclick="dropdown()" id ="btn_drop">
@@ -64,7 +64,7 @@
                                 <a href="src/pages/dicas.html" >Dicas</a>
                             </li>
                             <li>
-                                <a href="src/pages/entrar.html">Entrar</a>
+                                <a href="src/pages/login.html">Entrar</a>
                             </li>
                             <li>
                                 <a href="src/pages/cadastro.html'">Cadastrar</a>
@@ -154,12 +154,38 @@
                                             <label for="mensagem">Mensagem:</label>
                                             <textarea id="mensagem" name="mensagem" placeholder="Ficou com alguma dúvida? Tem alguma sugestão? Escreva para nós"></textarea>
                                         </div>
-
-                                        
                                 </form>
                             </fieldset>
-                        <!-- FIM Formulário de Contato -->
-                    </article>
+                    </article><!-- FIM Formulário de Contato -->
+
+                    <!-- INICIO Título Comentários-->
+                <article id ="box_informativo">
+                    <h1 class = "titulo">
+                        Comentários
+                    </h1>
+
+                    <div id="comentarios">
+                        <div id="foto_comentario"><img src="src/img/icone_usuario.png" width="75px"/></div>
+                        <div id="texto_comentario">
+                            <p><b>Jair Lula da Silva</b></p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                                sint quos nisi dolorem sequi, ex neque asperiores minima?</p>
+                        </div>
+                        <div id="acoes_comentario"></div>
+                    </div>
+                    
+                    <div id="comentarios">
+                        <div id="foto_comentario"><img src="src/img/icone_usuario.png" width="75px"/></div>
+                        <div id="texto_comentario">
+                            <p><b>Luiz Bolsonaro</b></p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Doloribus perspiciatis perferendis officiis molestiae animi possimus enim inventore et blanditiis, 
+                                sint quos nisi dolorem sequi, ex neque asperiores minima?</p>
+                        </div>
+                        <div id="acoes_comentario"></div>
+                    </div>
+                </article><!-- FIM  Comentários-->
            
                     <footer>
                         <p>@Copyright 2022 Todos os direitos reservados<span class="aqui"> U-Recycle</span></p>
@@ -184,5 +210,5 @@
                     </footer>
         </main>
     </body>
-    <script>function informar(){alert("ATENÇÃO\nTodas as imagens estão sendo utilizadas para fins educativos e não comerciais")}</script>
+    <!-- <script>function informar(){alert("ATENÇÃO\nTodas as imagens estão sendo utilizadas para fins educativos e não comerciais")}</script> -->
 </html>

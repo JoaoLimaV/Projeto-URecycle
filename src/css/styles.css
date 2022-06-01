@@ -120,6 +120,7 @@ textarea {
     background-color: #ffffff;
     border: 2px solid #9b9b9b;
     border-radius: 5px;
+    resize: none;
 }
 
 #btn_enviar {
@@ -141,4 +142,25 @@ textarea {
     border: 2px solid transparent;
     transition: 0.5s;
     color: white;
+}
+
+#comentarios {
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 30px;
+}
+
+#foto_comentario {
+    background-color: #cdcccc;
+    width: 150px;
+    height: 80px;
+    margin-left: 60px;
+    border-radius: 100%;
+    display: inline;
+}
+
+#texto_comentario {
+    display: inline;
 }
