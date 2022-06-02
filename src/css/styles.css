@@ -3,7 +3,7 @@
 
 /* ARTICLE - Imagem Apresentacao */
 #box_imagem_Apresentacao{
-    background: var(--bg-destaque) url(https://studiosol-a.akamaihd.net/uploadfile/letras/playlists/3/4/5/b/345bf64886b24a82899bf05ab394e48e.jpg) no-repeat center center;
+    /* background: var(--bg-destaque) url(https://studiosol-a.akamaihd.net/uploadfile/letras/playlists/3/4/5/b/345bf64886b24a82899bf05ab394e48e.jpg) no-repeat center center; */
     height: 430px;
     width: 100%;
 }
@@ -144,21 +144,38 @@ textarea {
     color: white;
 }
 
-#comentarios {
-    border: 2px solid black;
-    width: 100%;
-    border-radius: 5px;
-    display: flex;
-    margin-top: 30px;
+#box_comentario h1{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(0, 192, 135);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.6); /* Vertical, Horizontal*/
+    margin: 0 0;
+}
+
+#box_comentario p{
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 5px 40px;
 }
 
 #foto_comentario {
     background-color: #cdcccc;
     width: 150px;
-    height: 80px;
-    margin-left: 60px;
+    height: 100%;
+    margin: 30px 60px;
     border-radius: 100%;
     display: inline;
+}
+
+#acoes_comentario {
+    display: inline;
+}
+
+#comentarios {
+    border: 2px solid #9b9b9b;
+    border-radius: 5px;
+    display: flex;
+    margin: 25px 150px;
 }
 
 #texto_comentario {
