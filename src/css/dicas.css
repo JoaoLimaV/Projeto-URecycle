@@ -56,6 +56,10 @@ div#b1 button{
     font-size: 1.2rem;
     border-radius: 5px;
 }
+#b1 button:hover{
+background-color:var(--destaque-color-font);
+color: white;
+}
 div#cor{
  display: flex;
  line-height: 2rem;
@@ -76,7 +80,7 @@ div#cor5{
     color: black;
 }
 div#cor6{
-    color:brown;
+    color:rgb(123, 32, 32);
 }
 div#cor7{
     color: rgb(101, 101, 101);
