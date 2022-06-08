@@ -125,6 +125,9 @@ header nav ul li a:hover{
 #container_itens{
     background-color: var(--bg-destaque);
 }
+#historico input[type='text']{
+   color: var(--all-color-font);
+}
 /*  BOTOES HEADER */
 
 #botoes_header{

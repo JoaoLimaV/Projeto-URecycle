@@ -41,7 +41,7 @@ main{
  border-radius: 50px 0 0 50px;
  width: 40%;
  height: 100%;
- font-size: 1.3;
+ font-size: 1em;
 }
 #historico #imagem_pesquisa{
   border: 2px solid rgba(184, 182, 182, 0.4);
@@ -53,10 +53,12 @@ main{
   align-items:center;
   justify-content: center;
   cursor: pointer;
+
 }
 input:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
+  font-size: 1em;
 }
 #historico .caixa_historico{
   margin: 20px;
@@ -126,5 +128,8 @@ input:focus {
 }
 #historico .status{
   display: none; 
+}
+#historico input[type='text']{
+  width: 90%;
 }
 }
