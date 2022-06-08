@@ -1,144 +1,130 @@
-:root{
-  --color: rgb(0, 192, 135);
-}
-
-h1{
-  color: var(--color);
-  font-size: 2.7rem;
-  padding-top: 7%;
-  padding-left: 10%;
-  margin-bottom: 1rem;
-}
-
-#ancora{
-  margin: 2rem;
-  padding: 5px 2px;
-  border: var(--color) solid 2px;
-  border-radius: 1.5rem;
-}
-
-div#conteudo{
-  display: grid;
-  grid-template-columns: 1.5fr 5.5fr 1fr;
-  grid-template-areas: "I D S";
-  grid-template-rows: 30vh;
-}
-
-#foto{
-  grid-area: I;
+main{
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-}
-
-#foto img{
-  height: 14rem;
-  width: 15rem;
-}
-
-#detalhes{
-  grid-area: D;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 2.5rem;
-  font-size: 1.2rem;
-  max-height: 200px;
-}
-
-#detalhes p#culto1{
-  visibility: visible;
-  opacity: 1;
-  position: relative;
- 
-}
-
-#baixo{
-  max-height: 200px;
-  font-size: 1.2rem;
-  margin: 0;
-  border: 0;
-  padding: 1.5rem 1.5rem;
-  line-height: 1.7rem;
-}
-
-#baixo p{
-  overflow: hidden;
-  max-height: 0px;
-  transition:  0.15s;
-}
-
-#baixo input{
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-}
-
-#baixo input:checked ~ p{
+  min-height: 82vh;
   height: auto;
-  max-height: 400px;
-  transition: 0.15s;
-
 }
-
-#baixo p#oculto{
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
- 
-}
-
-#seta{
-  grid-area: S;
+#container_itens{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-right: 5rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: var(--color);
+  height: auto;
+  margin: 50px;
+  width: 80%;
 }
-
-#seta svg{
-  fill: var(--color);
-  height: 3.5rem;
-  width: 3.5rem;
+#container_itens #historico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 95%;
+}
+#container_itens h1{
+  text-align: center;
+  width: 98%;
+  font-size: 4em;
+}
+#historico #pesquisar{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 98%;
+  height: 30px;
+}
+#historico input[type='text']{
+ border: 2px solid rgba(184, 182, 182, 0.4);
+ border-right: 0px solid transparent;
+ border-radius: 50px 0 0 50px;
+ width: 40%;
+ height: 100%;
+ font-size: 1.3;
+}
+#historico #imagem_pesquisa{
+  border: 2px solid rgba(184, 182, 182, 0.4);
+  border-left: 0px solid transparent;
+  border-radius: 0 50px 50px 0;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
   cursor: pointer;
 }
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+#historico .caixa_historico{
+  margin: 20px;
+  width: 98%;
+  height: 120px;
 
-@media (max-width: 690px) {
-
-  #ancora p{
-    font-size: 1rem;
-  }
-
-  #detalhes p#oculto1{
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  }
-
-
-
-  #baixo p#oculto{
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-   
-  }
-
-  #seta svg{
-    height: 3rem;
-  }
-
-  #foto img{
-    height: 10rem;
-    width: 11rem; 
-  }
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#historico .caixa_historico .img_pedido{
+    margin: 10px;
+    width: 150px;
+    height: 100px;
+    border: 1px solid rgba(184, 182, 182, 0.4);
+    background: url(../img/configuracao_usuario/sem_imagem.jpg.opdownload) no-repeat center center;
+    background-size: 200px;
+}
+#historico .caixa_historico.concluido{
+  border: 2px solid rgba(0, 128, 0);
+}
+#historico .caixa_historico.pendente{
+  border: 2px solid rgba(255, 166, 0);
+}
+#historico .caixa_historico.cancelado{
+  border: 2px solid rgba(255, 0, 0);
+}
+#historico .texto{
+  width: 100%;
+}
+#historico .status{
+  margin: 10px;
+  width: 150px;
+  height: 100px;
+  border: 3px solid rgba(184, 182, 182, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#historico .status.concluido{
+  color: rgba(0, 128, 0);
+}
+#historico .status.pendente{
+  color: rgba(255, 166, 0);
+}
+#historico .status.cancelado{
+  color: rgba(255, 0, 0);
 }
 
+#historico .status .titulo_status{
+  font-size: 1.5em;
+}
 
-
-
+@media (max-width: 750px) {
+  #container_itens{
+    width: 95%;
+  }
+  #container_itens #historico{
+    width: 95%;
+  }
+  #historico .caixa_historico .img_pedido{
+    height: 75px;
+    background-size: 100px;
+    
+}
+#historico .status{
+  display: none; 
+}
+}

@@ -122,7 +122,9 @@ header nav ul li a:hover{
 .aqui{
     color: var(--destaque-color-font);
 }
-
+#container_itens{
+    background-color: var(--bg-destaque);
+}
 /*  BOTOES HEADER */
 
 #botoes_header{

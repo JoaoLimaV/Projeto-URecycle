@@ -131,4 +131,14 @@ footer{
         margin: 0 18.7% 0 18.7%;
 
     }
+    form #pergunta{
+        font-size: 15px; 
+        margin: 0;
+    }
+    label#pergunta{
+        min-width: 400px;
+       
+    }
+
+    }
 }

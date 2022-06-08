@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    
     <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen" />
     <link rel="stylesheet" href="../css/historico.css">
     <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-    <main>
         <header>
             <!-- Inicio Logo-->
             <div id="logo"> 
@@ -48,101 +48,131 @@
                 </nav>
             </div>
         </header><!-- FIM Cabeçalho-->
-        
+        <div id = "separador"></div>
     <!-- FIM Cabeçalho-->
+    <main>      
+        <article id = "container_itens">
+            <h1> Histórico</h1>
+            <article id = "historico">
+                <article id ="pesquisar">
+                    <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite o Número do Pedido">
 
-    <h1>Historico</h1>
-   
-    <div id="ancora">
-      <div id="conteudo">
-        <div id="foto"><img src="../img/configuracao_usuario/sem_imagem.jpg.opdownload" alt=""></div>
-
-        <div id="detalhes">
-          
-            <p><strong>Endereço:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p><strong>Data do Pedido:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p id="oculto1"><strong>Ponto de Referencia:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p id="oculto1"><strong>Empresa Encarregada:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
- 
-        </div>
-
-        <div id="seta">
-            
-            <label for="check1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg></label>
-        <p>Aprovado</p>
-        </div>
-      </div>
-      <div id="baixo">
-
-        <input type="checkbox" id="check1">
-
-        <p id="oculto"><strong>Ponto de Referencia:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p id="oculto"><strong>Empresa Encarregada:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-        <p><strong>Descrição:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p><strong>Tipo:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p><strong>Fotos Enviadas:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p><strong>Nome do Cliente:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
-    </div>
-
-    <div id="ancora">
-        <div id="conteudo">
-          <div id="foto"><img src="../img/configuracao_usuario/sem_imagem.jpg.opdownload" alt=""></div>
-  
-          <div id="detalhes">
-            
-              <p><strong>Endereço:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <p><strong>Data do Pedido:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <p id="oculto1"><strong>Ponto de Referencia:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <p id="oculto1"><strong>Empresa Encarregada:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  
-   
-          </div>
-  
-          <div id="seta">
-              
-              <label for="check2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"/></svg></label>
-
-          <p>Aprovado</p>
-          </div>
-        </div>
-        <div id="baixo">
-  
-          <input type="checkbox" id="check2">
-
-          <p id="oculto"><strong>Ponto de Referencia:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p id="oculto"><strong>Empresa Encarregada:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-          <p><strong>Descrição:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p><strong>Tipo:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p><strong>Fotos Enviadas:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p><strong>Nome do Cliente:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      </div>
-
- 
-
-</main>
-    <footer>
-            <p>@Copyright 2022 Todos os direitos reservados<span class="aqui"> U-Recycle</span></p>
-            <article id = "redes_sociais">
-                <span class="box_social">
-                        <a href="" class="face">F</a>
-                </span>   
-
-                <span class="box_social">
-                        <a href="" class="insta">I</a>
-                </span>  
-
-                <span class="box_social">
-                        <a href="" class="twitter">T</a>
-                </span>   
-
-                <span class="box_social">
-                        <a href="" class="whats">W</a>
-                </span> 
+                    <article id = "imagem_pesquisa">
+                        <img src="../img/historico/lupa.png"height="70%">
+                    </article>
+                </article>
+                <article class = "caixa_historico concluido">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #01 </p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status concluido">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CONCLUIDO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico concluido">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #02</p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status concluido">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CONCLUIDO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico pendente">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #03 </p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status pendente">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>PENDENTE</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico pendente">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #04</p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status pendente">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CANCELADO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico cancelado">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #05</p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status cancelado">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CANCELADO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico cancelado">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #06 </p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status cancelado">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CANCELADO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico cancelado">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #07 </p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status cancelado">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CANCELADO</p>
+                    </div>
+                </article>
+                <article class = "caixa_historico cancelado">
+                    <div class ="img_pedido"></div>
+                    <div class ="texto">
+                    <p>Número do Pedido: #08 </p><br>
+                    <p>DATA: 00/00/0000</p>
+                    </div>
+                    <div class ="status cancelado">
+                            <p class = "titulo_status">STATUS: </p>
+                            <p>CANCELADO</p>
+                    </div>
+                </article>
             </article>
-    </footer>
+        </article>
+    </main>
+
+    <footer>
+        <p>@Copyright 2022 Todos os direitos reservados<span class="aqui"> U-Recycle</span></p>
+        
+    <article id = "redes_sociais">
+       <span class="box_social">
+            <a href="" class="face">F</a>
+       </span>   
+
+       <span class="box_social">
+            <a href="" class="insta">I</a>
+       </span>  
+
+       <span class="box_social">
+            <a href="" class="twitter">T</a>
+       </span>   
+
+       <span class="box_social">
+            <a href="" class="whats">W</a>
+       </span> 
+    </article>
+</footer>
+
 </body>

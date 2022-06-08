@@ -165,7 +165,7 @@
     border: 2px solid rgba(0, 128, 0);
  }
  #menu_lateral_direita .caixa.concluido:hover{
-    background-color: rgba(0, 128, 0, 0.2);
+    
     cursor: pointer;
  }
  #menu_lateral_direita .caixa.pendente{
@@ -175,7 +175,6 @@
     border: 2px solid rgba(255, 166, 0);
  }
  #menu_lateral_direita .caixa.pendente:hover{
-    background-color: rgba(255, 166, 0, 0.2);
     cursor: pointer;
  }
  #menu_lateral_direita .caixa.cancelado{
@@ -185,7 +184,6 @@
     border: 2px solid rgba(255, 0, 0);;
  }
  #menu_lateral_direita .caixa.cancelado:hover{
-    background-color: rgba(255, 0, 0, 0.2);
     cursor: pointer;
  }
  #menu_lateral_direita .icone_usuario{
