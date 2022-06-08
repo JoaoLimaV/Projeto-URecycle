@@ -4,7 +4,7 @@
 /* ARTICLE - Imagem Apresentacao */
 #box_imagem_Apresentacao{
     /* background: var(--bg-destaque) url(https://studiosol-a.akamaihd.net/uploadfile/letras/playlists/3/4/5/b/345bf64886b24a82899bf05ab394e48e.jpg) no-repeat center center; */
-    height: 430px;
+    
     width: 100%;
 }
 #box_imagem_Apresentacao h1{
@@ -180,4 +180,16 @@ textarea {
 
 #texto_comentario {
     display: inline;
+}
+
+.button {
+    float: left;
+}
+
+#btn_like {
+    background-image: url(../img/like.png);
+}
+
+#btn_deslike{
+    background: url(../img/deslike.png);
 }
