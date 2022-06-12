@@ -13,3 +13,7 @@ function envia_contato(){
     alert("Enviou legal!");
 }
 
+function acaoBotao(){
+    alert("Obrigado por seu feedback!");
+}
+

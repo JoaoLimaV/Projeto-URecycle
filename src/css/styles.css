@@ -158,19 +158,6 @@ textarea {
     padding: 5px 40px;
 }
 
-#foto_comentario {
-    background-color: #cdcccc;
-    width: 150px;
-    height: 100%;
-    margin: 30px 60px;
-    border-radius: 100%;
-    display: inline;
-}
-
-#acoes_comentario {
-    display: inline;
-}
-
 #comentarios {
     border: 2px solid #9b9b9b;
     border-radius: 5px;
@@ -178,8 +165,50 @@ textarea {
     margin: 25px 150px;
 }
 
-#texto_comentario {
+#foto_comentario {
+    margin: 30px 60px;
     display: inline;
+}
+
+#foto_comentario img{
+    width: 90px;
+    border-radius: 50%;
+    border: 3px solid #767676;
+    background-color: #dcdada;
+}
+
+#texto_comentario {
+    display: flex;
+    flex-direction: column;
+}
+
+#acoes_comentario #btn_like{
+    background: var(--btn-like-bg);
+    width: 60px;
+    height: 60px;
+    background-size: 90%;
+    cursor: pointer; 
+    margin-top: 15px;
+    transition: transform 200ms ease-in-out;
+
+}
+
+#acoes_comentario #btn_like:hover{
+    transform: scale(1.25);
+}
+
+#acoes_comentario #btn_deslike{
+    background: var(--btn-deslike-bg);
+    width: 60px;
+    height: 60px;
+    background-size: 90%;
+    cursor: pointer;  
+    transition: transform 200ms ease-in-out;  
+
+}
+
+#acoes_comentario #btn_deslike:hover{
+    transform: scale(1.25);
 }
 
 .button {

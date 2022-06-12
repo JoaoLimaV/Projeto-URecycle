@@ -23,6 +23,8 @@
     --btn-dark-tamanho-imagem: 100%;
     --btn-interrogacao-bg: url(../img/interrogacao.png) center center no-repeat;
     --btn-perfil-bg:url(../img/icone_usuario_preto.png) no-repeat center center;
+    --btn-like-bg: url(../img/like.png) center center no-repeat;
+    --btn-deslike-bg: url(../img/deslike.png) center center no-repeat;
     --btn-border: 2px solid black;
 
     --img-face: url(../img/face.png) center center no-repeat;
