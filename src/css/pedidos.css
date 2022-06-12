@@ -1,0 +1,29 @@
+#formulario{
+    margin: 25px 10%;
+    border: 1px solid red;
+}
+
+.titulo{
+    color: rgb(0, 192, 135);;
+    font-size: 4em;
+    margin: 75px 0 50px 0;
+    text-align: center;
+}
+span.titulo{
+    padding: 50px;
+}
+#pedido label{
+    margin: 0 0 5px 6%;
+    font-size: 17px;
+}
+#pedido input{
+    font-size: 17px;
+    width: 50%;
+    height: 30px;
+    border: 1px solid rgb(210,210,210);
+    padding: 2px;
+    margin: 0 6% 5px 6%;
+}
+#pedido input::placeholder{
+    color: rgb(210,210,210);
+}
