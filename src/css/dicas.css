@@ -1,8 +1,8 @@
 :root{
     --destaque-color-font: rgb(0, 192, 135);
 }
-div#ancora{
-    padding: 2rem 2rem;
+section#ancora{
+    padding: 2em 2em;
 }
 h1#H01{
     color: var(--destaque-color-font);
@@ -16,22 +16,23 @@ div#img01{
     justify-content: center;
 }
 p#p1{
-    font-size: 1.2rem;
+    font-size: 1.2em;
+    margin: 1.2em 0;
 }
 div#p3{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 p#p2,p#p4{
-    font-size: 1.2rem;
-    text-align: justify;
+    font-size: 1.2em;
 }
 p#p4{
-    padding-top:1rem;
+    padding-top:1em;
 }
+
 div#img02 img{
-    height: 35rem;
-    width: 35rem;
+    height: 35em;
+    width: 35em;
 }
 div#H03{
     border: 2px solid grey;
@@ -41,29 +42,38 @@ div#botoes{
     align-items: center;
     justify-content: center;
     color: var(--destaque-color-font);
-    font-size: 1.6rem;
+    font-size: 1.6em;
     font-weight: bold;
+    padding-top: 0.5em;
 }
+
 div#b1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 1rem 1rem;
+    padding: 1em 1em;
 }
+
 div#b1 button{
     color: blueviolet;
     border: 1.6px solid gray;
-    margin: 0.5rem;
-    font-size: 1.2rem;
+    margin: 0.5em;
+    padding: 0.5em 0em;
+    font-size: 1.2em;
     border-radius: 5px;
 }
+
 #b1 button:hover{
 background-color:var(--destaque-color-font);
 color: white;
 }
+
 div#cor{
  display: flex;
- line-height: 2rem;
+ line-height: 2em;
+ font-size: 1.2em;
+ text-align: center;
 }
+
 div#cor1{
     color: blue;
 }
@@ -84,6 +94,8 @@ div#cor6{
 }
 div#cor7{
     color: rgb(101, 101, 101);
+    height: auto;
+    width: auto;
 }
 div#cor8{
     color:rgb(209, 208, 208);
@@ -94,3 +106,37 @@ div#cor9{
 div#cor10{
     color: rgb(176, 7, 176);
 }
+
+@media (max-width: 1218px) {
+
+    div#img02 img{
+        height: 25em;
+        width: 25em;
+    }
+
+  div#cor{
+        font-size: 1.05em;
+       }
+ 
+}
+@media (max-width: 980px) {
+
+    div#b1 button, div#cor,p#p4, p#p2, p#p1{
+        font-size: 1.3em;
+    }
+
+    div#p3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2em;
+    }
+
+    div#img02,div#img02 img{
+        height: 0em;
+        width: 0em;
+        position: absolute;
+        opacity: 0;
+    }
+}
+
