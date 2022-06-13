@@ -8,7 +8,7 @@
     background-color: transparent;
 }
  :root{
-    --bg-padrao:rgb(247, 252, 245);
+    --bg-padrao:rgb(253, 251, 251);
     --bg-destaque: rgb(255, 255, 255);
     --logo-imagem: url(../img/logo.png) center left no-repeat;
 
