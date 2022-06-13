@@ -31,9 +31,10 @@ input#pergunta{
 input#pergunta::placeholder{
     color: rgb(210,210,210);
 }
-.texto_basico{
+.basico{
     font-size: 20px;
     font-weight: bold;
+
 }
 #conteudo{
     height: 45%;
@@ -42,19 +43,18 @@ input#pergunta::placeholder{
 /* Botoes */
 #lateral{
     width: 220px;
-    height: 100%;
+    height: 100%px;
 	float: left;
-    margin: 0;
+    margin: 0 0 5px 0;
     font-size: 20px;;
 }
 #botoes_lateral .btn_normal{
     text-align: left;
     font-size: 16px;
-    width: 220px;
+    width: 225px;
     height: 45px;
     cursor: pointer;
-    padding: 0 15px;
-    margin: 0 5px;
+    text-align: center;
     color: var(--all-color-font);
 }
 #botoes_lateral .btn_normal:hover{
@@ -63,9 +63,7 @@ input#pergunta::placeholder{
     color: black;
 }
 .btn_normal {
-	padding: 4px;
 	border-radius: 5px;
-	position: relative;
 }
 #botoes_lateral input {
     display: flex;
@@ -102,6 +100,15 @@ input#pergunta::placeholder{
     font-size: medium;
     padding: 10px 0;
 }
+.caixamobile{
+        float: left;
+        margin: 0 0 25px -57px;
+        padding: 10px;
+        border: 1px solid rgb(210,210,210);
+        border-radius: 10px;
+        width: 303px;
+        height: 90px;
+    }
 /* Divs informações */
 #ajuda1, #ajuda2, 
 #ajuda3, #ajuda4, 
@@ -110,10 +117,17 @@ input#pergunta::placeholder{
     height: 100%;
     margin-left: 225px;
 }
+#ajuda1mobile, #ajuda2mobile, 
+#ajuda3mobile, #ajuda4mobile, 
+#ajuda5mobile {
+    display: none;
+    height: 100%;
+    margin: 8px;
+}
+
 /* Footer */
 footer{
     display: block;
-
 }
 
 @media (max-width: 1280px) {
@@ -122,23 +136,35 @@ footer{
     }
 }
 @media (max-width: 1024px) {
-
     *{
         align-items: center;
         text-align: center;
-    } 
+    }
+    article{
+        margin: 0;
+    }
+    .texto_caixa{
+        font-size: medium;
+        padding: 10px 0;
+    }
     #conteudo{
         margin: 0 18.7% 0 18.7%;
-
     }
     form #pergunta{
-        font-size: 15px; 
-        margin: 0;
+        display: none;
     }
     label#pergunta{
         min-width: 400px;
-       
     }
-
+    .basico{
+        margin: 25px;
+    }
+}
+    @media (max-width: 375px) {
+        #conteudo{
+        margin: 0 75px 500px 75px;
+    }
+    #lateral{
+        height: 920px;
     }
 }

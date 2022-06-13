@@ -70,16 +70,16 @@
     </header><!-- FIM Cabeçalho-->
     <br><br>
     <article>
-        <article class="titulo"> Perguntas Frequentes</article>
+        <article class="titulo">Perguntas Frequentes</article>
 
     </article>
         <!---Inicio Barra de Pesquisa-->
         <form>
-            <label for="pergunta" id="pergunta" class="texto_basico">Pesquise para achar a resposta de que procura:<br></label>
+            <label for="pergunta" id="pergunta" class="basico">Pesquise para achar a resposta de que procura:<br></label>
             <input type="text" name="pergunta" id="pergunta" placeholder="Digite algo como &#34como fazer um pedido&#34">
         </form>
         <!---Fim Barra de Pesquisa-->
-    <article class="texto_basico">
+    <article class="basico">
     Tópicos de ajuda
     </article>
     <article id="conteudo">
@@ -87,10 +87,126 @@
         <article id="lateral">
             <ul id="botoes_lateral">
                 <li><input label="Tópicos Recomendados" type="radio" id="recomendados" name="ajuda" value="recomendados" class="btn_normal" checked onchange="mudatexto1()"></li>
-                <li><input label="Gerenciamento de conta" type="radio" id="conta" name="ajuda" value="conta" class="btn_normal" onchange="mudatexto2()"></li>
-                <li><input label="Segurança e privacidade" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto3()"></li>
-                <li><input label="Dispositivos & Serviços Digitais" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto4()"></li>
-                <li><input label="Outros Tópicos e páginas de ajuda" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto5()"></li>
+                
+                <article id="ajuda1mobile">
+                    <article class="caixamobile">
+                            <h4>Como fazer um pedido</h4>
+                            <p class="texto_caixa">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                            </p>
+                        </article>
+                    <article class="caixamobile">
+                            <h4>Nova legislação</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                    <article class="caixamobile">
+                        <h4>Como reciclar</h4>
+                        <p class="texto_caixa">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </article>
+                </article>
+
+                <li class="clear"><input label="Gerenciamento De Conta" type="radio" id="conta" name="ajuda" value="conta" class="btn_normal" onchange="mudatexto2()"></li>
+                
+                <article id="ajuda2mobile">
+                    <article class="caixamobile">
+                            <h4>Como criar uma conta</h4>
+                            <p class="texto_caixa">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                            </p>
+                        </article>
+                    <article class="caixamobile">
+                            <h4>Termos de serviço</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                    <article class="caixamobile">
+                        <h4>Recuperação de conta</h4>
+                        <p class="texto_caixa">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </article>
+                    <article class="caixamobile">
+                        <h4>Contas compartilhadas</h4>
+                        <p class="texto_caixa">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                        </p>
+                    </article>
+                    <article class="caixamobile">
+                            <h4>Problemas com o acesso</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                    </article>
+                
+                <li class="clear"><input label="Segurança e Privacidade" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto3()"></li>
+                
+                <article id="ajuda3mobile">
+                    <article class="caixamobile">
+                            <h4>Gerenciamento de senhas</h4>
+                            <p class="texto_caixa">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                            </p>
+                        </article>
+                    <article class="caixamobile">
+                            <h4>Deletar conta</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                    <article class="caixamobile">
+                        <h4>Senha em duas etapas</h4>
+                        <p class="texto_caixa">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </article>
+                </article>
+                
+                <li class="clear"><input label="Dispositivos & Serviços Digitais" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto4()"></li>
+                
+                <article id="ajuda4mobile">
+                    <article class="caixamobile">
+                            <h4>Como baixar o app</h4>
+                            <p class="texto_caixa">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                            </p>
+                        </article>
+                    <article class="caixamobile">
+                            <h4>Serviços unicos web</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                    <article class="caixamobile">
+                        <h4>Dispositivos compativeis</h4>
+                        <p class="texto_caixa">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </article>
+                </article>
+                
+                <li class="clear"><input label="Outros Tópicos e Páginas De Ajuda" type="radio" id="privacidade" name="ajuda" value="privacidade" class="btn_normal" onchange="mudatexto5()"></li>
+            
+                <article id="ajuda5mobile">
+                    <article class="caixamobile">
+                            <h4>Metodos de pagamento</h4>
+                            <p class="texto_caixa">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatem voluptatibus nulla voluptates...
+                            </p>
+                        </article>
+                    <article class="caixamobile">
+                            <h4>Geolocalização</h4>
+                            <p class="texto_caixa">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                    </article>
+                </article>
+            
             </ul>
         </article>
         <!---Fim Barra Lateral-->
