@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen"/>
     <link rel="icon" type="image/x-icon" href="/src/img/logo.png">
-
-    <title>Login U-Recycle</title>
+    <title>Cadastro U-Recycle</title>
 </head>
 <body>
     <header>
@@ -62,9 +61,6 @@
                         <a href="login.html">Entrar</a>
                     </li>
                     <li>
-                        <a href="cadastro.html" class="aqui">Cadastrar</a>
-                    </li>
-                    <li>
                         <a onclick="darkmode()">Dark-Mode</a>
                     </li>
                     <li>
@@ -75,36 +71,43 @@
         </div>
     </header><!-- FIM Cabeçalho-->
     <div id = "separador"></div>
-    <div id = "separador"></div>
 
+    <!-- COMEÇO TUDO-->
+    <article id = "container">
 
-        <fieldset class="container">
-            <div class="img_form">
-                <h1>Nós vamos até você</h1>
-                <img src="../img/caminhao-removebg-preview-removebg-preview.png" alt="">
-            </div>
-            <div class="form_div">
-                <h1>Login</h1>
-                <form> 
-                                 
-                <div>
-                    <input type="email" placeholder="E-mail" name="email" id="email">
-                    <input type="password" placeholder="Senha" name="senha" id="senha">
+        <article id = "container_principal">
+
+            <article id="container_esquerda">
+                <h1>NÓS VAMOS ATÉ VOCÊ</h1>
+                <div class="img_form">
+                    <img src="../img/caminhao-removebg-preview-removebg-preview.png">
                 </div>
-                    
-                     
-                    <button id="btn_cadastrar" onclick="fazCadastro()">Entrar</button>
-                    
+            </article>  
+
+            <article id="container_direita">
+                
+                <form>
+                    <h1>login</h1>
+                        <input type="text" placeholder="E-mail ou CPF" name="login" id="login">
+                        <input type="password" placeholder="Senha" name="senha" id="senha">
+
                     <div class="redes_sociais">
                         <button id="btn_facebook">Facebook</button>
                         <button id="btn_google">Google</button>
                     </div>
-                </form>                
-                <a href="login.html" class="possui_cadastro">Esqueci minha senha</a>
-                <a href="cadastro.html" class="possui_cadastro">Não possuo cadastro</a>
-                <img class="logo_form" src="../img/logo.png">
-            </div>
-        </fieldset>
+                </form>
+                <div id = fora_form>
+                    <button id="btn_cadastrar">Cadastrar</button>
+                    <a href="cadastro.html" class="">Não possuo cadastro</a>
+                    <a href="" class="segundo_a">Esqueci a senha</a>
+                </div>
+            </article>
+        </article>
+    </article>    
 </body>
-        <script type="text/javascript" src="../js/funcionalidades.js"></script>
+<script src="../src/js/funcionalidades.js"></script>
+<script src="/src/js/funcionalidades.js"></script>
+<script src="/src/js/cpf.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </html>

@@ -61,10 +61,6 @@
                         <a href="login.html">Entrar</a>
                     </li>
                     <li>
-                        <a href="login.html" class="aqui">Login</a>
-                        <a href="cadastro.html" class="aqui">Cadastrar</a>
-                    </li>
-                    <li>
                         <a onclick="darkmode()">Dark-Mode</a>
                     </li>
                     <li>
@@ -75,35 +71,39 @@
         </div>
     </header><!-- FIM Cabeçalho-->
     <div id = "separador"></div>
-    <div id = "separador"></div>
 
+    <!-- COMEÇO TUDO-->
+    <article id = "container">
 
-        <fieldset class="container">
-            <div class="img_form">
-                <h1>Você faz a diferença</h1>
-                <img src="../img/Cadastro.png" alt="">
-            </div>
-            <div class="form_div">
-                <h1>Cadastro</h1>
+        <article id = "container_principal">
+
+            <article id="container_esquerda">
+                <h1>Você faz a diferença!</h1>
+                <div class="img_form">
+                    <img src="../img/Cadastro.png">
+                </div>
+            </article>  
+
+            <article id="container_direita">
+                
                 <form>
+                    <h1>Cadastro</h1>
                      <div class="form_nome">
                         <input type="text" placeholder="Nome" id="nome" name="nome">
-                        
                         <input type="text" placeholder="Sobrenome" id="sobrenome" name="sobrenome">
                      </div>   
                     
-                
-                <div>
-                    <input type="text" placeholder="CPF" name="cpf" id="cpf" onChange="validaCpf()" maxlength="11" onkeypress="$(this).mask('000.000.000-00')">
-                    <input type="email" placeholder="E-mail" name="email" id="email">
-                    <input type="password" placeholder="Senha" name="senha" id="senha">
-                    <input type="text" placeholder="Telefone" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')">
-                    <input type="text" placeholder="Cidade" name="cidade" id="cidade">
-                </div>
+                    <div>
+                        <input type="text" placeholder="CPF" name="cpf" id="cpf" onChange="validaCpf()" maxlength="11" onkeypress="$(this).mask('000.000.000-00')">
+                        <input type="email" placeholder="E-mail" name="email" id="email">
+                        <input type="password" placeholder="Senha" name="senha" id="senha">
+                        <input type="text" placeholder="Telefone" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')">
+                        <input type="text" placeholder="Cidade" name="cidade" id="cidade">
+                    </div>
                     
                     <div class="radio">
-                            <input type="radio" name="userType" id="pessoaFisica" class="radio"><label for="pessoaFisica">Pessoa Fisica</label>
-                            <input type="radio" name="userType" id="pessoaJuridica" class="radio"><label for="pessoaJuridica">Pessoa Juridica</label>
+                            <span><input type="radio" name="userType" id="pessoaFisica" class="radio"><label for="pessoaFisica">Pessoa Fisica</label></span>
+                            <span><input type="radio" name="userType" id="pessoaJuridica" class="radio"><label for="pessoaJuridica">Pessoa Juridica</label></span>
                     </div>
                      
                     <!--<button id="btn_cadastrar" onclick="fazCadastro()">Cadastrar</button>-->
@@ -113,11 +113,13 @@
                         <button id="btn_google">Google</button>
                     </div>
                 </form>
-                <button id="btn_cadastrar" onclick="location.href='dashboard.html'">Cadastrar</button>
-                <a href="login.html" class="possui_cadastro">Já possuo cadastro</a>
-                <img class="logo_form" src="../img/logo.png">
-            </div>
-        </fieldset>
+                <div id = fora_form>
+                    <button id="btn_cadastrar">Cadastrar</button>
+                    <a href="login.html" class="possui_cadastro">Já possuo cadastro</a>
+                </div>
+            </article>
+        </article>
+    </article>    
 </body>
 <script src="../src/js/funcionalidades.js"></script>
 <script src="/src/js/funcionalidades.js"></script>
