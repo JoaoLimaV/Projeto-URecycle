@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" type="text/css" href="pedidos.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="../css/pedidos.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../fonts/font.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" media="screen" />
     <script type="text/javascript" src="../js/funcionalidades.js"></script>
 
     <title>Meus Pedidos</title>
 
-    </style>
+    </style>    
 </head>
 
 <body>
@@ -81,21 +82,22 @@
 
         <div id="separador">
         </div>
+
         <article class="titulo"> U-Recycle </article>
         <div id="formulario">
-            <span class="titulo">Fazer Pedido</span>
+            <span class="sub_titulo">Fazer Pedido</span>
             <form id="pedido">
                 <label for="nome" id="nome" class="nome">Nome:<br></label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome aqui"><br>
 
                 <label for="cep" id="cep" class="cep">CEP:<br></label>
                 <input type="text" name="cep" id="cep" placeholder="00000-000"><br>
-
+                
                 <label for="end" id="end" class="end">Endereço:<br></label>
                 <input type="text" name="end" id="end" placeholder="Digite seu endereço"><br>
 
                 <label for="num" id="num" class="num">Número:</label>
-                <label for="comp" id="complemento" class="comp">complemento:</label><br>
+                <label for="comp" id="complemento" class="comp">Complemento:</label><br>
 
 
                 <input type="text" name="num" id="num" placeholder="1234">
@@ -140,11 +142,11 @@
                 <label for="nome">DESCRIÇÃO:</label><br>
                 <textarea id="descrição"></textarea>
 
-                <p id="f">fotos</p>
+                <p id="f">Fotos</p>
 
                 <input type="file" name="image" id="fotos" label><br>
 
-                <div>
+                <div id = botao>
                     <button id="enviar">Enviar</button>
                 </div>
 

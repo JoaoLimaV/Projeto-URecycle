@@ -1,47 +1,57 @@
-<<<<<<< HEAD
 #formulario {
-    margin: 50px 10%;
-    border: 1px solid rgb(210, 210, 210);
+    margin: 0 auto;
     background-color: rgb(253, 251, 251);
-}
+    width: 50%;
 
-.titulo {
-    color: rgb(76, 192, 167);
-    ;
-=======
-#formulario{
-    margin: 25px 10%;
-    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 2px solid rgba(204, 204, 204);
+    margin-bottom: 50px;
 }
 
 .titulo{
-    color: rgb(0, 192, 135);;
->>>>>>> 17e07b9c97ff6655e4806310b276bf6b0d2b4eac
-    font-size: 4em;
+    color: rgb(76, 192, 167);
+    font-size: 5em;
+    margin: 45px 0 20px 0;
+    text-align: center;
+}
+.titulos{
+    color: rgb(76, 192, 167);
+    font-size: 5em;
     margin: 75px 0 50px 0;
     text-align: center;
 }
-<<<<<<< HEAD
-
+.sub_titulo{
+    color: rgb(76, 192, 167);
+    font-size: 3.5em;
+    text-align: center;
+    width: 90%;
+}
 span.titulo {
     padding: 50px;
+}
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 #pedido label {
     margin: 0 0 500px 6%;
-    font-size: 17px;
+    font-size: 1.5em;
 }
 
 #pedido input[type=text] {
     font-size: 17px;
-    width: 40%;
-    height: 30px;
+    width: 75%;
+    height: 35px;
     border: 1px solid rgb(210, 210, 210);
     padding: 2px;
     margin: 0 0 5px 6%;
 }
 
-#pedido input::placeholder {
+#pedido input::placeholder{
     color: rgb(210, 210, 210);
 }
 
@@ -54,15 +64,16 @@ span.titulo {
     border: 1px solid rgb(210, 210, 210);
 }
 
-.tipom {
+.tipom{
     color: rgb(10, 10, 10);
     font-size: 2em;
-    margin: 150px 120px 10px 100px;
+    margin-left: 20px;
     text-align: center;
 }
 
 #c {
     margin: 0px 50px 50px 50px;
+    font-weight: bold;
 }
 
 #descrição {
@@ -73,19 +84,21 @@ span.titulo {
 }
 
 #fotos {
+    margin: 0 0 5px 6%;
     padding: 10px 50px 10px 5px;
     background: rgb(76, 192, 167);
     color: white;
-    margin-left: 300px;
     border-color: aquamarine;
 }
 
 #pedido input[type=text]#comp {
-    width: 23%;
+    width: 49%;
+    margin: 0px;
+    margin-left: 10px;
 }
 
 #pedido input[type=text]#num {
-    width: 10%;
+    width: 25%;
 }
 
 #pedido label#complemento {
@@ -93,36 +106,22 @@ span.titulo {
 }
 
 #f {
-    margin-left: 300px;
+    margin: 0 0 5px 6%;
     font-size: 2em;
 }
-
+#botao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 #enviar {
+    margin: 15px auto;
     text-align: center;
-    margin: 100px 0 30px 500px;
     background: rgb(76, 192, 167);
     color: white;
     border: 0ch;
     width: 100px;
     height: 50px;
     font-size: 25px;
-=======
-span.titulo{
-    padding: 50px;
-}
-#pedido label{
-    margin: 0 0 5px 6%;
-    font-size: 17px;
-}
-#pedido input{
-    font-size: 17px;
-    width: 50%;
-    height: 30px;
-    border: 1px solid rgb(210,210,210);
-    padding: 2px;
-    margin: 0 6% 5px 6%;
-}
-#pedido input::placeholder{
-    color: rgb(210,210,210);
->>>>>>> 17e07b9c97ff6655e4806310b276bf6b0d2b4eac
+   
 }
