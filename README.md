@@ -14,7 +14,7 @@ PASSO 1
 
 PASSO 2
 
-    - Colocar a pasta raiz do projeto (U-RECYCLE) na pasta padrão do WAMP > "C:\wamp64\www"
+    - Colocar a pasta raiz do projeto (Projeto-URecycle) na pasta padrão do WAMP > "C:\wamp64\www"
     
 PASSO 3
 
