@@ -6,10 +6,7 @@ const dark = document.getElementById('btn-dark')
 
     if($tema == "dark"){// SE JÁ ESTÁ DARK, QUER DIZER QUE ELE JÀ ESTÀ NO MODO ESCURO
         $html.classList.toggle('dark-mode')
-    }else{
-
     }
-    
 }
 
 function darkmode(){
