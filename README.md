@@ -18,4 +18,4 @@ PASSO 2
     
 PASSO 3
 
-    - Abrir o projeto via localhost no navegador http://localhost/U-RECYCLE/index.html
+    - Abrir o projeto via localhost no navegador http://localhost/Projeto-URecycle/index.html
