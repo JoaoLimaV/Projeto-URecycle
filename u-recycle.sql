@@ -1,0 +1,50 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jun 21, 2022 at 10:48 PM
+-- Server version: 5.7.36
+-- PHP Version: 7.4.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `u-recycle`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `ID_USUARIO` int(11) NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(255) NOT NULL,
+  `SOBRENOME` varchar(255) NOT NULL,
+  `CPF` char(11) NOT NULL,
+  `EMAIL` varchar(50) NOT NULL,
+  `TELEFONE` char(11) NOT NULL,
+  `SENHA` varchar(50) NOT NULL,
+  `TIPO_USUARIO` varchar(15) NOT NULL,
+  `CIDADE` varchar(255) NOT NULL,
+  `CEP` int(8) DEFAULT NULL,
+  `NUM_END` varchar(15) DEFAULT NULL,
+  `COMPLEMENTO_END` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`ID_USUARIO`)
+) ENGINE=MyISAM AUTO_INCREMENT=1111111131 DEFAULT CHARSET=latin1;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

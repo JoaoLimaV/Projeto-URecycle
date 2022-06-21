@@ -56,9 +56,10 @@
     --img-twitter: url(../img/twitter.png) center bottom no-repeat;
     --img-whats: url(../img/whats.png) center bottom no-repeat;
  }
+ 
+
 
 /* HEADER */
-
 body{
     color: var(--all-color-font);
     background-color: var(--bg-padrao);
@@ -98,7 +99,6 @@ header{
     text-indent: -3000px;
     height: 70px;
 }
-
 /* NAV HEADER */
 header nav{
     float: left;
@@ -138,6 +138,8 @@ header nav ul li a:hover{
     justify-content: flex-end;
     width: 16.5%;
 }
+/* NEM TOCA AQUI */
+
 #botoes_header .btn_redondo{
     text-align: center;
     font-size: 1.3em;
@@ -148,6 +150,17 @@ header nav ul li a:hover{
     border: 2px solid rgb(2, 2, 2, 0.5);
     padding: 0 15px;    
     margin: 0 5px;
+}
+#botoes_header #sair{
+    border: 2px solid rgb(2, 2, 2, 0.5);
+    width: 35px;
+    height: 35px;
+    font-size: 1em;
+    border-radius: 100%;
+    margin-right:10px;
+    color:rgb(0, 192, 135);
+    cursor: pointer;
+    font-weight: bold;
 }
 
 #botoes_header #darkmode{
