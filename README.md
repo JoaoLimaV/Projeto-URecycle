@@ -10,7 +10,8 @@ PASSO 1
 
     - Entrar PHPMYADM http://localhost/phpmyadmin/index.php
     - Usuário : root || Senha: Não é necessário colocar senha
-    - Clicar em NEW > Apertar em "IMPORT" > Selecionar o arquivo u-recycle.sql > GO
+    - Clicar em NEW > colocar o nome da database (u-recycle) > GO
+    - Selecionar a database criada > clicar em "import" > selecionar o arquivo "u-recycle.sql" > GO 
 
 PASSO 2
 
