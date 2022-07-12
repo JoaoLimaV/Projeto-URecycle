@@ -1,3 +1,14 @@
+@keyframes shake {
+    0% { transform: translateX(0rem) }
+    25% { transform: translateX(-0.5rem) }
+    50% { transform: translateX(0.5rem) }
+    100% { transform: translateX(0rem) }    
+}
+input[type='text'].invalid, input[type='email'].invalid{
+    animation: shake .2s ease-in-out 0s 2;
+    border: 2px solid red;
+}
+
 body header{
     border-bottom: 2px solid transparent;
 }
@@ -105,6 +116,34 @@ input[type='text'],input[type='password'],input[type='email'] {
     border: 2px solid rgba(204, 204, 204);
 }
 
+#div-senha{
+    /* border: 1px solid black; */
+    height: 42px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: #ffffff;
+    margin: 10px 0 15px 0;
+    border: 2px solid rgba(204, 204, 204);
+}
+
+#div-senha input[type='password'], #div-senha input[type='text']{
+    width: 100%;
+    border: 0px ;
+    background-color: transparent;
+}
+#div-senha span#btn-show-hidden-passowrd{
+    width: 10%;
+    height: 40px;
+    cursor: pointer;
+
+    background-image: url(https://cdn-icons-png.flaticon.com/512/1621/1621629.png);
+    background-size: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 .radio{
     display: flex;
     align-items: center;
@@ -212,7 +251,7 @@ form .redes_sociais{
 }
 #btn_cadastrar{
     font-size: 1.2em;
-    width: 90%;
+    width: 98%;
     height: 40px;
     cursor: pointer;
     border-radius: 5%;
