@@ -2,6 +2,7 @@
 
 const $html = document.querySelector('html')
 const dark = document.getElementById('btn-dark')
+console.log(dark);
 
  window.onload = function(){
     $tema = localStorage.getItem('tema');
@@ -47,29 +48,31 @@ const input_name = document.getElementById('nome');
 const input_lastname = document.getElementById('sobrenome');
 const input_cpf = document.getElementById('cpf');
 const input_email = document.getElementById('email');
+const input_tel = document.getElementById('telefone');
 const input_city = document.getElementById('cidade');
+const div_input_password = document.getElementById('div-senha');
 
 //Variables Show/Hidden Password
 var btn_senha = document.getElementById('btn-show-hidden-passowrd')
-var input_password = document.getElementById('senha');
+const input_password = document.getElementById('senha');
 
 // Verify Name
 input_name.addEventListener('blur', () =>{
     input_name.checkValidity();
-    if(input_name.validity.valid){
-        input_name.classList.remove('invalid');
-    }else{
+    if(input_name.validity.valid == false || input_name.value == ""){
         input_name.classList.add('invalid');
+    }else{
+        input_name.classList.remove('invalid');
     }
 });
 
 // Verify Last Name
 input_lastname.addEventListener('blur', () =>{
     input_lastname.checkValidity();
-    if(input_lastname.validity.valid){
-        input_lastname.classList.remove('invalid');
-    }else{
+    if(input_lastname.validity.valid == false || input_lastname.value == ""){
         input_lastname.classList.add('invalid');
+    }else{
+        input_lastname.classList.remove('invalid');
     }
 });
 
@@ -142,7 +145,7 @@ input_cpf.addEventListener('blur', () =>{
             
             if( resto == onze){
                 cpf.classList.remove("invalid")
-                cpf.style.border = "solid green";
+                /* cpf.style.border = "solid green"; */
             }else{
                 cpf.classList.add("invalid")
             }
@@ -152,24 +155,42 @@ input_cpf.addEventListener('blur', () =>{
         }
     }
 });
+// Verify Password
+input_password.addEventListener('blur', () => {
+    if(input_password.value == ""){
+        div_input_password.classList.add('invalid');
+    }else{
+        div_input_password.classList.remove('invalid');
+    }
+});
+// Verify tel
+input_tel.addEventListener('blur', () =>{
+    input_tel.checkValidity();
+    if(input_tel.validity.valid == false || input_tel.value == ""){
+        input_tel.classList.add('invalid');
+    }else{
+        input_tel.classList.remove('invalid');  
+    }
+});
 
 // Verify email
 input_email.addEventListener('blur', () =>{
     input_email.checkValidity();
-    if(input_email.validity.valid){
-        input_email.classList.remove('invalid');
-    }else{
+    if(input_email.validity.valid == false || input_email.value == ""){
         input_email.classList.add('invalid');
+    }else{
+        input_email.classList.remove('invalid');
     }
 });
 
 // Verify City
 input_city.addEventListener('blur', () =>{
     input_city.checkValidity();
-    if(input_city.validity.valid){
-        input_city.classList.remove('invalid');
-    }else{
+    if(input_city.validity.valid == false || input_city.value == ""){
         input_city.classList.add('invalid');
+        
+    }else{
+        input_city.classList.remove('invalid');
     }
 });
 
@@ -181,3 +202,4 @@ btn_senha.addEventListener('click', () => {
         input_password.type = "password";
     }
 });
+

@@ -1,27 +1,40 @@
 <?php 
-    include_once("conexao.php");
+    
+    require_once("class-php/class.php");
 
     if(!isset($_SESSION)){
         session_start();
     }
+    if(isset($_SESSION['start'])){
 
+        if(time() - $_SESSION['start'] >= 300){
+            // esse destroy vai dar conflito com usuário logado arrumar.  
+            session_destroy();
+            header('Location: cadastro.php');
+            exit;
+        }
+        echo (time() - $_SESSION['start']);
+    }
     if(isset($_POST['nome'])){ 
+        if(isset($_SESSION['error'])){
+            unset($_SESSION['error']);
+        }
+        if(!isset($_SESSION['start'])){
+            $_SESSION['start'] = time();
+        }
+        // Create Object Functions
+        $functions = new functions;
+
         $nome = $_POST["nome"];
         $sobre_nome = $_POST['sobre_nome'];
-
-        $cpf = str_replace(".",'',$_POST["cpf"]); $cpf = str_replace("-",'',$cpf);
-
+        $cpf = $_POST['cpf'];
+        $cpf = $functions->removeMask_cpf($cpf);
         $email = $_POST["email"];
-
-        $telefone = str_replace('(','',$_POST["telefone"]); $telefone = str_replace(')','',$telefone); 
-        $telefone = str_replace(' ','',$telefone);$telefone = str_replace('-','',$telefone);  
-
+        $telefone = $_POST['telefone'];
+        $telefone = $functions->removeMask_tel($telefone);  
         $senha = $_POST["senha"];
         $cidade = $_POST["cidade"];
-
-        if(isset($_POST['tipo'])){
-            $tipo = $_POST['tipo'];
-        }
+        $tipo = (isset($_POST['tipo'])) ? $_POST['tipo'] : "";
 
         $_SESSION['nome'] = $_POST["nome"];
         $_SESSION['sobre_nome'] = $_POST["sobre_nome"];
@@ -29,51 +42,43 @@
         $_SESSION['email'] = $_POST["email"];
         $_SESSION['telefone'] = $_POST["telefone"];
         $_SESSION['cidade'] = $_POST["cidade"];
+
+        // Create Object
+        $user_verification = new user_register_verification;
+        $user_verification->setName($nome);
+        $user_verification->setLast_name($sobre_nome);
+        $user_verification->setCpf($cpf);
+        $user_verification->setEmail($email);
+        $user_verification->setTel($telefone);
+        $user_verification->setPassword($senha);
+        $user_verification->setType($tipo);
+        $user_verification->setCity($cidade);
+
         
-        /* $_SESSION['senha'] = $_POST["senha"]; */
-        /* $_SESSION['tipo'] = $_POST["tipo"]; */
+        /* 
+            [0] - input-nome    | [1] - input-sobrenome
+            [2] - input-cpf     | [3] - input-email
+            [4] - input-tel     | [5] - input-cidade 
+        */
         
+        // Array Error Validation Values
 
-        if(!empty($nome) && !empty($sobre_nome) && !empty($cpf) && !empty($email) &&
-        !empty($telefone) && !empty($senha) && !empty($tipo) && !empty($cidade)){
+        $error[0] = $user_verification->verifyName();
+        $error[1] = $user_verification->verifyLast_name();
+        $error[2] = $user_verification->verifyCPF();
+        $error[3] = $user_verification->verifyEmail();
+        $error[4] = $user_verification->verifyTel();
+        $error[5] = $user_verification->verifyPassword();
+        $error[6] = $user_verification->verifyCity();
 
-            $query_code = "SELECT * FROM usuario WHERE CPF = '$cpf' OR EMAIL = '$email' OR TELEFONE = '$telefone'";
-            $query = mysqli_query($conexao, $query_code);
-            $result = $query->num_rows;
-
-            if($result == 0){
-                $query_code = "INSERT INTO usuario (NOME, SOBRENOME, CPF, EMAIL, TELEFONE, SENHA, TIPO_USUARIO, CIDADE) 
-                VALUES('$nome', '$sobre_nome', $cpf, '$email', '$telefone', '$senha', '$tipo', '$cidade')";
-                $query = mysqli_query($conexao, $query_code);
-                if($conexao->error){
-                    die("Usuário não cadastrado erro MYSQL" . $conexao->error);
-                }else{
-                    session_destroy();
-                    ?>  
-                    <script>
-                        alert('Usuário cadastrado com Sucesso!');
-                        window.location.href='login.php';
-
-                    </script>
-                    <?php
-                }
-            }else{
-                ?>
-                <script>
-                    alert('CPF, EMAIL ou TELEFONE já cadastrado!');
-                </script>
-                <?php
-            }
-        }// SEGUNDO PRIMEIRO IF
-        else{
-            ?>
-                <script>
-                    alert('Preencha TODOS os dados!');
-                </script>
-            <?php
-        }
-        
-    }// FIM PRIMEIRO IF
+        if(in_array(1, $error) == true || in_array(2, $error) == true || in_array(3, $error) == true){
+            $_SESSION['error'] = $error;
+        }else{
+            $user_verification->querySql();
+            session_destroy();
+            header('Location: login.php');
+        }    
+    }
 ?>
 
 <!DOCTYPE html>
@@ -174,7 +179,7 @@
                     <div>
                         <input type="text" class = '' placeholder="CPF" name="cpf" id="cpf" maxlength="11" onkeypress="$(this).mask('000.000.000-00')" value="<?php echo (isset($_SESSION['cpf'])) ? $_SESSION['cpf'] : "";?>">
                         <input type="email" class = '' placeholder="E-mail" name="email" id="email" value="<?php echo (isset($_SESSION['email'])) ? $_SESSION['email'] : "";?>">
-                        <div id = "div-senha"><input type="password" class = '' placeholder="Senha" name="senha" id="senha"> <span id = "btn-show-hidden-passowrd"></span></div>
+                        <div id = "div-senha" class = ''><input type="password" class = '' placeholder="Senha" name="senha" id="senha"> <span id = "btn-show-hidden-passowrd"></span></div>
                         <input type="text" class = '' placeholder="Telefone" maxlength="11" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')" value="<?php echo (isset($_SESSION['telefone'])) ? $_SESSION['telefone'] : "";?>">
                         <input type="text" class = '' placeholder="Cidade" name="cidade" id="cidade" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" value="<?php echo (isset($_SESSION['cidade'])) ? $_SESSION['cidade'] : "";?>">
                     </div>
@@ -200,7 +205,61 @@
         </article>
     </article>    
 </body>
+
 <script src="../js/funcionalidades.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </html>
+
+<?php 
+    if(isset($_SESSION['error'])){
+        echo("
+        <script> 
+         var error_input = [
+            '" . $_SESSION['error'][0] . "',
+            '" . $_SESSION['error'][1] . "',
+            '" . $_SESSION['error'][2] . "',
+            '" . $_SESSION['error'][3] . "',
+            '" . $_SESSION['error'][4] . "',
+            '" . $_SESSION['error'][5] . "',
+            '" . $_SESSION['error'][6] . "'
+        ];
+        </script>");
+    }
+?>
+<script>
+    window.onload = function(){
+        /* 
+                [0] - input-nome    | [1] - input-sobrenome
+                [2] - input-cpf     | [3] - input-email
+                [4] - input-tel     | [5] - input-senha
+                [6] - input-cidade  
+        */
+
+        if(typeof error_input != "undefined"){
+            if(error_input[0] != 0){
+                input_name.classList.add('invalid');
+            }
+            if(error_input[1] != 0){
+                input_lastname.classList.add('invalid');
+            }
+            if(error_input[2] != 0){
+                input_cpf.classList.add('invalid');
+            }
+            if(error_input[3] != 0){
+                input_email.classList.add('invalid');
+            }
+            if(error_input[4] != 0){
+                input_tel.classList.add('invalid');
+            }
+            if(error_input[5] != 0){
+                div_input_password.classList.add('invalid');
+            }
+            if(error_input[6] != 0){
+                input_city.classList.add('invalid');
+
+            }
+        }
+    }
+</script>
+

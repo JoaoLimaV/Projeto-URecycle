@@ -4,7 +4,7 @@
     50% { transform: translateX(0.5rem) }
     100% { transform: translateX(0rem) }    
 }
-input[type='text'].invalid, input[type='email'].invalid{
+.invalid, input[type='text'].invalid, input[type='email'].invalid, #div-senha.invalid{
     animation: shake .2s ease-in-out 0s 2;
     border: 2px solid red;
 }
@@ -117,7 +117,6 @@ input[type='text'],input[type='password'],input[type='email'] {
 }
 
 #div-senha{
-    /* border: 1px solid black; */
     height: 42px;
     width: 100%;
     display: flex;
