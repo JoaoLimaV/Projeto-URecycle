@@ -2,9 +2,8 @@
 
 const $html = document.querySelector('html')
 const dark = document.getElementById('btn-dark')
-console.log(dark);
 
- window.onload = function(){
+window.onload = function(){
     $tema = localStorage.getItem('tema');
 
     // Get the value of the object local storage, if its "dark", the page opens in dark mode
@@ -203,3 +202,10 @@ btn_senha.addEventListener('click', () => {
     }
 });
 
+//Variables P Message Error
+const p_name = document.getElementById('p-error-nome-sobre');
+const p_cpf = document.getElementById('p-error-cpf');
+const p_email = document.getElementById('p-error-email');
+const p_password = document.getElementById('p-error-senha');
+const p_tel = document.getElementById('p-error-telefone');
+const p_city = document.getElementById('p-error-cidade');

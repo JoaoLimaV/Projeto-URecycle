@@ -91,6 +91,14 @@ textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+form .p-error{
+    font-size: 14px;
+    width: 100%;
+    text-align: right;
+    color: red;
+    margin-bottom: 0px;
+    visibility: hidden;  /* visibility: visible; */
+}
 
 .form_nome{
     width: 100%;
@@ -99,20 +107,22 @@ textarea:focus, input:focus {
     align-items: center;
 }
 #nome{
-    width: 40%;
+    width: 39%;
     margin-right: 15px;
 }
 
 #sobrenome{
     width: 60%;
 }
-
+#campos-input{
+    width: 100%;
+}
 input[type='text'],input[type='password'],input[type='email'] {
     width: 100%;
     height: 40px;
     font-size: 18px;
     background-color: #ffffff;
-    margin: 10px 0 15px 0;
+    margin: 10px 0 0px 0;
     border: 2px solid rgba(204, 204, 204);
 }
 
@@ -124,13 +134,13 @@ input[type='text'],input[type='password'],input[type='email'] {
     justify-content: flex-start;
 
     background-color: #ffffff;
-    margin: 10px 0 15px 0;
+    margin: 10px 0 0px 0;
     border: 2px solid rgba(204, 204, 204);
 }
 
 #div-senha input[type='password'], #div-senha input[type='text']{
     width: 100%;
-    border: 0px ;
+    border: 0px;
     background-color: transparent;
 }
 #div-senha span#btn-show-hidden-passowrd{
@@ -293,7 +303,7 @@ form .redes_sociais{
         width: 30%;
         background-color: rgba(203, 215, 227, 0.541);
         height: 100%;
-    }   
+    }
 }
 @media (max-width: 1300px) {
     #container #container_esquerda{
@@ -328,7 +338,6 @@ form .redes_sociais{
     } 
 }
 @media (max-width: 900px){
-    
     #container #container_principal{
         flex-direction: column;
         border: 1px solid transparent;
@@ -342,7 +351,6 @@ form .redes_sociais{
     #container #container_direita{
         width: 90%;
         height: auto;
-        
     }   
     #container #container_esquerda > h1{
         font-size: 30px;
@@ -357,4 +365,42 @@ form .redes_sociais{
         margin-top: 5px;
         margin-bottom: 10px;
     }
+    .form_nome{
+        width: 415px;
+    }
+    #campos-input{
+        width: 415px;
+    }
+    .radio{
+        width: 415px;
+    }
+    form .redes_sociais{
+        width: 415px;
+    }
+    #btn_cadastrar{
+        width: 415px;
+    }
+    form .p-error{
+        width: 415px;
+    }
 }
+@media (max-width: 550px){
+    .form_nome{
+        width: 100%;
+    }
+    #campos-input{
+        width: 100%;
+    }
+    .radio{
+        width: 100%;
+    }
+    form .redes_sociais{
+        width: 100%;
+    }
+    #btn_cadastrar{
+        width: 98%;
+    }
+    form .p-error{
+        width: 100%;
+    }
+} 

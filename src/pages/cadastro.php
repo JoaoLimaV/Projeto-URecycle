@@ -13,7 +13,7 @@
             header('Location: cadastro.php');
             exit;
         }
-        echo (time() - $_SESSION['start']);
+        /* echo (time() - $_SESSION['start']); */
     }
     if(isset($_POST['nome'])){ 
         if(isset($_SESSION['error'])){
@@ -173,15 +173,20 @@
                     <h1>Cadastro</h1>
                      <div class="form_nome">
                         <input type="text" class = ''placeholder="Nome" id="nome" name="nome"  pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" value="<?php echo (isset($_SESSION['nome'])) ? $_SESSION['nome'] : "";?>">
-                        <input type="text" class = '' placeholder="Sobrenome" id="sobrenome" name="sobre_nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" value="<?php echo (isset($_SESSION['sobre_nome'])) ? $_SESSION['sobre_nome'] : "";?>">
+                        <input type="text" class = '' placeholder="Sobrenome" id="sobrenome" name="sobre_nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" value="<?php echo (isset($_SESSION['sobre_nome'])) ? $_SESSION['sobre_nome'] : "";?>"><br>
                      </div>   
-                    
-                    <div>
+                     <p class ="p-error" id = "p-error-nome-sobre"> * </p>
+                    <div id ="campos-input">
                         <input type="text" class = '' placeholder="CPF" name="cpf" id="cpf" maxlength="11" onkeypress="$(this).mask('000.000.000-00')" value="<?php echo (isset($_SESSION['cpf'])) ? $_SESSION['cpf'] : "";?>">
+                        <p class ="p-error" id = "p-error-cpf" > * </p>
                         <input type="email" class = '' placeholder="E-mail" name="email" id="email" value="<?php echo (isset($_SESSION['email'])) ? $_SESSION['email'] : "";?>">
+                        <p class ="p-error" id = "p-error-email"> * </p>
                         <div id = "div-senha" class = ''><input type="password" class = '' placeholder="Senha" name="senha" id="senha"> <span id = "btn-show-hidden-passowrd"></span></div>
-                        <input type="text" class = '' placeholder="Telefone" maxlength="11" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')" value="<?php echo (isset($_SESSION['telefone'])) ? $_SESSION['telefone'] : "";?>">
+                        <p class ="p-error" id = "p-error-senha"> * </p>
+                        <input type="text" class = '' placeholder="Telefone" maxlength="11" name="telefone" id="telefone" onkeypress="$(this).mask('(00) 00000-0000')" value="<?php echo (isset($_SESSION['telefone'])) ? $_SESSION['telefone'] : "";?>"> 
+                        <p class ="p-error" id = "p-error-telefone"> * </p>
                         <input type="text" class = '' placeholder="Cidade" name="cidade" id="cidade" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" value="<?php echo (isset($_SESSION['cidade'])) ? $_SESSION['cidade'] : "";?>">
+                        <p class ="p-error" id = "p-error-cidade"> * </p>
                     </div>
                     
                     <div class="radio">
@@ -235,29 +240,108 @@
                 [4] - input-tel     | [5] - input-senha
                 [6] - input-cidade  
         */
-
         if(typeof error_input != "undefined"){
+            var duplicate = false;
             if(error_input[0] != 0){
                 input_name.classList.add('invalid');
-            }
+                switch(error_input[0]){
+                    case '1':
+                        var text = document.createTextNode("Preencha os Campos");
+                        var duplicate = true;
+                    break;
+                    case '2':
+                        var text = document.createTextNode("Apenas Letras e Caracteres Especiais São Aceitos");
+                        var duplicate = true;
+                    break;
+                }
+                p_name.appendChild(text);
+                p_name.style.visibility="visible";
+            }   
             if(error_input[1] != 0){
                 input_lastname.classList.add('invalid');
+                if(duplicate == false){
+                    switch(error_input[1]){
+                        case '1':
+                            var text = document.createTextNode("Preencha os Campos");
+                        break;
+                        case '2':
+                            var text = document.createTextNode("Apenas Letras e Caracteres Especiais São Aceitos");
+                        break;
+                    }
+                    p_name.appendChild(text);
+                    p_name.style.visibility="visible";
+                }
             }
             if(error_input[2] != 0){
                 input_cpf.classList.add('invalid');
+                switch(error_input[2]){
+                    case '1':
+                        var text = document.createTextNode("Preencha o Campo");
+                    break;
+                    case '2':
+                        var text = document.createTextNode("CPF inválido");
+                    break;
+                    case '3':
+                        var text = document.createTextNode("CPF Já Registrado");
+                    break;
+                }
+                p_cpf.appendChild(text);
+                p_cpf.style.visibility="visible";
             }
             if(error_input[3] != 0){
                 input_email.classList.add('invalid');
+                switch(error_input[3]){
+                    case '1':
+                        var text = document.createTextNode("Preencha o Campo");
+                    break;
+                    case '2':
+                        var text = document.createTextNode("Email inválido");
+                    break;
+                    case '3':
+                        var text = document.createTextNode("Email Já Registrado");
+                    break;
+                }
+                p_email.appendChild(text);
+                p_email.style.visibility="visible";
             }
             if(error_input[4] != 0){
                 input_tel.classList.add('invalid');
+                switch(error_input[4]){
+                    case '1':
+                        var text = document.createTextNode("Preencha o Campo");
+                    break;
+                    case '2':
+                        var text = document.createTextNode("Telefone inválido");
+                    break;
+                    case '3':
+                        var text = document.createTextNode("Telefone Já Registrado");
+                    break;
+                }
+                p_tel.appendChild(text);
+                p_tel.style.visibility="visible";
             }
             if(error_input[5] != 0){
                 div_input_password.classList.add('invalid');
+                switch(error_input[5]){
+                    case '1':
+                        var text = document.createTextNode("Preencha o Campo");
+                    break;
+                }
+                p_password.appendChild(text);
+                p_password.style.visibility="visible";
             }
             if(error_input[6] != 0){
                 input_city.classList.add('invalid');
-
+                switch(error_input[6]){
+                    case '1':
+                        var text = document.createTextNode("Preencha o Campo");
+                    break;
+                    case '2':
+                        var text = document.createTextNode("Apenas Letras e Caracteres Especiais São Aceitos");
+                    break;
+                }
+                p_city.appendChild(text);
+                p_city.style.visibility="visible";
             }
         }
     }
